@@ -1,0 +1,46 @@
+@use "_variables.scss" as v;
+
+/*----------------------------------------------*/
+/* Design */
+/*----------------------------------------------*/
+@mixin btn-style {
+    background-color: v.$btn-bg-color;
+    border: 2px solid v.$btn-bg-color;
+    color: v.$btn-text-color;
+    font-family: v.$text-secondary-family;
+    font-size: v.$fs-xl;
+    font-weight: v.$fw-regular;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    @include hover-device {
+        &:hover {
+            background-color: transparent;
+            color: v.$btn-text-color;
+        }
+    }
+}
+/*----------------------------------------------*/
+/* Hover Device */
+/*----------------------------------------------*/
+@mixin hover-device {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+/* Media Queries */
+/*----------------------------------------------*/
+@mixin mq-min($width) {
+    @media (width >= $width) {
+        @content;
+    }
+}
+
+@mixin mq-max($width) {
+    @media (width < $width) {
+        @content;
+    }
+}

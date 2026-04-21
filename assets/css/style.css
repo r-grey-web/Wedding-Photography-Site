@@ -1,0 +1,524 @@
+/*----------------------------------------------*/
+/* Space */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Color */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Font Family */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Font Size */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Font Weight */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Breakpoint */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Design */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Hover Device */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Media Queries */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* Body */
+/*----------------------------------------------*/
+body {
+  background-color: #FFFFFF;
+}
+
+/*----------------------------------------------*/
+/* Hero */
+/*----------------------------------------------*/
+header {
+  width: 100%;
+  min-height: max(200px, min(63.4027777778vw, 100vh));
+  position: relative;
+  background: url("../images/hero-image.jpg") center/cover no-repeat;
+}
+header .p-gnav {
+  min-height: 109px;
+  padding: 0 114px 0 104px;
+  background: rgba(245, 245, 245, 0.8);
+}
+header .p-gnav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+header .p-gnav__left-items {
+  display: flex;
+  gap: 67px;
+}
+@media (width >= 1440px) {
+  header .p-gnav__left-items {
+    justify-content: space-evenly;
+  }
+}
+header .p-logo {
+  margin: 8px 0px 0 30px;
+}
+header .p-logo .p-logo__img {
+  max-height: 101px;
+  max-width: 279px;
+}
+header .p-gnav__right-items {
+  display: flex;
+  justify-content: flex-end;
+  gap: 54px;
+}
+@media (width >= 1440px) {
+  header .p-gnav__right-items {
+    justify-content: space-evenly;
+  }
+}
+header .p-gnav__item {
+  padding: 0 0px 8px 0;
+  color: #363636;
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+header .hero-text {
+  position: absolute;
+  top: 49.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+}
+header .hero-text h1 {
+  margin-left: 3px;
+  color: #BBA085;
+  font-family: "Ephesis", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  -webkit-text-stroke: 1.5px #BBA085;
+  paint-order: stroke fill;
+}
+header .hero-text p {
+  color: #FFFFFF;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 80px;
+  font-weight: 600;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(5px);
+}
+
+/*----------------------------------------------*/
+/* Concept Message 01 */
+/*----------------------------------------------*/
+.concept-message-01 {
+  padding: 100px 0;
+  background-color: #F4F4F4;
+}
+.concept-message-01 .concept-message-01__content-box {
+  text-align: center;
+}
+.concept-message-01 .concept-message-01__content-box img {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.concept-message-01 .concept-message-01__content-box p {
+  margin-bottom: 32px;
+  color: #BBA085;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+.concept-message-01 .concept-message-01__content-box h2 {
+  margin-bottom: 24px;
+  color: #4F4F4F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/*----------------------------------------------*/
+/* About */
+/*----------------------------------------------*/
+.about-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 858px;
+  max-height: 858px;
+}
+.about-wrapper .about__img-wrapper {
+  width: 692px;
+  height: 100%;
+  overflow: hidden;
+}
+.about-wrapper .about__img-wrapper .about__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.about-wrapper .about__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 70px 0px 0px 0px;
+}
+.about-wrapper .about__content .about__content-top {
+  flex: 1;
+  text-align: center;
+}
+.about-wrapper .about__content .about_decoration-01 {
+  display: inline-block;
+  margin-bottom: 37px;
+}
+.about-wrapper .about__content .about__title {
+  margin-bottom: 23px;
+  color: #4A4A4A;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+.about-wrapper .about__content .about__text-group {
+  color: #2D2D2D;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+.about-wrapper .about__content .about__text-group .about__text-group-01 {
+  margin-bottom: 33px;
+  line-height: 1.23;
+}
+.about-wrapper .about__content .about__text-group .about__text-group-02 {
+  margin-bottom: 44px;
+  line-height: 1.22;
+}
+.about-wrapper .about__content .about_decoration-02 {
+  display: inline-block;
+  margin-bottom: 42px;
+}
+.about-wrapper .about__content .about__signature {
+  color: #545454;
+  font-family: "Ephesis", cursive;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.about-wrapper .about__content .about__btn {
+  padding: 11px 41px 13px;
+  background-color: #E9E1D9;
+  border: 2px solid #E9E1D9;
+  color: #484848;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+@media (hover: hover) {
+  .about-wrapper .about__content .about__btn:hover:hover {
+    background-color: transparent;
+    color: #484848;
+  }
+}
+
+/*----------------------------------------------*/
+/* Services */
+/*----------------------------------------------*/
+.services {
+  padding: 170px 0;
+}
+.services .services__header {
+  margin: 0 auto 54px;
+  text-align: center;
+}
+.services .services__header .services__sub-title {
+  margin-bottom: 5px;
+  color: #BBA085;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+.services .services__header .services__main-title {
+  margin: 0;
+  color: #5B5B5B;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+.services .services__cards {
+  display: flex;
+  justify-content: center;
+  gap: 66px;
+}
+.services .services__cards .service-card__decoration {
+  margin-left: 15px;
+}
+.services .services__cards .service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
+  height: 551px;
+  max-width: 370px;
+  max-height: 551px;
+  padding: 42px 40px;
+  background-color: #F8F8F8;
+  text-align: center;
+}
+.services .services__cards .service-card:first-child .service-card__title {
+  margin: 0 0 36px;
+  transform: translateY(-4px);
+}
+.services .services__cards .service-card:first-child .service-card__btn {
+  margin-top: 14.5px;
+}
+.services .services__cards .service-card:nth-child(2) .service-card__title {
+  transform: translateY(11px);
+}
+.services .services__cards .service-card:nth-child(3) .service-card__decoration {
+  margin-left: 30px;
+}
+.services .services__cards .service-card:nth-child(3) .service-card__title {
+  transform: translateY(4px);
+}
+.services .services__cards .service-card__title {
+  margin: 0 0 40px;
+  color: #5B5B5B;
+  font-family: "Ephesis", cursive;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.services .services__cards .service-card__price-wrapper {
+  margin-bottom: 32px;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.05;
+}
+.services .services__cards .service-card__label {
+  color: #5B5B5B;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.services .services__cards .service-card__price {
+  margin: 0;
+  color: #5B5B5B;
+  font-size: 3.125rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+.services .services__cards .service-card__btn {
+  margin-top: 16px;
+  padding: 12px 36px;
+  background-color: #E9E1D9;
+  border: 2px solid #E9E1D9;
+  color: #484848;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+@media (hover: hover) {
+  .services .services__cards .service-card__btn:hover:hover {
+    background-color: transparent;
+    color: #484848;
+  }
+}
+
+/*----------------------------------------------*/
+/* Concept Message 02 */
+/*----------------------------------------------*/
+.concept-message-02 {
+  background-color: #F8F8F8;
+}
+
+.concept-message-02__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 0px;
+  align-items: center;
+  position: relative;
+}
+
+.concept-message-02__image-wrapper {
+  overflow: hidden;
+}
+
+.concept-message-02__img {
+  width: 100%;
+  height: auto;
+}
+
+.concept-message-02__content-box {
+  position: absolute;
+  right: 9.8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 440px;
+  max-width: 440px;
+  height: 591px;
+  max-height: 591px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: 0.4px solid rgba(181, 139, 97, 0.6);
+  outline-offset: -12px;
+  text-align: center;
+}
+
+.concept-message-02__box {
+  width: 100%;
+}
+
+.concept-message-02__quote-icon {
+  margin: 40px auto 24px;
+}
+
+.concept-message-02__title {
+  margin: 0 0 24px;
+  color: #686868;
+  font-family: "Ephesis", cursive;
+  font-size: 3.125rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.concept-message-02__text {
+  color: #414141;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/*----------------------------------------------*/
+/* Portfolio */
+/*----------------------------------------------*/
+.portfolio {
+  padding: 120px 0;
+}
+
+.portfolio__header {
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.portfolio__header .portfolio__sub-title {
+  margin-bottom: 8px;
+  color: #BBA085;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+.portfolio__header .portfolio__main-title {
+  margin: 0;
+  color: #5B5B5B;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.portfolio__content-wrapper {
+  display: flex;
+}
+.portfolio__content-wrapper .portfolio__text-box {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 562px;
+  max-width: 562px;
+  height: 323px;
+  max-height: 323px;
+  padding: 0px 48px 70px 105px;
+  background-color: #F8F8F8;
+  white-space: nowrap;
+}
+.portfolio__content-wrapper .portfolio__text-box .portfolio__number {
+  display: inline-block;
+  margin: 0 0 16px;
+  color: #B58B61;
+  font-family: "Cormorant", serif;
+  font-size: 7.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 0.65;
+}
+.portfolio__content-wrapper .portfolio__text-box .portfolio__story-title {
+  margin: 0;
+  color: #555555;
+  font-family: "Ephesis", cursive;
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+.portfolio__content-wrapper .portfolio__text-box .portfolio__description {
+  margin: 0;
+  color: #2D2D2D;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.portfolio__content-wrapper .portfolio__images {
+  display: flex;
+  gap: 37px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio__content-wrapper .portfolio__images .portfolio__img:first-child {
+  width: 394px;
+  height: 470px;
+}
+.portfolio__content-wrapper .portfolio__images .portfolio__img:last-child {
+  margin-right: 72px;
+  width: 373px;
+  height: 470px;
+}
+
+.portfolio__btn-wrapper {
+  margin: 59px 72px 0 0;
+  text-align: right;
+}
+.portfolio__btn-wrapper .portfolio__btn {
+  display: inline-block;
+  background-color: #E9E1D9;
+  border: 2px solid #E9E1D9;
+  color: #484848;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+@media (hover: hover) {
+  .portfolio__btn-wrapper .portfolio__btn:hover:hover {
+    background-color: transparent;
+    color: #484848;
+  }
+}
+.portfolio__btn-wrapper .portfolio__btn {
+  padding: 12px 26px;
+  border: none;
+  color: #555555;
+  font-weight: 300;
+  text-align: center;
+  white-space: nowrap;
+}/*# sourceMappingURL=style.css.map */
