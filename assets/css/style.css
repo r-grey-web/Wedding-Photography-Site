@@ -2,16 +2,25 @@
 /* Space */
 /*----------------------------------------------*/
 /*----------------------------------------------*/
-/* Color */
+/* color */
 /*----------------------------------------------*/
 /*----------------------------------------------*/
-/* Font Family */
+/* font-family */
 /*----------------------------------------------*/
 /*----------------------------------------------*/
-/* Font Size */
+/* font-size */
 /*----------------------------------------------*/
 /*----------------------------------------------*/
-/* Font Weight */
+/* font-weight */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* text-indent */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* letter-spacing */
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/* line-height */
 /*----------------------------------------------*/
 /*----------------------------------------------*/
 /* Breakpoint */
@@ -96,11 +105,11 @@ header .hero-text {
   text-align: center;
 }
 header .hero-text h1 {
-  margin-left: 3px;
   color: #BBA085;
   font-family: "Ephesis", cursive;
   font-size: 4rem;
   font-weight: 400;
+  text-indent: 0.05em;
   letter-spacing: 0.05em;
   -webkit-text-stroke: 1.5px #BBA085;
   paint-order: stroke fill;
@@ -134,6 +143,7 @@ header .hero-text p {
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
+  text-indent: 0.2em;
   letter-spacing: 0.2em;
 }
 .concept-message-01 .concept-message-01__content-box h2 {
@@ -173,7 +183,7 @@ header .hero-text p {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  padding: 70px 0px 0px 0px;
+  padding: 67px 30px 0px 0px;
 }
 .about-wrapper .about__content .about__content-top {
   flex: 1;
@@ -181,7 +191,7 @@ header .hero-text p {
 }
 .about-wrapper .about__content .about_decoration-01 {
   display: inline-block;
-  margin-bottom: 37px;
+  margin: 0 0 40px 30px;
 }
 .about-wrapper .about__content .about__title {
   margin-bottom: 23px;
@@ -216,6 +226,7 @@ header .hero-text p {
   letter-spacing: 0.05em;
 }
 .about-wrapper .about__content .about__btn {
+  margin-left: 10px;
   padding: 11px 41px 13px;
   background-color: #E9E1D9;
   border: 2px solid #E9E1D9;
@@ -236,7 +247,7 @@ header .hero-text p {
 /* Services */
 /*----------------------------------------------*/
 .services {
-  padding: 170px 0;
+  padding: 170px 0 183px;
 }
 .services .services__header {
   margin: 0 auto 54px;
@@ -248,6 +259,7 @@ header .hero-text p {
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
+  text-indent: 0.2em;
   letter-spacing: 0.2em;
 }
 .services .services__header .services__main-title {
@@ -256,6 +268,7 @@ header .hero-text p {
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 400;
+  text-indent: 0.05em;
   letter-spacing: 0.05em;
   line-height: 1.3;
 }
@@ -283,17 +296,27 @@ header .hero-text p {
   margin: 0 0 36px;
   transform: translateY(-4px);
 }
+.services .services__cards .service-card:first-child .service-card__price {
+  font-size: 3.125rem;
+}
 .services .services__cards .service-card:first-child .service-card__btn {
   margin-top: 14.5px;
 }
 .services .services__cards .service-card:nth-child(2) .service-card__title {
   transform: translateY(11px);
 }
+.services .services__cards .service-card:nth-child(2) .service-card__price {
+  font-size: 48px;
+}
 .services .services__cards .service-card:nth-child(3) .service-card__decoration {
   margin-left: 30px;
 }
 .services .services__cards .service-card:nth-child(3) .service-card__title {
+  margin-bottom: 42px;
   transform: translateY(4px);
+}
+.services .services__cards .service-card:nth-child(3) .service-card__price {
+  font-size: 48px;
 }
 .services .services__cards .service-card__title {
   margin: 0 0 40px;
@@ -317,8 +340,8 @@ header .hero-text p {
 .services .services__cards .service-card__price {
   margin: 0;
   color: #5B5B5B;
-  font-size: 3.125rem;
   font-weight: 300;
+  text-indent: 0.05em;
   letter-spacing: 0.05em;
 }
 .services .services__cards .service-card__btn {
@@ -345,8 +368,7 @@ header .hero-text p {
 .concept-message-02 {
   background-color: #F8F8F8;
 }
-
-.concept-message-02__container {
+.concept-message-02 .concept-message-02__container {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -354,17 +376,14 @@ header .hero-text p {
   align-items: center;
   position: relative;
 }
-
-.concept-message-02__image-wrapper {
+.concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper {
   overflow: hidden;
 }
-
-.concept-message-02__img {
+.concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
   width: 100%;
   height: auto;
 }
-
-.concept-message-02__content-box {
+.concept-message-02 .concept-message-02__container .concept-message-02__content-box {
   position: absolute;
   right: 9.8%;
   top: 50%;
@@ -378,27 +397,26 @@ header .hero-text p {
   outline-offset: -12px;
   text-align: center;
 }
-
-.concept-message-02__box {
+.concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__box {
   width: 100%;
 }
-
-.concept-message-02__quote-icon {
-  margin: 40px auto 24px;
+.concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__decoration {
+  margin: 38px auto 24px;
+  padding-left: 30px;
 }
-
-.concept-message-02__title {
-  margin: 0 0 24px;
+.concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__title {
+  margin: 0 0 25.5px;
+  padding-left: 0.065em;
   color: #686868;
   font-family: "Ephesis", cursive;
   font-size: 3.125rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  line-height: 1.3;
+  line-height: 1.31;
   white-space: nowrap;
 }
-
-.concept-message-02__text {
+.concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__text {
+  padding-left: 0.1em;
   color: #414141;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.75rem;
@@ -410,95 +428,91 @@ header .hero-text p {
 /* Portfolio */
 /*----------------------------------------------*/
 .portfolio {
-  padding: 120px 0;
+  padding: 104px 0 53px;
 }
-
-.portfolio__header {
-  margin: 0 auto 64px;
+.portfolio .portfolio__header {
+  margin: 0 auto 58px;
   text-align: center;
 }
-.portfolio__header .portfolio__sub-title {
+.portfolio .portfolio__header .portfolio__sub-title {
   margin-bottom: 8px;
   color: #BBA085;
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
+  text-indent: 0.74em;
   letter-spacing: 0.2em;
 }
-.portfolio__header .portfolio__main-title {
+.portfolio .portfolio__header .portfolio__main-title {
   margin: 0;
   color: #5B5B5B;
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 400;
+  text-indent: 0.33em;
   letter-spacing: 0.05em;
   line-height: 1.1;
 }
-
-.portfolio__content-wrapper {
+.portfolio .portfolio__content-wrapper {
   display: flex;
 }
-.portfolio__content-wrapper .portfolio__text-box {
+.portfolio .portfolio__content-wrapper .portfolio__text-box {
   align-self: flex-end;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 562px;
   max-width: 562px;
   height: 323px;
   max-height: 323px;
-  padding: 0px 48px 70px 105px;
+  padding: 0px 45px 70px 106px;
+  text-align: left;
   background-color: #F8F8F8;
   white-space: nowrap;
 }
-.portfolio__content-wrapper .portfolio__text-box .portfolio__number {
+.portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__number {
   display: inline-block;
-  margin: 0 0 16px;
+  margin: 0 0 23px;
   color: #B58B61;
   font-family: "Cormorant", serif;
   font-size: 7.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  line-height: 0.65;
+  line-height: 0.5;
 }
-.portfolio__content-wrapper .portfolio__text-box .portfolio__story-title {
-  margin: 0;
+.portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__story-title {
+  margin: 0 0 0px;
   color: #555555;
   font-family: "Ephesis", cursive;
   font-size: 46px;
   font-weight: 400;
   letter-spacing: 0.05em;
-  line-height: 1.3;
 }
-.portfolio__content-wrapper .portfolio__text-box .portfolio__description {
+.portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description {
   margin: 0;
   color: #2D2D2D;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.75rem;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.22;
 }
-.portfolio__content-wrapper .portfolio__images {
+.portfolio .portfolio__content-wrapper .portfolio__images {
   display: flex;
   gap: 37px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.portfolio__content-wrapper .portfolio__images .portfolio__img:first-child {
+.portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:first-child {
   width: 394px;
   height: 470px;
 }
-.portfolio__content-wrapper .portfolio__images .portfolio__img:last-child {
+.portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:last-child {
   margin-right: 72px;
   width: 373px;
   height: 470px;
 }
-
-.portfolio__btn-wrapper {
+.portfolio .portfolio__btn-wrapper {
   margin: 59px 72px 0 0;
   text-align: right;
 }
-.portfolio__btn-wrapper .portfolio__btn {
+.portfolio .portfolio__btn-wrapper .portfolio__btn {
   display: inline-block;
   background-color: #E9E1D9;
   border: 2px solid #E9E1D9;
@@ -509,16 +523,112 @@ header .hero-text p {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 @media (hover: hover) {
-  .portfolio__btn-wrapper .portfolio__btn:hover:hover {
+  .portfolio .portfolio__btn-wrapper .portfolio__btn:hover:hover {
     background-color: transparent;
     color: #484848;
   }
 }
-.portfolio__btn-wrapper .portfolio__btn {
-  padding: 12px 26px;
+.portfolio .portfolio__btn-wrapper .portfolio__btn {
+  padding: 12px 28px 12px 26px;
   border: none;
   color: #555555;
   font-weight: 300;
   text-align: center;
   white-space: nowrap;
+}
+
+/*----------------------------------------------*/
+/* Testimonials */
+/*----------------------------------------------*/
+.testimonials {
+  background-color: #F8F8F8;
+}
+.testimonials .testimonials__title-wrapper {
+  margin: 0 auto 83px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+.testimonials .testimonials__title-wrapper .testimonials__title {
+  color: #555555;
+  font-family: "Ephesis", cursive;
+  font-size: 70px;
+  font-weight: 400;
+  text-indent: 0.27em;
+  letter-spacing: 0.05em;
+}
+.testimonials .testimonials__container {
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonials .testimonials__container .testimonials__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__arrow {
+  width: 50px;
+  height: 50px;
+  background-color: #E9E1D9;
+  border: none;
+  font-size: 28px;
+  color: #888888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__arrow:hover {
+  background-color: #E0D9D3;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__arrow--prev, .testimonials .testimonials__container .testimonials__content .testimonials__arrow--next {
+  flex-shrink: 0;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__card {
+  flex: 1;
+  max-width: 450px;
+  width: 100%;
+  padding: 50px 45px;
+  background-color: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  text-align: center;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials_decoration {
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 50px;
+  height: auto;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__message {
+  margin: 0 0 35px;
+  color: #4F4F4F;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__name {
+  margin: 0;
+  color: #BBA085;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__image-wrapper {
+  flex: 1;
+  max-width: 450px;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.testimonials .testimonials__container .testimonials__content .testimonials__image-wrapper .testimonials__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
