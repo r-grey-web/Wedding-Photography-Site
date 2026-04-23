@@ -6,7 +6,7 @@
 /* Body */
 /*----------------------------------------------*/
 body {
-    background-color: v.$main-bg-color;
+    background-color: v.$color-white;
 }
 
 /*----------------------------------------------*/
@@ -78,18 +78,18 @@ header {
         text-align: center;
 
         h1 {
-            color: v.$text-primary;
+            color: v.$text-accent;
             font-family: v.$text-primary-family;
             font-size: v.$fs-4xl;
             font-weight: v.$fw-regular;
             text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
-            -webkit-text-stroke: 1.5px v.$text-primary;
+            -webkit-text-stroke: 1.5px v.$text-accent;
             paint-order: stroke fill;
         }
 
         p {
-            color: v.$main-bg-color;
+            color: v.$color-white;
             font-family: v.$text-secondary-family;
             font-size: 80px;
             font-weight: v.$fw-semibold;
@@ -116,7 +116,7 @@ header {
 
         p {
             margin-bottom: v.$space-l;
-            color: v.$text-primary;
+            color: v.$text-accent;
             font-family: v.$font-accent;
             font-size: v.$fs-xl;
             font-weight: v.$fw-medium;
@@ -126,7 +126,7 @@ header {
 
         h2 {
             margin-bottom: v.$space-m;
-            color: v.$text-secondary;
+            color: v.$color-gray-dark;
             font-family: v.$text-secondary-family;
             font-size: v.$fs-4xl;
             font-weight: v.$fw-regular;
@@ -236,7 +236,7 @@ header {
 
         .services__sub-title {
             margin-bottom: 5px;
-            color: v.$text-primary;
+            color: v.$text-accent;
             font-family: v.$font-accent;
             font-size: v.$fs-xl;
             font-weight: v.$fw-medium;
@@ -294,7 +294,7 @@ header {
 
             &:nth-child(2) {
                 .service-card__title {
-                    transform: translateY(11px);
+                    transform: translateY(13px);
                 }
 
                 .service-card__price {
@@ -324,6 +324,7 @@ header {
             font-family: v.$text-primary-family;
             font-size: 60px;
             font-weight: v.$fw-regular;
+            text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
         }
 
@@ -388,7 +389,7 @@ header {
             max-width: 440px;
             height: 591px;
             max-height: 591px;
-            background: rgba(v.$main-bg-color, 0.9);
+            background: rgba(v.$color-white, 0.9);
             outline: 0.4px solid rgba(#B58B61, 0.6);
             outline-offset: -12px;
             text-align: center;
@@ -416,7 +417,7 @@ header {
 
             .concept-message-02__text {
                 padding-left: 0.1em;
-                color: #414141;
+                color: v.$card-text-color-02;
                 font-family: v.$text-secondary-family;
                 font-size: v.$fs-xl;
                 font-weight: v.$fw-light;
@@ -438,7 +439,7 @@ header {
 
         .portfolio__sub-title {
             margin-bottom: v.$space-xs;
-            color: v.$text-primary;
+            color: v.$text-accent;
             font-family: v.$font-accent;
             font-size: v.$fs-xl;
             font-weight: v.$fw-medium;
@@ -485,7 +486,7 @@ header {
 
             .portfolio__story-title {
                 margin: 0 0 0px;
-                color: v.$text-tertiary;
+                color: v.$color-gray;
                 font-family: v.$text-primary-family;
                 font-size: 46px;
                 font-weight: v.$fw-regular;
@@ -531,7 +532,7 @@ header {
             @include m.btn-style;
             padding: 12px 28px 12px 26px;
             border: none;
-            color: v.$text-tertiary;
+            color: v.$color-gray;
             font-weight: v.$fw-light;
             text-align: center;
             white-space: nowrap;
@@ -545,13 +546,14 @@ header {
 .testimonials {
     background-color: v.$card-bg-color;
 
-    .testimonials__title-wrapper {
-        margin: 0 auto 83px;
-        background-color: v.$main-bg-color;
+    .testimonials__title-container {
+        margin: 0 auto;
+        padding-bottom: v.$space-xs;
+        background-color: v.$color-white;
         text-align: center;
 
         .testimonials__title {
-            color: v.$text-tertiary;
+            color: v.$color-gray;
             font-family: v.$text-primary-family;
             font-size: 70px;
             font-weight: v.$fw-regular;
@@ -562,71 +564,82 @@ header {
 
     .testimonials__container {
         margin: 0 auto;
+        padding: 78px 0px;
+        background-color: v.$card-bg-color;
         text-align: center;
 
         .testimonials__content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 50px;
-            max-width: 1200px;
             margin: 0 auto;
+            height: 450px;
 
             .testimonials__arrow {
-                width: 50px;
-                height: 50px;
+                width: 39px;
+                height: 57px;
+                margin-right: v.$space-m;
+                margin-bottom: v.$space-m;
                 background-color: v.$btn-bg-color;
-                border: none;
-                font-size: 28px;
-                color: #888888;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: all 0.3s ease;
 
-                &:hover {
+                @include m.hover-device {
                     background-color: #E0D9D3;
                 }
 
-                &--prev,
-                &--next {
-                    flex-shrink: 0;
+                &.testimonials__arrow--prev {
+                    margin-left: 10px;
                 }
             }
 
             .testimonials__card {
                 flex: 1;
+                display: flex;
+                flex-direction: column;
+                position: relative;
                 max-width: 450px;
                 width: 100%;
-                padding: 50px 45px;
-                background-color: v.$main-bg-color;
-                border: 1px solid #D9D9D9;
+                height: 100%;
+                margin-right: 47px;
+                padding: 163px 20px 0 25px;
+                background-color: v.$color-white;
+                box-shadow: inset 0 0 0 2px v.$btn-bg-color;
                 text-align: center;
 
-                .testimonials_decoration {
-                    display: inline-block;
-                    margin-bottom: 30px;
-                    width: 50px;
-                    height: auto;
+                .testimonials__quote {
+                    position: absolute;
+                    top: 57px;
+                    left: 50.5%;
+                    transform: translateX(-50%);
+                    color: v.$btn-bg-color;
+                    font-family: "Forum", serif;
+                    font-size: 200px;
+                    font-weight: v.$fw-regular;
+                    -webkit-text-stroke: 3.2px v.$btn-bg-color;
+                    paint-order: stroke fill;
+                    line-height: 1;
                 }
 
                 .testimonials__message {
-                    margin: 0 0 35px;
-                    color: v.$text-secondary;
+                    margin-bottom: 74px;
+                    color: v.$color-gray-dark;
                     font-family: v.$text-secondary-family;
-                    font-size: 26px;
+                    font-size: v.$fs-xl;
                     font-weight: v.$fw-regular;
-                    line-height: 1.4;
+                    line-height: 1.23;
                 }
 
                 .testimonials__name {
                     margin: 0;
-                    color: v.$text-primary;
+                    color: v.$card-text-color-02;
                     font-family: v.$text-secondary-family;
-                    font-size: 18px;
-                    font-weight: v.$fw-regular;
-                    letter-spacing: v.$letter-spacing-wide;
+                    font-size: v.$fs-xl;
+                    font-weight: v.$fw-light;
+                    text-transform: uppercase;
                 }
             }
 
@@ -634,16 +647,87 @@ header {
                 flex: 1;
                 max-width: 450px;
                 width: 100%;
-                height: 400px;
+                height: 100%;
+                margin-right: 25px;
                 overflow: hidden;
 
                 .testimonials__image {
+                    display: block;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    display: block;
                 }
             }
         }
+    }
+}
+
+/*----------------------------------------------*/
+/* Achievements */
+/*----------------------------------------------*/
+.stats {
+    background-color: v.$color-white;
+    padding: 100px 0;
+
+    .stats__container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 v.$space-xl;
+        text-align: center;
+
+        .stats__lead {
+            margin: 0 26px 80px 0;
+            color: #000000;
+            font-family: v.$text-secondary-family;
+            font-size: 40px;
+            font-weight: v.$fw-regular;
+            letter-spacing: v.$letter-spacing-base;
+            line-height: 1.2;
+        }
+    }
+
+
+
+    .stats__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: v.$space-3xl;
+
+        @include m.mq-max(v.$lg) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: v.$space-2xl;
+        }
+
+        @include m.mq-max(v.$xl) {
+            grid-template-columns: 1fr;
+            gap: v.$space-xl;
+        }
+    }
+
+    .stats__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stats__number {
+        display: block;
+        color: v.$text-accent;
+        font-family: v.$text-secondary-family;
+        font-size: 100px;
+        font-weight: v.$fw-light;
+        letter-spacing: v.$letter-spacing-base;
+        line-height: 1;
+        margin-bottom: 16px;
+    }
+
+    .stats__label {
+        margin: 0;
+        color: v.$color-gray;
+        font-family: v.$text-secondary-family;
+        font-size: v.$fs-lg;
+        font-weight: v.$fw-light;
+        letter-spacing: v.$letter-spacing-base;
     }
 }

@@ -14,16 +14,17 @@ $space-3xl: 64px;
 /*----------------------------------------------*/
 /* color */
 /*----------------------------------------------*/
-$main-bg-color: #FFFFFF;
+$color-white: #FFFFFF;
+$text-accent: #BBA085;
+$color-gray-dark: #4F4F4F;
+$color-gray: #555555;
 $card-bg-color: #F8F8F8;
 $card-text-color: #5B5B5B;
+// とりあえず。最後の命名見直す
+$card-text-color-02: #414141;
 $btn-bg-color: #E9E1D9;
 $btn-text-color: #484848;
 
-
-$text-primary: #BBA085;
-$text-secondary: #4F4F4F;
-$text-tertiary: #555555;
 /*----------------------------------------------*/
 /* font-family */
 /*----------------------------------------------*/

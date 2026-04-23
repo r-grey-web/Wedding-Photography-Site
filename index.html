@@ -19,6 +19,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <!-- Custom Scss -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Tailwind -->
@@ -197,18 +198,22 @@
 
         <!-- Testimonials Start -->
         <section id="testimonials" class="testimonials">
-            <div class="testimonials__title-wrapper">
+            <div class="testimonials__title-container">
                 <h2 class="testimonials__title">Client Testimonials</h2>
             </div>
             <div class="testimonials__container">
                 <div class="testimonials__content">
                     <button class="testimonials__arrow testimonials__arrow--prev" type="button"
-                        aria-label="Previous testimonial">&lt;</button>
-
+                        aria-label="Previous testimonial">
+                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.9313 0.859372L1.93129 12.1768L20.9313 23.8594" stroke="#BBA085"
+                                stroke-width="2" />
+                        </svg>
+                    </button>
                     <div class="testimonials__card">
-                        <img src="assets/icons/quotation-marks.svg" alt="" role="presentation"
-                            class="testimonials_decoration">
-                        <p class="testimonials__message">Showcasing your Big Day in a Memorable & Unforgettable way.</p>
+                        <span class="testimonials__quote" aria-hidden="true">“</span>
+                        <p class="testimonials__message">Showcasing your Big Day in a<br>Memorable &
+                            Unforgettable<br>way.</p>
                         <p class="testimonials__name">Sarah & Luke</p>
                     </div>
 
@@ -217,7 +222,11 @@
                     </div>
 
                     <button class="testimonials__arrow testimonials__arrow--next" type="button"
-                        aria-label="Next testimonial">&gt;</button>
+                        aria-label="Next testimonial"><svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.523803 23.8521L19.5238 12.5346L0.523801 0.852053" stroke="#BBA085"
+                                stroke-width="2" />
+                        </svg></button>
                 </div>
             </div>
         </section><!-- Testimonials End -->
@@ -225,7 +234,7 @@
         <!-- Achievements Start -->
         <section class="stats">
             <div class="stats__container">
-                <h2 class="stats__lead">HELPING COUPLES BRING TO LIFE<br> THEIR WEDDING DREAMS</h2>
+                <h2 class="stats__lead">HELPING COUPLES BRING TO LIFE<br>THEIR WEDDING DREAMS</h2>
 
                 <div class="stats__list">
                     <div class="stats__item">
