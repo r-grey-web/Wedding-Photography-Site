@@ -63,7 +63,7 @@ header {
     .p-gnav__item {
         padding: 0 0px 8px 0;
         color: #363636;
-        font-family: "Playfair Display SC", serif;
+        font-family: v.$font-accent-02;
         font-size: 1.375rem;
         font-weight: v.$fw-regular;
         letter-spacing: v.$letter-spacing-base;
@@ -80,7 +80,7 @@ header {
         h1 {
             color: v.$text-accent;
             font-family: v.$text-primary-family;
-            font-size: v.$fs-4xl;
+            font-size: v.$fs-5xl;
             font-weight: v.$fw-regular;
             text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
@@ -128,7 +128,7 @@ header {
             margin-bottom: v.$space-m;
             color: v.$color-gray-dark;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-4xl;
+            font-size: v.$fs-5xl;
             font-weight: v.$fw-regular;
             line-height: 1.2;
         }
@@ -248,7 +248,7 @@ header {
             margin: 0;
             color: v.$card-text-color;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-4xl;
+            font-size: v.$fs-5xl;
             font-weight: v.$fw-regular;
             text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
@@ -284,7 +284,7 @@ header {
                 }
 
                 .service-card__price {
-                    font-size: v.$fs-3xl;
+                    font-size: v.$fs-4xl;
                 }
 
                 .service-card__btn {
@@ -408,7 +408,7 @@ header {
                 padding-left: 0.065em;
                 color: #686868;
                 font-family: v.$text-primary-family;
-                font-size: v.$fs-3xl;
+                font-size: v.$fs-4xl;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 1.31;
@@ -451,7 +451,7 @@ header {
             margin: 0;
             color: v.$card-text-color;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-4xl;
+            font-size: v.$fs-5xl;
             font-weight: v.$fw-regular;
             text-indent: 0.33em;
             letter-spacing: v.$letter-spacing-base;
@@ -478,7 +478,7 @@ header {
                 margin: 0 0 23px;
                 color: #B58B61;
                 font-family: "Cormorant", serif;
-                font-size: v.$fs-5xl;
+                font-size: v.$fs-6xl;
                 font-weight: v.$fw-semibold;
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 0.5;
@@ -670,64 +670,68 @@ header {
     padding: 100px 0;
 
     .stats__container {
-        max-width: 1440px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 v.$space-xl;
+        padding: 0 25px;
         text-align: center;
 
         .stats__lead {
-            margin: 0 26px 80px 0;
+            margin: 0 26px v.$space-xl 0;
             color: #000000;
             font-family: v.$text-secondary-family;
-            font-size: 40px;
+            font-size: v.$fs-3xl;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1.2;
         }
-    }
 
-
-
-    .stats__list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: v.$space-3xl;
-
-        @include m.mq-max(v.$lg) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: v.$space-2xl;
+        .stats__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 30px;
         }
 
-        @include m.mq-max(v.$xl) {
-            grid-template-columns: 1fr;
-            gap: v.$space-xl;
+        .stats__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+
+            &:nth-child(2) {
+                .stats__label {
+                    transform: translateX(4px);
+                }
+            }
         }
-    }
 
-    .stats__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        .stats__number {
+            display: block;
+            color: v.$text-accent;
+            font-family: v.$font-accent-02;
+            font-size: 128px;
+            font-weight: v.$fw-regular;
+            letter-spacing: v.$letter-spacing-base;
+            line-height: 1;
 
-    .stats__number {
-        display: block;
-        color: v.$text-accent;
-        font-family: v.$text-secondary-family;
-        font-size: 100px;
-        font-weight: v.$fw-light;
-        letter-spacing: v.$letter-spacing-base;
-        line-height: 1;
-        margin-bottom: 16px;
-    }
+            .stats__number--small {
+                font-size: 96px;
+            }
 
-    .stats__label {
-        margin: 0;
-        color: v.$color-gray;
-        font-family: v.$text-secondary-family;
-        font-size: v.$fs-lg;
-        font-weight: v.$fw-light;
-        letter-spacing: v.$letter-spacing-base;
+            &.stats__number--offset {
+                transform: translate(4.5px, 10px);
+            }
+        }
+
+        .stats__label {
+            margin: 0;
+            color: #535353;
+            font-family: v.$text-primary-family;
+            font-size: v.$fs-3xl;
+            font-weight: v.$fw-regular;
+            line-height: 1.25;
+            white-space: nowrap;
+            transform: translateX(-2px);
+        }
     }
 }

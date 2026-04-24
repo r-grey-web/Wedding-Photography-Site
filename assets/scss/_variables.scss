@@ -14,13 +14,13 @@ $space-3xl: 64px;
 /*----------------------------------------------*/
 /* color */
 /*----------------------------------------------*/
+// とりあえず。最後の命名見直す
 $color-white: #FFFFFF;
 $text-accent: #BBA085;
 $color-gray-dark: #4F4F4F;
 $color-gray: #555555;
 $card-bg-color: #F8F8F8;
 $card-text-color: #5B5B5B;
-// とりあえず。最後の命名見直す
 $card-text-color-02: #414141;
 $btn-bg-color: #E9E1D9;
 $btn-text-color: #484848;
@@ -28,9 +28,11 @@ $btn-text-color: #484848;
 /*----------------------------------------------*/
 /* font-family */
 /*----------------------------------------------*/
+// とりあえず。最後の命名見直す
 $text-primary-family: "Ephesis", cursive;
 $text-secondary-family: "Cormorant Garamond", serif;
 $font-accent: "Raleway", sans-serif;
+$font-accent-02: "Playfair Display SC", serif;
 
 /*----------------------------------------------*/
 /* font-size */
@@ -40,9 +42,10 @@ $fs-md: 1rem; // 16px
 $fs-lg: 1.25rem; // 20px
 $fs-xl: 1.75rem; // 28px
 $fs-2xl: 2.25rem; // 36px
-$fs-3xl: 3.125rem; // 50px
-$fs-4xl: 4rem; // 64px
-$fs-5xl: 7.5rem; // 120px
+$fs-3xl: 2.5rem; // 40px
+$fs-4xl: 3.125rem; // 50px
+$fs-5xl: 4rem; // 64px
+$fs-6xl: 7.5rem; // 120px
 
 /*----------------------------------------------*/
 /* font-weight */
@@ -62,7 +65,6 @@ $letter-spacing-wide-offset: 0.2em;
 /*----------------------------------------------*/
 /* letter-spacing */
 /*----------------------------------------------*/
-$letter-spacing-none: normal;
 $letter-spacing-base: 0.05em;
 $letter-spacing-wide: 0.2em;
 

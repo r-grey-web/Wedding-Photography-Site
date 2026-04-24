@@ -658,58 +658,57 @@ header .hero-text p {
   padding: 100px 0;
 }
 .stats .stats__container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 25px;
   text-align: center;
 }
 .stats .stats__container .stats__lead {
-  margin: 0 26px 80px 0;
+  margin: 0 26px 48px 0;
   color: #000000;
   font-family: "Cormorant Garamond", serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
-.stats .stats__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 64px;
+.stats .stats__container .stats__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
 }
-@media (width < 992px) {
-  .stats .stats__list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 56px;
-  }
-}
-@media (width < 1090px) {
-  .stats .stats__list {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-}
-.stats .stats__item {
+.stats .stats__container .stats__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
-.stats .stats__number {
+.stats .stats__container .stats__item:nth-child(2) .stats__label {
+  transform: translateX(4px);
+}
+.stats .stats__container .stats__number {
   display: block;
   color: #BBA085;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 100px;
-  font-weight: 300;
+  font-family: "Playfair Display SC", serif;
+  font-size: 128px;
+  font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1;
-  margin-bottom: 16px;
 }
-.stats .stats__label {
+.stats .stats__container .stats__number .stats__number--small {
+  font-size: 96px;
+}
+.stats .stats__container .stats__number.stats__number--offset {
+  transform: translate(4.5px, 10px);
+}
+.stats .stats__container .stats__label {
   margin: 0;
-  color: #555555;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 0.05em;
+  color: #535353;
+  font-family: "Ephesis", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  white-space: nowrap;
+  transform: translateX(-2px);
 }/*# sourceMappingURL=style.css.map */
