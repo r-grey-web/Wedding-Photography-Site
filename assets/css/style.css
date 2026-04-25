@@ -718,7 +718,7 @@ header .hero-text p {
 /*----------------------------------------------*/
 .contact {
   background-color: #FFFFFF;
-  padding: 65px 0;
+  padding: 65px 0 109px;
 }
 
 .contact__container {
@@ -820,4 +820,97 @@ header .hero-text p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*----------------------------------------------*/
+/* Footer */
+/*----------------------------------------------*/
+.footer__container {
+  height: 398px;
+  background-color: #F8F8F8;
+  padding: 0px 0 60px;
+  text-align: center;
+}
+.footer__container .p-gnav {
+  min-height: 109px;
+  padding: 0 108px 0 111px;
+}
+.footer__container .p-gnav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 33px;
+}
+.footer__container .p-gnav__left-items {
+  display: flex;
+  gap: 67px;
+}
+@media (width >= 1440px) {
+  .footer__container .p-gnav__left-items {
+    justify-content: space-evenly;
+  }
+}
+.footer__container .p-logo {
+  margin: 8px 0px 0 30px;
+}
+.footer__container .p-logo .p-logo__img {
+  max-height: 101px;
+  max-width: 279px;
+}
+.footer__container .p-gnav__right-items {
+  display: flex;
+  justify-content: flex-end;
+  gap: 54px;
+}
+@media (width >= 1440px) {
+  .footer__container .p-gnav__right-items {
+    justify-content: space-evenly;
+  }
+}
+.footer__container .p-gnav__item {
+  padding: 0 0px 9px 0;
+  color: #363636;
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+.footer__container .footer__description {
+  margin: 0 auto 44px;
+  max-width: 800px;
+}
+.footer__container .footer__description .footer__description-body {
+  margin: 0;
+  color: #2D2D2D;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.22;
+}
+.footer__container .footer__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16.5px;
+  margin-bottom: 24px;
+}
+.footer__container .footer__social-links .footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) {
+  .footer__container .footer__social-links .footer__social-icon:hover:hover {
+    opacity: 0.7;
+  }
+}
+.footer__container .footer__copyright {
+  color: #2D2D2D;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
