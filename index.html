@@ -44,7 +44,7 @@
                 <ul class="p-gnav__right-items">
                     <li class="p-gnav__item"><a href="#portfolio">PORTFOLIO</a></li>
                     <li class="p-gnav__item"><a href="#blog">BLOG</a></li>
-                    <li class="p-gnav__item contact"><a href="#contact">CONTACT</a></li>
+                    <li class="p-gnav__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
@@ -262,34 +262,35 @@
         </section><!-- Achievements End -->
 
         <!-- Contact Start -->
-        <section id="contact">
-            <div class="contact-container">
-                <div class="form-section">
-                    <span class="sub-title">CONTACT</span>
-                    <h1 class="main-title">Get in Touch</h1>
+        <section id="contact" class="contact">
+            <div class="contact__container">
+                <div class="contact__form">
+                    <span class="contact__subtitle">CONTACT</span>
+                    <h1 class="contact__title">Get in Touch</h1>
 
-                    <form action="#">
-                        <div class="input-group">
-                            <label for="name">NAME</label>
-                            <input type="text" id="name" name="name" autocomplete="off">
+                    <form class="contact__form-body" action="#">
+                        <div class="contact__field">
+                            <label class="contact__label" for="name">NAME</label>
+                            <input class="contact__input" type="text" id="name" name="name" autocomplete="off">
                         </div>
 
-                        <div class="input-group">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" autocomplete="off">
+                        <div class="contact__field">
+                            <label class="contact__label" for="email">EMAIL</label>
+                            <input class="contact__input" type="email" id="email" name="email" autocomplete="off">
                         </div>
 
-                        <div class="input-group">
-                            <label for="message">MESSAGE</label>
-                            <textarea id="message" name="message" rows="4" autocomplete="off"></textarea>
+                        <div class="contact__field">
+                            <label class="contact__label" for="message">MESSAGE</label>
+                            <textarea class="contact__textarea" id="message" name="message" rows="4"
+                                autocomplete="off"></textarea>
                         </div>
 
-                        <button type="submit" class="send-button">Send</button>
+                        <button class="contact__button" type="submit">Send</button>
                     </form>
                 </div>
 
-                <div class="image-section">
-                    <img src="assets/images/contact-photo.jpg" alt="Wedding Couple">
+                <div class="contact__image">
+                    <img class="contact__photo" src="assets/images/contact-photo.jpg" alt="Wedding Couple">
                 </div>
             </div>
         </section><!-- Contact End -->

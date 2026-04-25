@@ -186,7 +186,7 @@ header {
         }
 
         .about__text-group {
-            color: #2D2D2D;
+            color: v.$color-contents;
             font-family: v.$text-secondary-family;
             font-size: 28px;
             font-weight: v.$fw-regular;
@@ -495,7 +495,7 @@ header {
 
             .portfolio__description {
                 margin: 0;
-                color: #2D2D2D;
+                color: v.$color-contents;
                 font-family: v.$text-secondary-family;
                 font-size: v.$fs-xl;
                 font-weight: v.$fw-light;
@@ -667,7 +667,7 @@ header {
 /*----------------------------------------------*/
 .stats {
     background-color: v.$color-white;
-    padding: 100px 0;
+    padding: 100px 0 65px;
 
     .stats__container {
         max-width: 1200px;
@@ -732,6 +732,112 @@ header {
             line-height: 1.25;
             white-space: nowrap;
             transform: translateX(-2px);
+        }
+    }
+}
+
+/*----------------------------------------------*/
+/* Contact */
+/*----------------------------------------------*/
+.contact {
+    background-color: v.$color-white;
+    padding: 65px 0;
+}
+
+.contact__container {
+    display: flex;
+    width: 1260px;
+    max-width: 1260px;
+    height: 815px;
+    margin: 0 98px 0 auto;
+
+    .contact__form {
+        flex: 0 0 655px;
+        padding: 70px 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: v.$card-bg-color;
+
+        .contact__subtitle {
+            margin-bottom: 0px;
+            color: v.$text-accent;
+            font-family: v.$font-accent;
+            font-size: v.$fs-xl;
+            font-weight: v.$fw-medium;
+            letter-spacing: v.$letter-spacing-wide;
+        }
+
+        .contact__title {
+            margin-bottom: 102px;
+            color: v.$card-text-color;
+            font-family: v.$text-secondary-family;
+            font-size: v.$fs-5xl;
+            font-weight: v.$fw-regular;
+            letter-spacing: v.$letter-spacing-base;
+            line-height: 1.35;
+        }
+
+        .contact__field {
+            margin-bottom: 28px;
+
+            &:nth-child(2) {
+                margin-bottom: 39px;
+
+                .contact__label {
+                    margin-bottom: -15px;
+                }
+            }
+
+            &:nth-child(3) {
+                margin-bottom: v.$space-m;
+            }
+        }
+
+        .contact__label {
+            display: block;
+            margin-bottom: -20px;
+            color: v.$color-contents;
+            font-family: v.$text-secondary-family;
+            font-size: v.$fs-xl;
+            font-weight: v.$fw-light;
+        }
+
+        .contact__input,
+        .contact__textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #C6C6C6;
+            background-color: transparent;
+            outline: none;
+
+            &:focus {
+                border-bottom-color: v.$text-accent;
+            }
+        }
+
+        .contact__textarea {
+            resize: vertical;
+            min-height: 124px;
+        }
+
+        .contact__button {
+            @include m.btn-style;
+            padding: v.$space-xs 66px;
+            width: fit-content;
+            cursor: pointer;
+            border: none;
+            color: #505050;
+        }
+    }
+
+    .contact__image {
+        flex: 1;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
