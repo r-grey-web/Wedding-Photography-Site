@@ -17,84 +17,139 @@ header {
     min-height: max(200px, min(calc(100vw * 913 / 1440), 100vh));
     position: relative;
     background: url("../images/hero-image.jpg") center / cover no-repeat;
+}
 
-    .p-gnav {
-        min-height: 109px;
-        padding: 0 114px 0 104px;
-        background: color.change(#F5F5F5, $alpha: 0.8);
+.p-gnav {
+    min-height: 109px;
+    padding: 0 114px 0 104px;
+    background: color.change(#F5F5F5, $alpha: 0.8);
+
+    @include m.mq-max(v.$xxl) {
+        // 992px〜1440px
+        padding-right: clamp(38px, 3.83vw, 114px);
+        padding-left: clamp(34.6px, 3.494vw, 104px);
     }
 
     .p-gnav__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 50px;
         width: 100%;
-    }
-
-    .p-gnav__left-items {
-        display: flex;
-        gap: 67px;
 
         @include m.mq-min(v.$xxl) {
-            justify-content: space-evenly;
+            // 1440px〜2560px
+            justify-content: space-around;
+        }
+
+        @include m.mq-max(v.$xxl) {
+            // justify-content: center;
+        }
+
+        @include m.mq-max(v.$lg) {
+            display: none;
+            // ハンバーガーに切り替え
         }
     }
+}
 
-    .p-logo {
-        margin: 8px 0px 0 30px;
+.p-gnav__left-items {
+    display: flex;
+    gap: 67px;
 
-        .p-logo__img {
-            max-height: 101px;
-            max-width: 279px;
-        }
+    @include m.mq-min(v.$xxl) {
+        // 1440px〜2560px
+        gap: clamp(67px, 4.7vw, 120px);
     }
 
-    .p-gnav__right-items {
-        display: flex;
-        justify-content: flex-end;
-        gap: 54px;
+    @include m.mq-max(v.$xxl) {
+        // 992px〜1440px
+        gap: clamp(32px, 4.652vw, 67px);
+    }
+}
 
-        @include m.mq-min(v.$xxl) {
-            justify-content: space-evenly;
-        }
+.p-logo {
+    flex-shrink: 0;
+    margin: 8px 0px 0 30px;
+
+    .p-logo__img {
+        height: 101px;
+        width: 279px;
+    }
+}
+
+.p-gnav__right-items {
+    display: flex;
+    justify-content: flex-end;
+    gap: 54px;
+
+    @include m.mq-min(v.$xxl) {
+        // 1440px〜2560px
+        gap: clamp(67px, 4.7vw, 120px);
     }
 
-    .p-gnav__item {
-        padding: 0 0px 8px 0;
-        color: #363636;
-        font-family: v.$font-accent-02;
-        font-size: 1.375rem;
+    @include m.mq-max(v.$xxl) {
+        // 992px〜1440px
+        gap: clamp(28px, 3.75vw, 54px);
+    }
+}
+
+.p-gnav__item {
+    padding: 0 0px 8px 0;
+    color: #363636;
+    font-family: v.$font-accent-02;
+    font-size: 1.375rem;
+    font-weight: v.$fw-regular;
+    letter-spacing: v.$letter-spacing-base;
+
+    @include m.mq-max(v.$xxl) {
+        // 992px〜1440px 
+        font-size: clamp(18px, 1.814vw, 22px);
+    }
+}
+
+.hero__titles {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+
+    .hero__catch {
+        color: v.$text-accent;
+        font-family: v.$text-primary-family;
+        font-size: v.$fs-5xl;
         font-weight: v.$fw-regular;
+        text-indent: v.$letter-spacing-base-offset;
         letter-spacing: v.$letter-spacing-base;
-    }
+        -webkit-text-stroke: 1.5px v.$text-accent;
+        paint-order: stroke fill;
 
-    .hero-text {
-        position: absolute;
-        top: 49.5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-        text-align: center;
-
-        h1 {
-            color: v.$text-accent;
-            font-family: v.$text-primary-family;
-            font-size: v.$fs-5xl;
-            font-weight: v.$fw-regular;
-            text-indent: v.$letter-spacing-base-offset;
-            letter-spacing: v.$letter-spacing-base;
-            -webkit-text-stroke: 1.5px v.$text-accent;
-            paint-order: stroke fill;
+        @include m.mq-min(v.$xxl) {
+            // 1440px〜2560px
+            font-size: clamp(v.$fs-5xl, 3.125vw, v.$fs-5xl-6xl);
         }
 
-        p {
-            color: v.$color-white;
-            font-family: v.$text-secondary-family;
-            font-size: 80px;
-            font-weight: v.$fw-semibold;
-            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-            transform: translateY(5px);
+        @include m.mq-max(v.$xxl) {
+            font-size: clamp(v.$fs-3xl, 5.208vw, v.$fs-5xl);
+        }
+    }
+
+    .hero__title {
+        color: v.$color-white;
+        font-family: v.$text-secondary-family;
+        font-size: v.$fs-5xl-6xl;
+        font-weight: v.$fw-semibold;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        transform: translateY(5px);
+
+        @include m.mq-min(v.$xxl) {
+            // 1440px〜2560px
+            font-size: clamp(v.$fs-5xl-6xl, 3.75vw, v.$fs-5xl-7xl);
+        }
+
+        @include m.mq-max(v.$xxl) {
+            font-size: clamp(56px, 7.291vw, v.$fs-5xl-6xl);
         }
     }
 }
@@ -260,6 +315,10 @@ header {
         display: flex;
         justify-content: center;
         gap: 66px;
+
+        @include m.mq-max(v.$xxl) {
+            flex-wrap: wrap;
+        }
 
         .service-card__decoration {
             margin-left: 15px;
@@ -462,16 +521,24 @@ header {
     .portfolio__content-wrapper {
         display: flex;
 
+        @include m.mq-max(v.$xxl) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .portfolio__text-box {
             align-self: flex-end;
             width: 562px;
-            max-width: 562px;
             height: 323px;
             max-height: 323px;
             padding: 0px 45px 70px 106px;
             text-align: left;
             background-color: v.$card-bg-color;
             white-space: nowrap;
+
+            @include m.mq-max(v.$xxl) {
+                width: 100%;
+            }
 
             .portfolio__number {
                 display: inline-block;
@@ -518,6 +585,10 @@ header {
                     margin-right: 72px;
                     width: 373px;
                     height: 470px;
+
+                    @include m.mq-max(v.$xxl) {
+                        margin-right: 0px;
+                    }
                 }
             }
         }
@@ -715,7 +786,7 @@ header {
             line-height: 1;
 
             .stats__number--small {
-                font-size: 96px;
+                font-size: v.$fs-5xl-7xl;
             }
 
             &.stats__number--offset {
@@ -747,9 +818,18 @@ header {
 .contact__container {
     display: flex;
     width: 1260px;
-    max-width: 1260px;
     height: 815px;
     margin: 0 98px 0 auto;
+
+    @include m.mq-min(v.$xxl) {
+        margin: 0 auto;
+    }
+
+    @include m.mq-max(v.$xxl) {
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+    }
 
     .contact__form {
         flex: 0 0 655px;
@@ -757,6 +837,12 @@ header {
         display: flex;
         flex-direction: column;
         background-color: v.$card-bg-color;
+
+        @include m.mq-max(v.$xxl) {
+            flex: 1;
+            width: 100%;
+            padding: 60px 40px;
+        }
 
         .contact__subtitle {
             margin-bottom: 0px;
@@ -852,54 +938,16 @@ header {
     text-align: center;
 
     .p-gnav {
-        min-height: 109px;
         padding: 0 108px 0 111px;
+
+        @include m.mq-max(v.$xxl) {
+            padding-right: clamp(36px, 3.629vw, 108px);
+            padding-left: clamp(37px, 3.729vw, 111px);
+        }
     }
 
     .p-gnav__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        width: 100%;
         margin-bottom: 33px;
-    }
-
-    .p-gnav__left-items {
-        display: flex;
-        gap: 67px;
-
-        @include m.mq-min(v.$xxl) {
-            justify-content: space-evenly;
-        }
-    }
-
-    .p-logo {
-        margin: 8px 0px 0 30px;
-
-        .p-logo__img {
-            max-height: 101px;
-            max-width: 279px;
-        }
-    }
-
-    .p-gnav__right-items {
-        display: flex;
-        justify-content: flex-end;
-        gap: 54px;
-
-        @include m.mq-min(v.$xxl) {
-            justify-content: space-evenly;
-        }
-    }
-
-    .p-gnav__item {
-        padding: 0 0px 9px 0;
-        color: #363636;
-        font-family: v.$font-accent-02;
-        font-size: 1.375rem;
-        font-weight: v.$fw-regular;
-        letter-spacing: v.$letter-spacing-base;
     }
 
     .footer__description {

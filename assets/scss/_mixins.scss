@@ -34,7 +34,7 @@
 /* Media Queries */
 /*----------------------------------------------*/
 @mixin mq-min($width) {
-    @media (width >= $width) {
+    @media (width > $width) {
         @content;
     }
 }
