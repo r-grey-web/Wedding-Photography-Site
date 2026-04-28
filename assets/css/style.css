@@ -56,6 +56,11 @@ header {
   padding: 0 114px 0 104px;
   background: rgba(245, 245, 245, 0.8);
 }
+@media (width < 992px) {
+  .p-gnav {
+    display: none;
+  }
+}
 @media (width < 1440px) {
   .p-gnav {
     padding-right: clamp(38px, 3.83vw, 114px);
@@ -73,11 +78,6 @@ header {
     justify-content: space-around;
   }
 }
-@media (width < 992px) {
-  .p-gnav .p-gnav__container {
-    display: none;
-  }
-}
 
 .p-gnav__left-items {
   display: flex;
@@ -90,7 +90,7 @@ header {
 }
 @media (width < 1440px) {
   .p-gnav__left-items {
-    gap: clamp(32px, 4.652vw, 67px);
+    gap: clamp(30px, -3.246rem + 8.259vw, 67px);
   }
 }
 
@@ -115,7 +115,7 @@ header {
 }
 @media (width < 1440px) {
   .p-gnav__right-items {
-    gap: clamp(28px, 3.75vw, 54px);
+    gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
   }
 }
 
@@ -131,6 +131,25 @@ header {
   .p-gnav__item {
     font-size: clamp(18px, 1.814vw, 22px);
   }
+}
+
+.p-gnav__h-menu-box {
+  display: none;
+}
+@media (width < 992px) {
+  .p-gnav__h-menu-box {
+    display: block;
+    position: fixed;
+    top: 2%;
+    right: 7%;
+    z-index: 100;
+  }
+}
+.p-gnav__h-menu-box .p-gnav__h-menu {
+  width: 35px;
+  height: 35px;
+  stroke: #363636;
+  stroke-width: 1;
 }
 
 .hero__titles {
@@ -153,49 +172,70 @@ header {
 }
 @media (width > 1440px) {
   .hero__titles .hero__catch {
-    font-size: clamp(4rem, 3.125vw, 80px);
+    font-size: clamp(4rem, 2.714rem + 1.429vw, 5rem);
   }
 }
 @media (width < 1440px) {
   .hero__titles .hero__catch {
-    font-size: clamp(2.5rem, 5.208vw, 4rem);
+    font-size: clamp(1.25rem, 0.464rem + 3.929vw, 4rem);
+  }
+}
+@media (width < 576px) {
+  .hero__titles .hero__catch {
+    -webkit-text-stroke-width: 1px;
   }
 }
 .hero__titles .hero__title {
   color: #FFFFFF;
   font-family: "Cormorant Garamond", serif;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 600;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   transform: translateY(5px);
 }
 @media (width > 1440px) {
   .hero__titles .hero__title {
-    font-size: clamp(80px, 3.75vw, 6rem);
+    font-size: clamp(5rem, 3.75vw, 6rem);
   }
 }
 @media (width < 1440px) {
   .hero__titles .hero__title {
-    font-size: clamp(56px, 7.291vw, 80px);
+    font-size: clamp(1.5rem, 0.5rem + 5vw, 5rem);
   }
 }
 
 /*----------------------------------------------*/
 /* Concept Message 01 */
 /*----------------------------------------------*/
-.concept-message-01 {
+.concept-message {
   padding: 100px 0;
   background-color: #F4F4F4;
 }
-.concept-message-01 .concept-message-01__content-box {
+@media (width < 1440px) {
+  .concept-message {
+    padding-block: clamp(1.375rem, -0.018rem + 6.964vw, 6.25rem);
+  }
+}
+.concept-message .concept-message__content-box {
   text-align: center;
 }
-.concept-message-01 .concept-message-01__content-box img {
+.concept-message .concept-message__content-box .concept-message__img {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
-.concept-message-01 .concept-message-01__content-box p {
-  margin-bottom: 32px;
+@media (width > 1440px) {
+  .concept-message .concept-message__content-box .concept-message__img {
+    width: clamp(4.438rem, 2.83rem + 1.786vw, 5.688rem);
+    height: auto;
+  }
+}
+@media (width < 1440px) {
+  .concept-message .concept-message__content-box .concept-message__img {
+    width: clamp(2.563rem, 2.027rem + 2.679vw, 4.438rem);
+  }
+}
+.concept-message .concept-message__content-box .concept-message__catch {
+  margin-bottom: 2rem;
   color: #BBA085;
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
@@ -203,15 +243,24 @@ header {
   text-indent: 0.2em;
   letter-spacing: 0.2em;
 }
-.concept-message-01 .concept-message-01__content-box h2 {
-  margin-bottom: 24px;
+@media (width > 1440px) {
+  .concept-message .concept-message__content-box .concept-message__catch {
+    font-size: clamp(1.75rem, 1.107rem + 0.714vw, 2.25rem);
+  }
+}
+.concept-message .concept-message__content-box .concept-message__title {
+  margin-bottom: 1.5rem;
   color: #4F4F4F;
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.2;
 }
-
+@media (width > 1440px) {
+  .concept-message .concept-message__content-box .concept-message__title {
+    font-size: clamp(4rem, 3.357rem + 0.714vw, 72px);
+  }
+}
 /*----------------------------------------------*/
 /* About */
 /*----------------------------------------------*/
@@ -390,7 +439,7 @@ header {
   letter-spacing: 0.05em;
 }
 .services .services__cards .service-card__price-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   font-family: "Cormorant Garamond", serif;
   line-height: 1.05;
 }
@@ -408,7 +457,7 @@ header {
   letter-spacing: 0.05em;
 }
 .services .services__cards .service-card__btn {
-  margin-top: 16px;
+  margin-top: 1rem;
   padding: 12px 36px;
   background-color: #E9E1D9;
   border: 2px solid #E9E1D9;
@@ -464,7 +513,7 @@ header {
   width: 100%;
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__decoration {
-  margin: 38px auto 24px;
+  margin: 38px auto 1.5rem;
   padding-left: 30px;
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__title {
@@ -493,12 +542,17 @@ header {
 .portfolio {
   padding: 104px 0 53px;
 }
+@media (width < 992px) {
+  .portfolio {
+    padding-inline: 30px;
+  }
+}
 .portfolio .portfolio__header {
   margin: 0 auto 58px;
   text-align: center;
 }
 .portfolio .portfolio__header .portfolio__sub-title {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   color: #BBA085;
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
@@ -518,6 +572,13 @@ header {
 }
 .portfolio .portfolio__content-wrapper {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (width > 1440px) {
+  .portfolio .portfolio__content-wrapper {
+    justify-content: center;
+  }
 }
 @media (width < 1440px) {
   .portfolio .portfolio__content-wrapper {
@@ -540,6 +601,11 @@ header {
     width: 100%;
   }
 }
+@media (width < 768px) {
+  .portfolio .portfolio__content-wrapper .portfolio__text-box {
+    padding: 0px 22.5px 35px 53px;
+  }
+}
 .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__number {
   display: inline-block;
   margin: 0 0 23px;
@@ -558,6 +624,11 @@ header {
   font-weight: 400;
   letter-spacing: 0.05em;
 }
+@media (width < 576px) {
+  .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__story-title {
+    font-size: clamp(2.5rem, 2.031rem + 2.344vw, 2.875rem);
+  }
+}
 .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description {
   margin: 0;
   color: #2D2D2D;
@@ -566,11 +637,30 @@ header {
   font-weight: 300;
   line-height: 1.22;
 }
+@media (width < 576px) {
+  .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description {
+    font-size: clamp(1.375rem, 0.906rem + 2.344vw, 1.75rem);
+  }
+}
+.portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description .portfolio__br--block-sp {
+  display: none;
+}
+@media (width < 576px) {
+  .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description .portfolio__br--block-sp {
+    display: block;
+  }
+}
 .portfolio .portfolio__content-wrapper .portfolio__images {
+  justify-content: center;
   display: flex;
   gap: 37px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (width < 992px) {
+  .portfolio .portfolio__content-wrapper .portfolio__images {
+    flex-wrap: wrap;
+  }
 }
 .portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:first-child {
   width: 394px;
@@ -584,6 +674,12 @@ header {
 @media (width < 1440px) {
   .portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:last-child {
     margin-right: 0px;
+  }
+}
+@media (width < 992px) {
+  .portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:first-child, .portfolio .portfolio__content-wrapper .portfolio__images .portfolio__img:last-child {
+    width: 100%;
+    height: auto;
   }
 }
 .portfolio .portfolio__btn-wrapper {
@@ -623,7 +719,7 @@ header {
 }
 .testimonials .testimonials__title-container {
   margin: 0 auto;
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
   background-color: #FFFFFF;
   text-align: center;
 }
@@ -651,8 +747,8 @@ header {
 .testimonials .testimonials__container .testimonials__content .testimonials__arrow {
   width: 39px;
   height: 57px;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
   background-color: #E9E1D9;
   cursor: pointer;
   display: flex;
@@ -741,7 +837,7 @@ header {
   text-align: center;
 }
 .stats .stats__container .stats__lead {
-  margin: 0 26px 48px 0;
+  margin: 0 26px 3rem 0;
   color: #000000;
   font-family: "Cormorant Garamond", serif;
   font-size: 2.5rem;
@@ -754,6 +850,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-right: 30px;
+}
+@media (width < 992px) {
+  .stats .stats__container .stats__list {
+    flex-wrap: wrap;
+  }
 }
 .stats .stats__container .stats__item {
   display: flex;
@@ -857,7 +958,7 @@ header {
   margin-bottom: -15px;
 }
 .contact__container .contact__form .contact__field:nth-child(3) {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 .contact__container .contact__form .contact__label {
   display: block;
@@ -899,7 +1000,7 @@ header {
   }
 }
 .contact__container .contact__form .contact__button {
-  padding: 8px 66px;
+  padding: 0.5rem 66px;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;

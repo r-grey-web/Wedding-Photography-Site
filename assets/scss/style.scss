@@ -24,6 +24,10 @@ header {
     padding: 0 114px 0 104px;
     background: color.change(#F5F5F5, $alpha: 0.8);
 
+    @include m.mq-max(v.$lg) {
+        display: none;
+    }
+
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
         padding-right: clamp(38px, 3.83vw, 114px);
@@ -37,17 +41,7 @@ header {
         width: 100%;
 
         @include m.mq-min(v.$xxl) {
-            // 1440px〜2560px
             justify-content: space-around;
-        }
-
-        @include m.mq-max(v.$xxl) {
-            // justify-content: center;
-        }
-
-        @include m.mq-max(v.$lg) {
-            display: none;
-            // ハンバーガーに切り替え
         }
     }
 }
@@ -63,7 +57,7 @@ header {
 
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
-        gap: clamp(32px, 4.652vw, 67px);
+        gap: clamp(30px, -3.246rem + 8.259vw, 67px)
     }
 }
 
@@ -89,7 +83,7 @@ header {
 
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
-        gap: clamp(28px, 3.75vw, 54px);
+        gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
     }
 }
 
@@ -107,6 +101,25 @@ header {
     }
 }
 
+.p-gnav__h-menu-box {
+    display: none;
+
+    @include m.mq-max(v.$lg) {
+        display: block;
+        position: fixed;
+        top: 2%;
+        right: 7%;
+        z-index: 100;
+    }
+
+    .p-gnav__h-menu {
+        width: 35px;
+        height: 35px;
+        stroke: #363636;
+        stroke-width: 1;
+    }
+}
+
 .hero__titles {
     position: absolute;
     top: 49.5%;
@@ -118,7 +131,7 @@ header {
     .hero__catch {
         color: v.$text-accent;
         font-family: v.$text-primary-family;
-        font-size: v.$fs-5xl;
+        font-size: v.$fs-64;
         font-weight: v.$fw-regular;
         text-indent: v.$letter-spacing-base-offset;
         letter-spacing: v.$letter-spacing-base;
@@ -127,29 +140,35 @@ header {
 
         @include m.mq-min(v.$xxl) {
             // 1440px〜2560px
-            font-size: clamp(v.$fs-5xl, 3.125vw, v.$fs-5xl-6xl);
+            font-size: clamp(4rem, 2.714rem + 1.429vw, 5rem);
         }
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(v.$fs-3xl, 5.208vw, v.$fs-5xl);
+            // 320px〜1440px
+            font-size: clamp(1.25rem, 0.464rem + 3.929vw, 4rem);
+        }
+
+        @include m.mq-max(v.$sm) {
+            -webkit-text-stroke-width: 1px;
         }
     }
 
     .hero__title {
         color: v.$color-white;
         font-family: v.$text-secondary-family;
-        font-size: v.$fs-5xl-6xl;
+        font-size: v.$fs-80;
         font-weight: v.$fw-semibold;
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         transform: translateY(5px);
 
         @include m.mq-min(v.$xxl) {
             // 1440px〜2560px
-            font-size: clamp(v.$fs-5xl-6xl, 3.75vw, v.$fs-5xl-7xl);
+            font-size: clamp(v.$fs-80, 3.75vw, v.$fs-96);
         }
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(56px, 7.291vw, v.$fs-5xl-6xl);
+            // 320px〜1440px
+            font-size: clamp(1.5rem, 0.5rem + 5vw, 5rem);
         }
     }
 }
@@ -157,35 +176,71 @@ header {
 /*----------------------------------------------*/
 /* Concept Message 01 */
 /*----------------------------------------------*/
-.concept-message-01 {
+.concept-message {
     padding: 100px 0;
     background-color: #F4F4F4;
 
-    .concept-message-01__content-box {
+    @include m.mq-max(v.$xxl) {
+        // 320px〜1440px
+        padding-block: clamp(1.375rem, -0.018rem + 6.964vw, 6.25rem);
+    }
+
+    .concept-message__content-box {
         text-align: center;
 
-        img {
+        .concept-message__img {
             display: inline-block;
             margin-bottom: v.$space-m;
+
+            @include m.mq-min(v.$xxl) {
+                // 1440px〜2560px
+                width: clamp(4.438rem, 2.83rem + 1.786vw, 5.688rem);
+                height: auto;
+            }
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+                width: clamp(2.563rem, 2.027rem + 2.679vw, 4.438rem);
+            }
         }
 
-        p {
+        .concept-message__catch {
             margin-bottom: v.$space-l;
             color: v.$text-accent;
             font-family: v.$font-accent;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: v.$letter-spacing-wide-offset;
             letter-spacing: v.$letter-spacing-wide;
+
+            @include m.mq-min(v.$xxl) {
+                // 1440px〜2560px
+                font-size: clamp(v.$fs-28, 1.107rem + 0.714vw, 2.25rem);
+            }
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+
+            }
         }
 
-        h2 {
+        .concept-message__title {
             margin-bottom: v.$space-m;
             color: v.$color-gray-dark;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-5xl;
+            font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             line-height: 1.2;
+
+            @include m.mq-min(v.$xxl) {
+                // 1440px〜2560px
+                font-size: clamp(v.$fs-64, 3.357rem + 0.714vw, 72px);
+            }
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+
+            }
         }
     }
 }
@@ -293,7 +348,7 @@ header {
             margin-bottom: 5px;
             color: v.$text-accent;
             font-family: v.$font-accent;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: v.$letter-spacing-wide-offset;
             letter-spacing: v.$letter-spacing-wide;
@@ -303,7 +358,7 @@ header {
             margin: 0;
             color: v.$card-text-color;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-5xl;
+            font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
@@ -343,7 +398,7 @@ header {
                 }
 
                 .service-card__price {
-                    font-size: v.$fs-4xl;
+                    font-size: v.$fs-50;
                 }
 
                 .service-card__btn {
@@ -467,7 +522,7 @@ header {
                 padding-left: 0.065em;
                 color: #686868;
                 font-family: v.$text-primary-family;
-                font-size: v.$fs-4xl;
+                font-size: v.$fs-50;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 1.31;
@@ -478,7 +533,7 @@ header {
                 padding-left: 0.1em;
                 color: v.$card-text-color-02;
                 font-family: v.$text-secondary-family;
-                font-size: v.$fs-xl;
+                font-size: v.$fs-28;
                 font-weight: v.$fw-light;
                 line-height: 1.2;
             }
@@ -492,6 +547,10 @@ header {
 .portfolio {
     padding: 104px 0 53px;
 
+    @include m.mq-max(v.$lg) {
+        padding-inline: 30px;
+    }
+
     .portfolio__header {
         margin: 0 auto 58px;
         text-align: center;
@@ -500,7 +559,7 @@ header {
             margin-bottom: v.$space-xs;
             color: v.$text-accent;
             font-family: v.$font-accent;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: 0.74em;
             letter-spacing: v.$letter-spacing-wide;
@@ -510,7 +569,7 @@ header {
             margin: 0;
             color: v.$card-text-color;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-5xl;
+            font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             text-indent: 0.33em;
             letter-spacing: v.$letter-spacing-base;
@@ -520,6 +579,12 @@ header {
 
     .portfolio__content-wrapper {
         display: flex;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        @include m.mq-min(v.$xxl) {
+            justify-content: center;
+        }
 
         @include m.mq-max(v.$xxl) {
             flex-wrap: wrap;
@@ -540,12 +605,16 @@ header {
                 width: 100%;
             }
 
+            @include m.mq-max(v.$md) {
+                padding: 0px 22.5px 35px 53px;
+            }
+
             .portfolio__number {
                 display: inline-block;
                 margin: 0 0 23px;
                 color: #B58B61;
                 font-family: "Cormorant", serif;
-                font-size: v.$fs-6xl;
+                font-size: v.$fs-120;
                 font-weight: v.$fw-semibold;
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 0.5;
@@ -558,24 +627,46 @@ header {
                 font-size: 46px;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
+
+                @include m.mq-max(v.$sm) {
+                    font-size: clamp(2.5rem, 2.031rem + 2.344vw, 2.875rem);
+                }
             }
 
             .portfolio__description {
                 margin: 0;
                 color: v.$color-contents;
                 font-family: v.$text-secondary-family;
-                font-size: v.$fs-xl;
+                font-size: v.$fs-28;
                 font-weight: v.$fw-light;
                 line-height: 1.22;
+
+                @include m.mq-max(v.$sm) {
+                    font-size: clamp(1.375rem, 0.906rem + 2.344vw, 1.75rem);
+                }
+
+                .portfolio__br--block-sp {
+                    display: none;
+
+                    @include m.mq-max(v.$sm) {
+                        display: block;
+                    }
+                }
             }
         }
 
         .portfolio__images {
+            justify-content: center;
             display: flex;
             gap: 37px;
             object-fit: cover;
 
+            @include m.mq-max(v.$lg) {
+                flex-wrap: wrap;
+            }
+
             .portfolio__img {
+
                 &:first-child {
                     width: 394px;
                     height: 470px;
@@ -588,6 +679,14 @@ header {
 
                     @include m.mq-max(v.$xxl) {
                         margin-right: 0px;
+                    }
+                }
+
+                &:first-child,
+                &:last-child {
+                    @include m.mq-max(v.$lg) {
+                        width: 100%;
+                        height: auto;
                     }
                 }
             }
@@ -699,7 +798,7 @@ header {
                     margin-bottom: 74px;
                     color: v.$color-gray-dark;
                     font-family: v.$text-secondary-family;
-                    font-size: v.$fs-xl;
+                    font-size: v.$fs-28;
                     font-weight: v.$fw-regular;
                     line-height: 1.23;
                 }
@@ -708,7 +807,7 @@ header {
                     margin: 0;
                     color: v.$card-text-color-02;
                     font-family: v.$text-secondary-family;
-                    font-size: v.$fs-xl;
+                    font-size: v.$fs-28;
                     font-weight: v.$fw-light;
                     text-transform: uppercase;
                 }
@@ -750,7 +849,7 @@ header {
             margin: 0 26px v.$space-xl 0;
             color: #000000;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-3xl;
+            font-size: v.$fs-40;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1.2;
@@ -761,6 +860,10 @@ header {
             align-items: center;
             justify-content: space-between;
             padding-right: 30px;
+
+            @include m.mq-max(v.$lg) {
+                flex-wrap: wrap;
+            }
         }
 
         .stats__item {
@@ -786,7 +889,7 @@ header {
             line-height: 1;
 
             .stats__number--small {
-                font-size: v.$fs-5xl-7xl;
+                font-size: v.$fs-96;
             }
 
             &.stats__number--offset {
@@ -798,7 +901,7 @@ header {
             margin: 0;
             color: #535353;
             font-family: v.$text-primary-family;
-            font-size: v.$fs-3xl;
+            font-size: v.$fs-40;
             font-weight: v.$fw-regular;
             line-height: 1.25;
             white-space: nowrap;
@@ -848,7 +951,7 @@ header {
             margin-bottom: 0px;
             color: v.$text-accent;
             font-family: v.$font-accent;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             letter-spacing: v.$letter-spacing-wide;
         }
@@ -857,7 +960,7 @@ header {
             margin-bottom: 102px;
             color: v.$card-text-color;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-5xl;
+            font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1.35;
@@ -884,7 +987,7 @@ header {
             margin-bottom: -20px;
             color: v.$color-contents;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-light;
         }
 
@@ -958,7 +1061,7 @@ header {
             margin: 0;
             color: v.$color-contents;
             font-family: v.$text-secondary-family;
-            font-size: v.$fs-xl;
+            font-size: v.$fs-28;
             font-weight: v.$fw-light;
             line-height: 1.22;
         }
@@ -989,7 +1092,7 @@ header {
     .footer__copyright {
         color: v.$color-contents;
         font-family: v.$text-secondary-family;
-        font-size: v.$fs-lg;
+        font-size: v.$fs-20;
         font-weight: v.$fw-medium;
     }
 }

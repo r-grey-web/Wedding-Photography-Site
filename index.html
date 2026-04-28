@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -49,6 +51,10 @@
             </div>
         </nav>
 
+        <button class="p-gnav__h-menu-box" aria-label="メニューを開く">
+            <i class="p-gnav__h-menu" data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
         <div class="hero__titles">
             <p class="hero__catch">Your Dream Wedding Awaits</p>
             <h1 class="hero__title">Artistic Wedding Photography</h1>
@@ -57,12 +63,13 @@
 
     <main>
         <!-- Concept Message 01 Start -->
-        <section class="concept-message-01">
-            <div class="concept-message-01__content-box">
-                <img src="assets/decorations/decoration-01.svg" class="about-top__decoration" alt=""
-                    role="presentation">
-                <p>AWARD WINNING PHOTOGRAPHY</p>
-                <h2>Showcasing your big day in a memorable<br> and unforgettable way.</h2>
+        <section class="concept-message">
+            <div class="concept-message__content-box">
+                <img class="concept-message__img" src="assets/decorations/decoration-01.svg"
+                    class="about-top__decoration" alt="" role="presentation">
+                <p class="concept-message__catch">AWARD WINNING PHOTOGRAPHY</p>
+                <h2 class="concept-message__title">Showcasing your big day in a memorable<br> and unforgettable way.
+                </h2>
             </div>
         </section><!-- Concept Message 01 End -->
 
@@ -181,8 +188,8 @@
                     <div class="portfolio__text-box">
                         <span class="portfolio__number">01</span>
                         <h3 class="portfolio__story-title">Ricardo & Michelle</h3>
-                        <p class="portfolio__description">Lorem ipsum dolor sit amet consecte<br> Dignissim consectetur
-                            tristique purus<br> vehicula felis velit.
+                        <p class="portfolio__description">Lorem ipsum dolor sit amet<br class="portfolio__br--block-sp">
+                            consecte<br> Dignissim consectetur tristique purus<br> vehicula felis velit.
                         </p>
                     </div>
                     <div class="portfolio__images">
@@ -339,6 +346,9 @@
             Copyright 2024 All Rights Reserved
         </div>
     </footer><!-- Footer End -->
+
+    <!-- js -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
