@@ -24,14 +24,23 @@ header {
     padding: 0 114px 0 104px;
     background: color.change(#F5F5F5, $alpha: 0.8);
 
-    @include m.mq-max(v.$lg) {
-        display: none;
-    }
-
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
         padding-right: clamp(38px, 3.83vw, 114px);
         padding-left: clamp(34.6px, 3.494vw, 104px);
+    }
+
+    @include m.mq-max(v.$lg) {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+    }
+
+    &.is-open {
+        display: block;
     }
 
     .p-gnav__container {
@@ -41,7 +50,12 @@ header {
         width: 100%;
 
         @include m.mq-min(v.$xxl) {
+
             justify-content: space-around;
+        }
+
+        @include m.mq-max(v.$lg) {
+            flex-direction: column;
         }
     }
 }
@@ -58,6 +72,10 @@ header {
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
         gap: clamp(30px, -3.246rem + 8.259vw, 67px)
+    }
+
+    @include m.mq-max(v.$lg) {
+        flex-direction: column;
     }
 }
 
@@ -84,6 +102,10 @@ header {
     @include m.mq-max(v.$xxl) {
         // 992px〜1440px
         gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
+    }
+
+    @include m.mq-max(v.$lg) {
+        flex-direction: column;
     }
 }
 
@@ -642,7 +664,7 @@ header {
                 line-height: 1.22;
 
                 @include m.mq-max(v.$sm) {
-                    font-size: clamp(1.375rem, 0.906rem + 2.344vw, 1.75rem);
+                    font-size: clamp(1.25rem, 1.107rem + 0.714vw, 1.75rem);
                 }
 
                 .portfolio__br--block-sp {
