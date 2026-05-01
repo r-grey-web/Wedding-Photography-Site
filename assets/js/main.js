@@ -7,6 +7,7 @@ const humBtn = document.getElementById("ham-btn");
 
 humBtn.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
+    humBtn.classList.toggle('is-open');
     humBtn.setAttribute('aria-expanded', isOpen);
 });
 
@@ -16,3 +17,4 @@ document.addEventListener('click', e => {
         humBtn.setAttribute('aria-expanded', false);
     }
 });
+

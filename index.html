@@ -29,9 +29,13 @@
 </head>
 
 <body>
-    <!-- Hero Start -->
+    <!-- Top Start -->
     <header>
         <nav id="p-gnav" class="p-gnav">
+            <div class="p-gnav--sp-header">
+                <a href="index.html" class="p-gnav--sp-logo" aria-label="ホーム"><img src="assets/icons/logo.svg"
+                        alt="サイト名" class="p-gnav--sp-logo__img"></a>
+            </div>
             <div class="p-gnav__container">
                 <!-- Left menu -->
                 <ul class="p-gnav__left-items">
@@ -51,15 +55,19 @@
             </div>
         </nav>
 
-        <button id="ham-btn" class="p-gnav__h-menu-box" aria-label="メニューを開く">
-            <i class="p-gnav__h-menu" data-lucide="menu" aria-hidden="true"></i>
+        <!-- Hamburger menu -->
+        <button id="ham-btn" class="ham-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="p-gnav">
+            <i class="ham-btn--open" data-lucide="menu" aria-hidden="true"></i>
+            <i class="ham-btn--close" data-lucide="x" aria-hidden="true"></i>
         </button>
 
+        <!-- Hero -->
         <div class="hero__titles">
             <p class="hero__catch">Your Dream Wedding Awaits</p>
             <h1 class="hero__title">Artistic Wedding Photography</h1>
         </div>
-    </header><!-- Hero End -->
+
+    </header><!-- Top End -->
 
     <main>
         <!-- Concept Message 01 Start -->
