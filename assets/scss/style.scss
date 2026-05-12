@@ -333,7 +333,7 @@ header {
 /* Concept Message 01 */
 /*----------------------------------------------*/
 .concept-message {
-    padding: 100px 0;
+    padding: 100px 0 97px;
     background-color: #F4F4F4;
 
     @include m.mq-max(v.$xxl) {
@@ -342,6 +342,7 @@ header {
     }
 
     .concept-message__content-box {
+        padding-inline: 24px;
         text-align: center;
 
         .concept-message__img {
@@ -376,7 +377,8 @@ header {
 
             @include m.mq-max(v.$xxl) {
                 // 320px〜1440px
-
+                margin-bottom: clamp(1rem, 0.714rem + 1.429vw, 2rem);
+                font-size: clamp(0.813rem, 0.545rem + 1.339vw, 1.75rem);
             }
         }
 
@@ -395,7 +397,7 @@ header {
 
             @include m.mq-max(v.$xxl) {
                 // 320px〜1440px
-
+                font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
             }
         }
     }
@@ -407,21 +409,32 @@ header {
 .about-wrapper {
     display: flex;
     align-items: stretch;
-    // justify-content: space-between;
     width: 100%;
     height: 858px;
     max-height: 858px;
+
+    @include m.mq-max(v.$xxl) {
+        flex-wrap: wrap;
+    }
 
     .about__img-wrapper {
         width: 692px;
         height: 100%;
         overflow: hidden;
 
+        @include m.mq-max(v.$xxl) {
+            // width: 100%;
+            // height: 558px;
+        }
+
         .about__img {
+            display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            object-position: center bottom;
+
+            @include m.mq-max(v.$xxl) {}
         }
     }
 
@@ -431,7 +444,11 @@ header {
         flex-direction: column;
         align-items: center;
         width: 50%;
-        padding: 67px 30px 0px 0px;
+        padding: 70px 35px 0px 0px;
+
+        @include m.mq-max(v.$xxl) {
+            flex: none;
+        }
 
         .about__content-top {
             flex: 1;
@@ -440,7 +457,7 @@ header {
 
         .about_decoration-01 {
             display: inline-block;
-            margin: 0 0 40px 30px;
+            margin: 0 0 40px 35px;
         }
 
         .about__title {
@@ -449,13 +466,23 @@ header {
             font-family: v.$text-secondary-family;
             font-size: 48px;
             font-weight: v.$fw-regular;
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+                font-size: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
+            }
         }
 
         .about__text-group {
             color: v.$color-contents;
             font-family: v.$text-secondary-family;
-            font-size: 28px;
+            font-size: v.$fs-28;
             font-weight: v.$fw-regular;
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+            }
 
             .about__text-group-01 {
                 margin-bottom: 33px;
@@ -479,12 +506,24 @@ header {
             font-size: 3.75rem;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
+            text-indent: 0.07em;
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+                font-size: clamp(2.25rem, 1.821rem + 2.143vw, 3.75rem);
+            }
         }
 
         .about__btn {
-            margin-left: 10px;
-            padding: 11px 41px 13px;
+            margin-left: 15px;
+            margin-top: 5px;
+            padding: 12px 39px 12px 42px;
             @include m.btn-style;
+
+            @include m.mq-max(v.$xxl) {
+                // 320px〜1440px
+                font-size: clamp(0.875rem, 0.625rem + 1.25vw, 1.75rem);
+            }
         }
 
     }

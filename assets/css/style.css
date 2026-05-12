@@ -362,7 +362,7 @@ header {
 /* Concept Message 01 */
 /*----------------------------------------------*/
 .concept-message {
-  padding: 100px 0;
+  padding: 100px 0 97px;
   background-color: #F4F4F4;
 }
 @media (width < 1440px) {
@@ -371,6 +371,7 @@ header {
   }
 }
 .concept-message .concept-message__content-box {
+  padding-inline: 24px;
   text-align: center;
 }
 .concept-message .concept-message__content-box .concept-message__img {
@@ -402,6 +403,12 @@ header {
     font-size: clamp(1.75rem, 1.107rem + 0.714vw, 2.25rem);
   }
 }
+@media (width < 1440px) {
+  .concept-message .concept-message__content-box .concept-message__catch {
+    margin-bottom: clamp(1rem, 0.714rem + 1.429vw, 2rem);
+    font-size: clamp(0.813rem, 0.545rem + 1.339vw, 1.75rem);
+  }
+}
 .concept-message .concept-message__content-box .concept-message__title {
   margin-bottom: 1.5rem;
   color: #4F4F4F;
@@ -415,6 +422,12 @@ header {
     font-size: clamp(4rem, 3.357rem + 0.714vw, 72px);
   }
 }
+@media (width < 1440px) {
+  .concept-message .concept-message__content-box .concept-message__title {
+    font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
+  }
+}
+
 /*----------------------------------------------*/
 /* About */
 /*----------------------------------------------*/
@@ -425,17 +438,24 @@ header {
   height: 858px;
   max-height: 858px;
 }
+@media (width < 1440px) {
+  .about-wrapper {
+    flex-wrap: wrap;
+  }
+}
 .about-wrapper .about__img-wrapper {
   width: 692px;
   height: 100%;
   overflow: hidden;
 }
 .about-wrapper .about__img-wrapper .about__img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 .about-wrapper .about__content {
   flex: 1;
@@ -443,7 +463,12 @@ header {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  padding: 67px 30px 0px 0px;
+  padding: 70px 35px 0px 0px;
+}
+@media (width < 1440px) {
+  .about-wrapper .about__content {
+    flex: none;
+  }
 }
 .about-wrapper .about__content .about__content-top {
   flex: 1;
@@ -451,7 +476,7 @@ header {
 }
 .about-wrapper .about__content .about_decoration-01 {
   display: inline-block;
-  margin: 0 0 40px 30px;
+  margin: 0 0 40px 35px;
 }
 .about-wrapper .about__content .about__title {
   margin-bottom: 23px;
@@ -460,11 +485,21 @@ header {
   font-size: 48px;
   font-weight: 400;
 }
+@media (width < 1440px) {
+  .about-wrapper .about__content .about__title {
+    font-size: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
+  }
+}
 .about-wrapper .about__content .about__text-group {
   color: #2D2D2D;
   font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
+}
+@media (width < 1440px) {
+  .about-wrapper .about__content .about__text-group {
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+  }
 }
 .about-wrapper .about__content .about__text-group .about__text-group-01 {
   margin-bottom: 33px;
@@ -484,10 +519,17 @@ header {
   font-size: 3.75rem;
   font-weight: 400;
   letter-spacing: 0.05em;
+  text-indent: 0.07em;
+}
+@media (width < 1440px) {
+  .about-wrapper .about__content .about__signature {
+    font-size: clamp(2.25rem, 1.821rem + 2.143vw, 3.75rem);
+  }
 }
 .about-wrapper .about__content .about__btn {
-  margin-left: 10px;
-  padding: 11px 41px 13px;
+  margin-left: 15px;
+  margin-top: 5px;
+  padding: 12px 39px 12px 42px;
   background-color: #E9E1D9;
   border: 2px solid #E9E1D9;
   color: #484848;
@@ -500,6 +542,11 @@ header {
   .about-wrapper .about__content .about__btn:hover:hover {
     background-color: transparent;
     color: #484848;
+  }
+}
+@media (width < 1440px) {
+  .about-wrapper .about__content .about__btn {
+    font-size: clamp(0.875rem, 0.625rem + 1.25vw, 1.75rem);
   }
 }
 
