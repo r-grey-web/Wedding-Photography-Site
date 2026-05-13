@@ -411,10 +411,28 @@ header {
     align-items: stretch;
     width: 100%;
     height: 858px;
-    max-height: 858px;
+
+    @include m.mq-min(v.$xxl) {
+        justify-content: center;
+        max-height: 858px;
+        width: 1440px;
+        max-width: 1440px;
+        margin: v.$space-xl auto 0;
+    }
 
     @include m.mq-max(v.$xxl) {
+        justify-content: center;
+    }
+
+    @include m.mq-max(v.$lg) {
         flex-wrap: wrap;
+        height: 100%;
+        margin-top: v.$space-ll;
+    }
+
+    @include m.mq-max(v.$md) {
+        padding-inline: v.$space-m;
+        margin-top: v.$space-m;
     }
 
     .about__img-wrapper {
@@ -423,8 +441,12 @@ header {
         overflow: hidden;
 
         @include m.mq-max(v.$xxl) {
-            // width: 100%;
-            // height: 558px;
+            width: 45%;
+        }
+
+        @include m.mq-max(v.$lg) {
+            width: 100%;
+            margin: 0 auto;
         }
 
         .about__img {
@@ -434,7 +456,15 @@ header {
             object-fit: cover;
             object-position: center bottom;
 
-            @include m.mq-max(v.$xxl) {}
+            @include m.mq-max(v.$xxl) {
+                object-position: 75% bottom;
+            }
+
+            @include m.mq-max(v.$lg) {
+                width: 692px;
+                height: auto;
+                margin: 0 auto;
+            }
         }
     }
 
@@ -443,11 +473,22 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 55%;
         padding: 70px 35px 0px 0px;
+
+        @include m.mq-min(v.$xxl) {
+            padding: v.$space-s 0px 0px 0px;
+        }
 
         @include m.mq-max(v.$xxl) {
             flex: none;
+            padding-inline: 24px;
+            width: 55%;
+        }
+
+        @include m.mq-max(v.$lg) {
+            width: 100%;
+            padding-inline: 0px;
         }
 
         .about__content-top {
@@ -458,6 +499,14 @@ header {
         .about_decoration-01 {
             display: inline-block;
             margin: 0 0 40px 35px;
+
+            @include m.mq-min(v.$xxl) {
+                width: clamp(4.688rem, 3.884rem + 0.893vw, 5.313rem);
+            }
+
+            // @include m.mq-max(v.$xxl) {
+            //     width: clamp(2.813rem, 2.277rem + 2.679vw, 4.688rem);
+            // }
         }
 
         .about__title {
@@ -467,9 +516,13 @@ header {
             font-size: 48px;
             font-weight: v.$fw-regular;
 
+            @include m.mq-min(v.$xxl) {
+                font-size: clamp(3rem, 2.357rem + 0.714vw, 3.5rem);
+            }
+
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
-                font-size: clamp(1.5rem, 1.071rem + 2.143vw, 3rem);
+                // 992px〜1440px
+                font-size: clamp(1.5rem, 0.786rem + 3.571vw, 3rem);
             }
         }
 
@@ -479,8 +532,12 @@ header {
             font-size: v.$fs-28;
             font-weight: v.$fw-regular;
 
+            @include m.mq-min(v.$xxl) {
+                font-size: clamp(1.75rem, 1.589rem + 0.179vw, 1.875rem);
+            }
+
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
+                // 992px〜1440px
                 font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
             }
 
@@ -498,6 +555,11 @@ header {
         .about_decoration-02 {
             display: inline-block;
             margin-bottom: 42px;
+
+            @include m.mq-min(v.$xxl) {
+                width: clamp(18.875rem, 18.071rem + 0.893vw, 19.5rem);
+                margin-bottom: v.$space-l;
+            }
         }
 
         .about__signature {
@@ -508,8 +570,12 @@ header {
             letter-spacing: v.$letter-spacing-base;
             text-indent: 0.07em;
 
+            @include m.mq-min(v.$xxl) {
+                font-size: clamp(3.75rem, 2.786rem + 1.071vw, 4.5rem);
+            }
+
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
+                // 992px〜1440px
                 font-size: clamp(2.25rem, 1.821rem + 2.143vw, 3.75rem);
             }
         }
@@ -521,8 +587,8 @@ header {
             @include m.btn-style;
 
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
-                font-size: clamp(0.875rem, 0.625rem + 1.25vw, 1.75rem);
+                // 992px〜1440px
+                font-size: clamp(1rem, 0.643rem + 1.786vw, 1.75rem);
             }
         }
 
