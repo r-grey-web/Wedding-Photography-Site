@@ -661,7 +661,7 @@ header {
                     font-size: v.$fs-50;
 
                     @include m.mq-max(v.$xxl) {
-                        font-size: clamp(38px, 2.161rem + 1.071vw, 50px);
+                        font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
                     }
                 }
 
@@ -795,6 +795,11 @@ header {
         max-width: 1440px;
         margin: 0 auto;
 
+        @media (width < 1200px) {
+            // grid-template-columns: 1fr;
+            grid-template-columns: 2fr 1fr;
+        }
+
         .concept-message-02__image-wrapper {
             overflow: hidden;
 
@@ -806,7 +811,7 @@ header {
 
         .concept-message-02__content-box {
             position: absolute;
-            right: 9.8%;
+            right: 9.8vw;
             top: 50%;
             transform: translateY(-50%);
             width: 440px;
@@ -819,7 +824,8 @@ header {
             text-align: center;
 
             @include m.mq-max(v.$xxl) {
-                right: 5%;
+                width: clamp(21.25rem, 19.464rem + 8.929vw, 27.5rem);
+                height: clamp(27.563rem, 24.884rem + 13.393vw, 36.938rem);
             }
 
             .concept-message-02__box {
@@ -829,6 +835,10 @@ header {
             .concept-message-02__decoration {
                 margin: 38px auto v.$space-m;
                 padding-left: 30px;
+
+                @include m.mq-max(v.$xxl) {
+                    width: clamp(5.063rem, 4.884rem + 0.893vw, 5.688rem);
+                }
             }
 
             .concept-message-02__title {
@@ -841,6 +851,10 @@ header {
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 1.31;
                 white-space: nowrap;
+
+                @include m.mq-max(v.$xxl) {
+                    font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
+                }
             }
 
             .concept-message-02__text {
@@ -850,6 +864,10 @@ header {
                 font-size: v.$fs-28;
                 font-weight: v.$fw-light;
                 line-height: 1.2;
+
+                @include m.mq-max(v.$xxl) {
+                    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                }
             }
         }
     }

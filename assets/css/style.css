@@ -720,7 +720,7 @@ header {
 }
 @media (width < 1440px) {
   .services .services__cards .service-card:first-child .service-card__price {
-    font-size: clamp(38px, 2.161rem + 1.071vw, 50px);
+    font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
   }
 }
 .services .services__cards .service-card:first-child .service-card__btn {
@@ -855,6 +855,11 @@ header {
   max-width: 1440px;
   margin: 0 auto;
 }
+@media (width < 1200px) {
+  .concept-message-02 .concept-message-02__container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
 .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper {
   overflow: hidden;
 }
@@ -864,7 +869,7 @@ header {
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
   position: absolute;
-  right: 9.8%;
+  right: 9.8vw;
   top: 50%;
   transform: translateY(-50%);
   width: 440px;
@@ -878,7 +883,8 @@ header {
 }
 @media (width < 1440px) {
   .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
-    right: 5%;
+    width: clamp(21.25rem, 19.464rem + 8.929vw, 27.5rem);
+    height: clamp(27.563rem, 24.884rem + 13.393vw, 36.938rem);
   }
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__box {
@@ -887,6 +893,11 @@ header {
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__decoration {
   margin: 38px auto 1.5rem;
   padding-left: 30px;
+}
+@media (width < 1440px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__decoration {
+    width: clamp(5.063rem, 4.884rem + 0.893vw, 5.688rem);
+  }
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__title {
   margin: 0 0 25.5px;
@@ -899,6 +910,11 @@ header {
   line-height: 1.31;
   white-space: nowrap;
 }
+@media (width < 1440px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__title {
+    font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
+  }
+}
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__text {
   padding-left: 0.1em;
   color: #414141;
@@ -906,6 +922,11 @@ header {
   font-size: 1.75rem;
   font-weight: 300;
   line-height: 1.2;
+}
+@media (width < 1440px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__text {
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+  }
 }
 
 /*----------------------------------------------*/
