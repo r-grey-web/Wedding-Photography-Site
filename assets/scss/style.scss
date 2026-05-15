@@ -34,7 +34,6 @@ header {
     background: color.change(#F5F5F5, $alpha: 0.8);
 
     @include m.mq-max(v.$xxl) {
-        // 992px〜1440px
         padding-right: clamp(38px, 3.83vw, 114px);
         padding-left: clamp(34.6px, 3.494vw, 104px);
     }
@@ -118,12 +117,10 @@ header {
     gap: 67px;
 
     @include m.mq-min(v.$xxl) {
-        // 1440px〜2560px
         gap: clamp(67px, 4.7vw, 120px);
     }
 
     @include m.mq-max(v.$xxl) {
-        // 992px〜1440px
         gap: clamp(30px, -3.246rem + 8.259vw, 67px)
     }
 
@@ -153,12 +150,10 @@ header {
     gap: 54px;
 
     @include m.mq-min(v.$xxl) {
-        // 1440px〜2560px
         gap: clamp(67px, 4.7vw, 120px);
     }
 
     @include m.mq-max(v.$xxl) {
-        // 992px〜1440px
         gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
     }
 
@@ -177,7 +172,6 @@ header {
     letter-spacing: v.$letter-spacing-base;
 
     @include m.mq-max(v.$xxl) {
-        // 320px〜1440px 
         font-size: clamp(0.938rem, 0.813rem + 0.625vw, 1.375rem);
     }
 
@@ -255,6 +249,7 @@ header {
 
     .ham-btn--close {
         display: none;
+        opacity: 0.7;
         width: 34px;
         height: 34px;
         stroke-width: 1;
@@ -294,13 +289,7 @@ header {
         -webkit-text-stroke: 1.5px v.$text-accent;
         paint-order: stroke fill;
 
-        @include m.mq-min(v.$xxl) {
-            // 1440px〜2560px
-            font-size: clamp(4rem, 2.714rem + 1.429vw, 5rem);
-        }
-
         @include m.mq-max(v.$xxl) {
-            // 320px〜1440px
             font-size: clamp(1.25rem, 0.464rem + 3.929vw, 4rem);
         }
 
@@ -317,13 +306,7 @@ header {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         transform: translateY(5px);
 
-        @include m.mq-min(v.$xxl) {
-            // 1440px〜2560px
-            font-size: clamp(v.$fs-80, 3.75vw, v.$fs-96);
-        }
-
         @include m.mq-max(v.$xxl) {
-            // 320px〜1440px
             font-size: clamp(1.5rem, 0.5rem + 5vw, 5rem);
         }
     }
@@ -337,7 +320,6 @@ header {
     background-color: #F4F4F4;
 
     @include m.mq-max(v.$xxl) {
-        // 320px〜1440px
         padding-block: clamp(1.375rem, -0.018rem + 6.964vw, 6.25rem);
     }
 
@@ -349,14 +331,7 @@ header {
             display: inline-block;
             margin-bottom: v.$space-m;
 
-            @include m.mq-min(v.$xxl) {
-                // 1440px〜2560px
-                width: clamp(4.438rem, 2.83rem + 1.786vw, 5.688rem);
-                height: auto;
-            }
-
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
                 width: clamp(2.563rem, 2.027rem + 2.679vw, 4.438rem);
             }
         }
@@ -370,13 +345,7 @@ header {
             text-indent: v.$letter-spacing-wide-offset;
             letter-spacing: v.$letter-spacing-wide;
 
-            @include m.mq-min(v.$xxl) {
-                // 1440px〜2560px
-                font-size: clamp(v.$fs-28, 1.107rem + 0.714vw, 2.25rem);
-            }
-
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
                 margin-bottom: clamp(1rem, 0.714rem + 1.429vw, 2rem);
                 font-size: clamp(0.813rem, 0.545rem + 1.339vw, 1.75rem);
             }
@@ -390,13 +359,7 @@ header {
             font-weight: v.$fw-regular;
             line-height: 1.2;
 
-            @include m.mq-min(v.$xxl) {
-                // 1440px〜2560px
-                font-size: clamp(v.$fs-64, 3.357rem + 0.714vw, 72px);
-            }
-
             @include m.mq-max(v.$xxl) {
-                // 320px〜1440px
                 font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
             }
         }
@@ -431,8 +394,11 @@ header {
     }
 
     @include m.mq-max(v.$md) {
-        padding-inline: v.$space-m;
         margin-top: v.$space-m;
+    }
+
+    @media (width <=693px) {
+        margin-top: 0;
     }
 
     .about__img-wrapper {
@@ -482,13 +448,13 @@ header {
 
         @include m.mq-max(v.$xxl) {
             flex: none;
-            padding-inline: 24px;
             width: 55%;
+            padding-inline: 24px;
+            padding-top: clamp(2rem, 1.321rem + 3.393vw, 4.375rem);
         }
 
         @include m.mq-max(v.$lg) {
             width: 100%;
-            padding-inline: 0px;
         }
 
         .about__content-top {
@@ -500,13 +466,10 @@ header {
             display: inline-block;
             margin: 0 0 40px 35px;
 
-            @include m.mq-min(v.$xxl) {
-                width: clamp(4.688rem, 3.884rem + 0.893vw, 5.313rem);
+            @include m.mq-max(v.$xxl) {
+                width: clamp(2.5rem, 1.875rem + 3.125vw, 4.688rem);
+                margin-bottom: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
             }
-
-            // @include m.mq-max(v.$xxl) {
-            //     width: clamp(2.813rem, 2.277rem + 2.679vw, 4.688rem);
-            // }
         }
 
         .about__title {
@@ -516,12 +479,7 @@ header {
             font-size: 48px;
             font-weight: v.$fw-regular;
 
-            @include m.mq-min(v.$xxl) {
-                font-size: clamp(3rem, 2.357rem + 0.714vw, 3.5rem);
-            }
-
             @include m.mq-max(v.$xxl) {
-                // 992px〜1440px
                 font-size: clamp(1.5rem, 0.786rem + 3.571vw, 3rem);
             }
         }
@@ -532,23 +490,32 @@ header {
             font-size: v.$fs-28;
             font-weight: v.$fw-regular;
 
-            @include m.mq-min(v.$xxl) {
-                font-size: clamp(1.75rem, 1.589rem + 0.179vw, 1.875rem);
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
             }
 
-            @include m.mq-max(v.$xxl) {
-                // 992px〜1440px
-                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+            @media (width <=378px) {
+                br {
+                    display: none;
+                }
             }
 
             .about__text-group-01 {
                 margin-bottom: 33px;
                 line-height: 1.23;
+
+                @include m.mq-max(v.$xxl) {
+                    line-height: 1.33;
+                }
             }
 
             .about__text-group-02 {
                 margin-bottom: 44px;
                 line-height: 1.22;
+
+                @include m.mq-max(v.$xxl) {
+                    line-height: 1.32;
+                }
             }
         }
 
@@ -556,9 +523,8 @@ header {
             display: inline-block;
             margin-bottom: 42px;
 
-            @include m.mq-min(v.$xxl) {
-                width: clamp(18.875rem, 18.071rem + 0.893vw, 19.5rem);
-                margin-bottom: v.$space-l;
+            @include m.mq-max(v.$xxl) {
+                width: clamp(11.25rem, 9.071rem + 10.893vw, 18.875rem);
             }
         }
 
@@ -570,13 +536,8 @@ header {
             letter-spacing: v.$letter-spacing-base;
             text-indent: 0.07em;
 
-            @include m.mq-min(v.$xxl) {
-                font-size: clamp(3.75rem, 2.786rem + 1.071vw, 4.5rem);
-            }
-
             @include m.mq-max(v.$xxl) {
-                // 992px〜1440px
-                font-size: clamp(2.25rem, 1.821rem + 2.143vw, 3.75rem);
+                font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
             }
         }
 
@@ -587,7 +548,6 @@ header {
             @include m.btn-style;
 
             @include m.mq-max(v.$xxl) {
-                // 992px〜1440px
                 font-size: clamp(1rem, 0.643rem + 1.786vw, 1.75rem);
             }
         }
@@ -599,11 +559,15 @@ header {
 /* Services */
 /*----------------------------------------------*/
 .services {
-    padding: 170px 0 183px;
+    padding: 173px 0 183px;
 
     .services__header {
         margin: 0 auto 54px;
         text-align: center;
+
+        @include m.mq-max(v.$xxl) {
+            margin-bottom: clamp(1rem, 0.714vw + 13.71px, 3.375rem);
+        }
 
         .services__sub-title {
             margin-bottom: 5px;
@@ -613,6 +577,10 @@ header {
             font-weight: v.$fw-medium;
             text-indent: v.$letter-spacing-wide-offset;
             letter-spacing: v.$letter-spacing-wide;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+            }
         }
 
         .services__main-title {
@@ -621,9 +589,14 @@ header {
             font-family: v.$text-secondary-family;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
-            text-indent: v.$letter-spacing-base-offset;
-            letter-spacing: v.$letter-spacing-base;
+            text-indent: 0.05em;
+            letter-spacing: 0.05em;
             line-height: v.$line-height-tight;
+            font-variant-ligatures: no-common-ligatures;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+            }
         }
     }
 
@@ -631,9 +604,18 @@ header {
         display: flex;
         justify-content: center;
         gap: 66px;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
 
         @include m.mq-max(v.$xxl) {
             flex-wrap: wrap;
+            gap: clamp(1.5rem, 0.75rem + 3.75vw, 4.125rem);
+            padding-inline: 24px;
+        }
+
+        @include m.mq-max(v.$sm) {
+            gap: clamp(1rem, 1.429vw + 11.43px, 2rem);
         }
 
         .service-card__decoration {
@@ -652,55 +634,110 @@ header {
             background-color: v.$card-bg-color;
             text-align: center;
 
+            @include m.mq-max(v.$xxl) {
+                height: auto;
+                width: calc(100% - 40px);
+                padding-block: clamp(1.75rem, 1.5rem + 1.25vw, 2.625rem);
+                padding-inline: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+            }
+
             &:first-child {
+                .service-card__decoration {
+                    @include m.mq-max(v.$xxl) {
+                        width: clamp(3.125rem, 2.768rem + 1.786vw, 4.375rem);
+                    }
+                }
+
                 .service-card__title {
-                    margin: 0 0 36px;
+                    margin: 0 0 2.25rem;
                     transform: translateY(-4px);
+
+                    @include m.mq-max(v.$xxl) {
+                        margin-bottom: clamp(1.75rem, 1.607rem + 0.714vw, 2.25rem);
+                    }
                 }
 
                 .service-card__price {
                     font-size: v.$fs-50;
+
+                    @include m.mq-max(v.$xxl) {
+                        font-size: clamp(38px, 2.161rem + 1.071vw, 50px);
+                    }
                 }
 
                 .service-card__btn {
                     margin-top: 14.5px;
+
+                    @include m.mq-max(v.$xxl) {
+                        margin-top: clamp(0rem, -0.259rem + 1.295vw, 0.906rem);
+                    }
                 }
             }
 
             &:nth-child(2) {
+                .service-card__decoration {
+                    @include m.mq-max(v.$xxl) {
+                        width: clamp(4.563rem, 4.063rem + 2.5vw, 6.313rem);
+                    }
+                }
+
                 .service-card__title {
+                    margin-bottom: v.$space-ll;
                     transform: translateY(13px);
+
+                    @include m.mq-max(v.$xxl) {
+                        margin-bottom: clamp(2.375rem, 2.339rem + 0.179vw, 2.5rem);
+                    }
                 }
 
                 .service-card__price {
                     font-size: 48px;
+
+                    @include m.mq-max(v.$xxl) {
+                        font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
+                    }
                 }
             }
 
             &:nth-child(3) {
                 .service-card__decoration {
                     margin-left: 30px;
+
+                    @include m.mq-max(v.$xxl) {
+                        width: clamp(3.75rem, 3.446rem + 1.518vw, 4.813rem);
+                    }
                 }
 
                 .service-card__title {
                     margin-bottom: 42px;
                     transform: translateY(4px);
+
+                    @include m.mq-max(v.$xxl) {
+                        margin-bottom: clamp(2.25rem, 2.143rem + 0.536vw, 2.625rem);
+                    }
                 }
 
                 .service-card__price {
                     font-size: 48px;
+
+                    @include m.mq-max(v.$xxl) {
+                        font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
+                    }
                 }
             }
         }
 
         .service-card__title {
-            margin: 0 0 40px;
             color: v.$card-text-color;
             font-family: v.$text-primary-family;
             font-size: 60px;
             font-weight: v.$fw-regular;
             text-indent: v.$letter-spacing-base-offset;
             letter-spacing: v.$letter-spacing-base;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(2.625rem, 2.304rem + 1.607vw, 3.75rem);
+            }
         }
 
         .service-card__price-wrapper {
@@ -711,9 +748,13 @@ header {
 
         .service-card__label {
             color: v.$card-text-color;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1.188rem, 1.098rem + 0.446vw, 1.5rem);
+            }
         }
 
         .service-card__price {
@@ -728,6 +769,11 @@ header {
             margin-top: v.$space-s;
             padding: 12px 36px;
             @include m.btn-style;
+
+            @include m.mq-max(v.$xxl) {
+                margin-top: clamp(0rem, -0.286rem + 1.429vw, 1rem);
+                font-size: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+            }
         }
     }
 }
@@ -745,6 +791,9 @@ header {
         gap: 0px;
         align-items: center;
         position: relative;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
 
         .concept-message-02__image-wrapper {
             overflow: hidden;
@@ -768,6 +817,10 @@ header {
             outline: 0.4px solid rgba(#B58B61, 0.6);
             outline-offset: -12px;
             text-align: center;
+
+            @include m.mq-max(v.$xxl) {
+                right: 5%;
+            }
 
             .concept-message-02__box {
                 width: 100%;
