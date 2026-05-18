@@ -857,19 +857,61 @@ header {
 }
 @media (width < 1200px) {
   .concept-message-02 .concept-message-02__container {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 1fr;
+  }
+}
+@media (width < 1090px) {
+  .concept-message-02 .concept-message-02__container {
+    grid-template-columns: 1fr;
   }
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper {
   overflow: hidden;
 }
+@media (width < 768px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+}
+@media (width < 576px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper {
+    aspect-ratio: 1/1;
+  }
+}
 .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (width < 1200px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
+    -o-object-position: -80px center;
+       object-position: -80px center;
+  }
+}
+@media (width < 1090px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
+    -o-object-position: -200px center;
+       object-position: -200px center;
+  }
+}
+@media (width < 870px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media (width < 768px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__image-wrapper .concept-message-02__img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
   position: absolute;
-  right: 9.8vw;
+  right: 140px;
   top: 50%;
   transform: translateY(-50%);
   width: 440px;
@@ -883,8 +925,21 @@ header {
 }
 @media (width < 1440px) {
   .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
+    right: clamp(4.375rem, -17.5rem + 29.167vw, 8.75rem);
     width: clamp(21.25rem, 19.464rem + 8.929vw, 27.5rem);
     height: clamp(27.563rem, 24.884rem + 13.393vw, 36.938rem);
+  }
+}
+@media (width < 1200px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
+    right: clamp(1.563rem, -3.438rem + 10.417vw, 4.375rem);
+  }
+}
+@media (width < 870px) {
+  .concept-message-02 .concept-message-02__container .concept-message-02__content-box {
+    position: static;
+    transform: none;
+    margin: 24px auto;
   }
 }
 .concept-message-02 .concept-message-02__container .concept-message-02__content-box .concept-message-02__box {
@@ -953,6 +1008,11 @@ header {
   text-indent: 0.74em;
   letter-spacing: 0.2em;
 }
+@media (width < 1440px) {
+  .portfolio .portfolio__header .portfolio__sub-title {
+    font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+  }
+}
 .portfolio .portfolio__header .portfolio__main-title {
   margin: 0;
   color: #5B5B5B;
@@ -963,10 +1023,18 @@ header {
   letter-spacing: 0.05em;
   line-height: 1.1;
 }
-.portfolio .portfolio__content-wrapper {
-  display: flex;
+@media (width < 1440px) {
+  .portfolio .portfolio__header .portfolio__main-title {
+    font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+  }
+}
+.portfolio .portfolio__container {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+.portfolio .portfolio__content-wrapper {
+  display: flex;
 }
 @media (width > 1440px) {
   .portfolio .portfolio__content-wrapper {
@@ -977,6 +1045,7 @@ header {
   .portfolio .portfolio__content-wrapper {
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   }
 }
 .portfolio .portfolio__content-wrapper .portfolio__text-box {
@@ -991,7 +1060,7 @@ header {
 }
 @media (width < 1440px) {
   .portfolio .portfolio__content-wrapper .portfolio__text-box {
-    width: 100%;
+    order: 2;
   }
 }
 @media (width < 768px) {
@@ -1046,6 +1115,7 @@ header {
 .portfolio .portfolio__content-wrapper .portfolio__images {
   justify-content: center;
   display: flex;
+  order: 1;
   gap: 37px;
   -o-object-fit: cover;
      object-fit: cover;
