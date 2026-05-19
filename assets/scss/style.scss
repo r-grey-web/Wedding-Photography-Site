@@ -921,13 +921,17 @@ header {
 .portfolio {
     padding: 104px 0 53px;
 
-    @include m.mq-max(v.$lg) {
-        padding-inline: 30px;
+    @media (width < 1389px) {
+        padding-inline: 24px;
     }
 
     .portfolio__header {
         margin: 0 auto 58px;
         text-align: center;
+
+        @include m.mq-max(v.$xxl) {
+            margin-bottom: clamp(1rem, 0.25rem + 3.75vw, 3.625rem);
+        }
 
         .portfolio__sub-title {
             margin-bottom: v.$space-xs;
@@ -967,6 +971,7 @@ header {
 
     .portfolio__content-wrapper {
         display: flex;
+        gap: 0;
 
         @include m.mq-min(v.$xxl) {
             justify-content: center;
@@ -974,8 +979,12 @@ header {
 
         @include m.mq-max(v.$xxl) {
             flex-wrap: wrap;
+            padding-right: 24px;
+        }
+
+        @media (width < 1389px) {
             justify-content: center;
-            width: 100%;
+            padding-right: 0px;
         }
 
         .portfolio__text-box {
@@ -989,12 +998,13 @@ header {
             white-space: nowrap;
 
             @include m.mq-max(v.$xxl) {
-                order: 2;
-
+                // paddingのclampを考える
             }
 
-            @include m.mq-max(v.$md) {
-                padding: 0px 22.5px 35px 53px;
+            @media (width < 1389px) {
+                order: 2;
+                position: relative;
+                height: auto;
             }
 
             .portfolio__number {
@@ -1006,6 +1016,10 @@ header {
                 font-weight: v.$fw-semibold;
                 letter-spacing: v.$letter-spacing-base;
                 line-height: 0.5;
+
+                @include m.mq-max(v.$xxl) {
+                    font-size: clamp(4.5rem, 3.643rem + 4.286vw, 7.5rem);
+                }
             }
 
             .portfolio__story-title {
@@ -1016,8 +1030,8 @@ header {
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
 
-                @include m.mq-max(v.$sm) {
-                    font-size: clamp(2.5rem, 2.031rem + 2.344vw, 2.875rem);
+                @include m.mq-max(v.$xxl) {
+                    font-size: clamp(1.75rem, 1.429rem + 1.607vw, 2.875rem);
                 }
             }
 
@@ -1029,32 +1043,52 @@ header {
                 font-weight: v.$fw-light;
                 line-height: 1.22;
 
-                @include m.mq-max(v.$sm) {
-                    font-size: clamp(1.25rem, 1.107rem + 0.714vw, 1.75rem);
-                }
-
-                .portfolio__br--block-sp {
-                    display: none;
-
-                    @include m.mq-max(v.$sm) {
-                        display: block;
-                    }
+                @include m.mq-max(v.$xxl) {
+                    font-size: clamp(1.063rem, 0.866rem + 0.982vw, 1.75rem);
                 }
             }
         }
 
         .portfolio__images {
-            justify-content: center;
             display: flex;
-            order: 1;
+            justify-content: center;
+            width: auto;
             gap: 37px;
             object-fit: cover;
+
+            @include m.mq-max(v.$xxl) {
+                gap: clamp(1rem, 0.063rem + 2.5vw, 2.313rem);
+            }
+
+            @media (width < 1389px) {
+                order: 1;
+                margin-right: 0px;
+            }
 
             @include m.mq-max(v.$lg) {
                 flex-wrap: wrap;
             }
 
             .portfolio__img {
+
+                @media (width < 1389px) {
+                    flex: 1;
+                    width: 0;
+                    height: auto;
+                    aspect-ratio: 3 / 4;
+                    object-fit: cover;
+                }
+
+                @include m.mq-max(v.$md) {
+                    flex: none;
+                    width: 80% !important;
+                    height: auto !important;
+                }
+
+                @include m.mq-max(v.$sm) {
+                    width: 100% !important;
+                    height: auto !important;
+                }
 
                 &:first-child {
                     width: 394px;
@@ -1070,25 +1104,23 @@ header {
                         margin-right: 0px;
                     }
                 }
-
-                &:first-child,
-                &:last-child {
-                    @include m.mq-max(v.$lg) {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
             }
         }
     }
 
-    .portfolio__btn-wrapper {
+    .portfolio__pc-btn-wrapper {
         margin: 59px 72px 0 0;
         text-align: right;
 
-        @include m.mq-max(v.$xxl) {}
+        @include m.mq-max(v.$xxl) {
+            margin-right: clamp(1.5rem, -80.206rem + 94.118vw, 4.5rem);
+        }
 
-        .portfolio__btn {
+        @media (width < 1389px) {
+            display: none;
+        }
+
+        .portfolio__pc-btn {
             display: inline-block;
             @include m.btn-style;
             padding: 12px 28px 12px 26px;
@@ -1097,6 +1129,33 @@ header {
             font-weight: v.$fw-light;
             text-align: center;
             white-space: nowrap;
+        }
+    }
+
+    .portfolio__sp-btn-wrapper {
+        display: none;
+
+        @media (width < 1389px) {
+            display: block;
+            order: 2;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .portfolio__sp-btn {
+            display: inline-block;
+            @include m.btn-style;
+            padding: 12px 28px 12px 26px;
+            border: none;
+            color: v.$color-gray;
+            font-weight: v.$fw-light;
+            text-align: center;
+            white-space: nowrap;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+            }
         }
     }
 }
