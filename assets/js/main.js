@@ -55,7 +55,14 @@ window.addEventListener('load', () => {
     window.addEventListener('resize', matchWidth);
 });
 
-
+// Testimonials Section - Swiper
+const swiper = new Swiper('.testimonials__swiper', {
+    loop: true,
+    navigation: {
+        prevEl: '.testimonials__arrow--prev',
+        nextEl: '.testimonials__arrow--next',
+    },
+});
 
 
 

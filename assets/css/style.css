@@ -1030,7 +1030,7 @@ header {
 }
 @media (width < 1440px) {
   .portfolio .portfolio__header .portfolio__main-title {
-    font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+    font-size: clamp(40px, 2.071rem + 2.143vw, 64px);
   }
 }
 .portfolio .portfolio__container {
@@ -1069,6 +1069,11 @@ header {
   background-color: #F8F8F8;
   white-space: nowrap;
 }
+@media (width < 1440px) {
+  .portfolio .portfolio__content-wrapper .portfolio__text-box {
+    padding: 0px clamp(1rem, 0.482rem + 2.589vw, 2.813rem) clamp(4.375rem, 6.0625rem - 1.9vw, 5rem) clamp(1.5rem, 0.036rem + 7.321vw, 6.625rem);
+  }
+}
 @media (width < 1389px) {
   .portfolio .portfolio__content-wrapper .portfolio__text-box {
     order: 2;
@@ -1095,7 +1100,7 @@ header {
   margin: 0 0 0px;
   color: #555555;
   font-family: "Ephesis", cursive;
-  font-size: 46px;
+  font-size: 2.875rem;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
@@ -1114,7 +1119,7 @@ header {
 }
 @media (width < 1440px) {
   .portfolio .portfolio__content-wrapper .portfolio__text-box .portfolio__description {
-    font-size: clamp(1.063rem, 0.866rem + 0.982vw, 1.75rem);
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
   }
 }
 .portfolio .portfolio__content-wrapper .portfolio__images {
@@ -1254,7 +1259,7 @@ header {
 }
 @media (width < 1440px) {
   .portfolio .portfolio__sp-btn-wrapper .portfolio__sp-btn {
-    font-size: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
   }
 }
 
@@ -1278,11 +1283,22 @@ header {
   text-indent: 0.27em;
   letter-spacing: 0.05em;
 }
+@media (width < 1440px) {
+  .testimonials .testimonials__title-container .testimonials__title {
+    font-size: clamp(2.75rem, 2.286rem + 2.321vw, 4.375rem);
+  }
+}
 .testimonials .testimonials__container {
+  position: relative;
   margin: 0 auto;
   padding: 78px 0px;
   background-color: #F8F8F8;
   text-align: center;
+}
+@media (width < 1440px) {
+  .testimonials .testimonials__container {
+    padding-inline: 24px;
+  }
 }
 .testimonials .testimonials__container .testimonials__content {
   display: flex;
@@ -1290,26 +1306,6 @@ header {
   justify-content: center;
   margin: 0 auto;
   height: 450px;
-}
-.testimonials .testimonials__container .testimonials__content .testimonials__arrow {
-  width: 39px;
-  height: 57px;
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: #E9E1D9;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-@media (hover: hover) {
-  .testimonials .testimonials__container .testimonials__content .testimonials__arrow:hover {
-    background-color: #E0D9D3;
-  }
-}
-.testimonials .testimonials__container .testimonials__content .testimonials__arrow.testimonials__arrow--prev {
-  margin-left: 10px;
 }
 .testimonials .testimonials__container .testimonials__content .testimonials__card {
   flex: 1;
@@ -1319,11 +1315,16 @@ header {
   max-width: 450px;
   width: 100%;
   height: 100%;
-  margin-right: 47px;
-  padding: 163px 20px 0 25px;
+  margin-right: 46px;
+  padding: 163px 23px 0 25px;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 2px #E9E1D9;
   text-align: center;
+}
+@media (width < 1440px) {
+  .testimonials .testimonials__container .testimonials__content .testimonials__card {
+    margin-right: clamp(1.5rem, -0.071rem + 3.274vw, 2.875rem);
+  }
 }
 .testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__quote {
   position: absolute;
@@ -1346,6 +1347,11 @@ header {
   font-weight: 400;
   line-height: 1.23;
 }
+@media (width < 1440px) {
+  .testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__message {
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+  }
+}
 .testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__name {
   margin: 0;
   color: #414141;
@@ -1354,12 +1360,17 @@ header {
   font-weight: 300;
   text-transform: uppercase;
 }
+@media (width < 1440px) {
+  .testimonials .testimonials__container .testimonials__content .testimonials__card .testimonials__name {
+    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+  }
+}
 .testimonials .testimonials__container .testimonials__content .testimonials__image-wrapper {
   flex: 1;
   max-width: 450px;
   width: 100%;
   height: 100%;
-  margin-right: 25px;
+  margin-right: 14px;
   overflow: hidden;
 }
 .testimonials .testimonials__container .testimonials__content .testimonials__image-wrapper .testimonials__image {
@@ -1368,6 +1379,51 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.testimonials .testimonials__container .testimonials__arrow {
+  z-index: 10;
+  position: absolute;
+  top: 47.5%;
+  transform: translateY(-50%);
+  width: 39px;
+  height: 57px;
+  background-color: #E9E1D9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+@media (hover: hover) {
+  .testimonials .testimonials__container .testimonials__arrow:hover {
+    background-color: #E0D9D3;
+  }
+}
+.testimonials .testimonials__container .testimonials__arrow--prev {
+  left: 12.3%;
+}
+@media (width < 1440px) {
+  .testimonials .testimonials__container .testimonials__arrow--prev {
+    left: 6.15%;
+  }
+}
+@media (width < 1300px) {
+  .testimonials .testimonials__container .testimonials__arrow--prev {
+    left: 3%;
+  }
+}
+.testimonials .testimonials__container .testimonials__arrow--next {
+  right: 13.3%;
+}
+@media (width < 1440px) {
+  .testimonials .testimonials__container .testimonials__arrow--next {
+    right: 6.65%;
+  }
+}
+@media (width < 1300px) {
+  .testimonials .testimonials__container .testimonials__arrow--next {
+    right: 3.3%;
+  }
 }
 
 /*----------------------------------------------*/

@@ -958,7 +958,7 @@ header {
             line-height: 1.1;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+                font-size: clamp(40px, 2.071rem + 2.143vw, 64px);
             }
         }
     }
@@ -998,7 +998,7 @@ header {
             white-space: nowrap;
 
             @include m.mq-max(v.$xxl) {
-                // paddingのclampを考える
+                padding: 0px clamp(1rem, 0.482rem + 2.589vw, 2.813rem) clamp(4.375rem, 6.0625rem - 1.9vw, 5rem) clamp(1.5rem, 0.036rem + 7.321vw, 6.625rem);
             }
 
             @media (width < 1389px) {
@@ -1026,7 +1026,7 @@ header {
                 margin: 0 0 0px;
                 color: v.$color-gray;
                 font-family: v.$text-primary-family;
-                font-size: 46px;
+                font-size: 2.875rem;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
 
@@ -1044,7 +1044,7 @@ header {
                 line-height: 1.22;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(1.063rem, 0.866rem + 0.982vw, 1.75rem);
+                    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
                 }
             }
         }
@@ -1154,7 +1154,7 @@ header {
             white-space: nowrap;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
             }
         }
     }
@@ -1179,14 +1179,23 @@ header {
             font-weight: v.$fw-regular;
             text-indent: 0.27em;
             letter-spacing: v.$letter-spacing-base;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(2.75rem, 2.286rem + 2.321vw, 4.375rem);
+            }
         }
     }
 
     .testimonials__container {
+        position: relative;
         margin: 0 auto;
         padding: 78px 0px;
         background-color: v.$card-bg-color;
         text-align: center;
+
+        @include m.mq-max(v.$xxl) {
+            padding-inline: 24px;
+        }
 
         .testimonials__content {
             display: flex;
@@ -1194,27 +1203,6 @@ header {
             justify-content: center;
             margin: 0 auto;
             height: 450px;
-
-            .testimonials__arrow {
-                width: 39px;
-                height: 57px;
-                margin-right: v.$space-m;
-                margin-bottom: v.$space-m;
-                background-color: v.$btn-bg-color;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s ease;
-
-                @include m.hover-device {
-                    background-color: #E0D9D3;
-                }
-
-                &.testimonials__arrow--prev {
-                    margin-left: 10px;
-                }
-            }
 
             .testimonials__card {
                 flex: 1;
@@ -1224,11 +1212,15 @@ header {
                 max-width: 450px;
                 width: 100%;
                 height: 100%;
-                margin-right: 47px;
-                padding: 163px 20px 0 25px;
+                margin-right: 46px;
+                padding: 163px 23px 0 25px;
                 background-color: v.$color-white;
                 box-shadow: inset 0 0 0 2px v.$btn-bg-color;
                 text-align: center;
+
+                @include m.mq-max(v.$xxl) {
+                    margin-right: clamp(1.5rem, -0.071rem + 3.274vw, 2.875rem);
+                }
 
                 .testimonials__quote {
                     position: absolute;
@@ -1251,6 +1243,10 @@ header {
                     font-size: v.$fs-28;
                     font-weight: v.$fw-regular;
                     line-height: 1.23;
+
+                    @include m.mq-max(v.$xxl) {
+                        font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                    }
                 }
 
                 .testimonials__name {
@@ -1260,6 +1256,10 @@ header {
                     font-size: v.$fs-28;
                     font-weight: v.$fw-light;
                     text-transform: uppercase;
+
+                    @include m.mq-max(v.$xxl) {
+                        font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                    }
                 }
             }
 
@@ -1268,7 +1268,7 @@ header {
                 max-width: 450px;
                 width: 100%;
                 height: 100%;
-                margin-right: 25px;
+                margin-right: 14px;
                 overflow: hidden;
 
                 .testimonials__image {
@@ -1276,6 +1276,53 @@ header {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                }
+            }
+        }
+
+        .testimonials__arrow {
+            z-index: 10;
+            position: absolute;
+            top: 47.5%;
+            transform: translateY(-50%);
+            width: 39px;
+            height: 57px;
+            background-color: v.$btn-bg-color;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+
+            @media (width < 1200px) {
+                // 矢印だけにして、位置を調整
+            }
+
+            @include m.hover-device {
+                background-color: #E0D9D3;
+            }
+
+            &--prev {
+                left: 12.3%;
+
+                @include m.mq-max(v.$xxl) {
+                    left: 6.15%;
+                }
+
+                @media (width < 1300px) {
+                    left: 3%;
+                }
+            }
+
+            &--next {
+                right: 13.3%;
+
+                @include m.mq-max(v.$xxl) {
+                    right: 6.65%;
+                }
+
+                @media (width < 1300px) {
+                    right: 3.3%;
                 }
             }
         }
