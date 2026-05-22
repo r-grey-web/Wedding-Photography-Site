@@ -990,6 +990,11 @@ header {
 .portfolio {
   padding: 104px 0 53px;
 }
+@media (width < 1440px) {
+  .portfolio {
+    padding-top: clamp(4rem, 3.286rem + 3.571vw, 6.5rem);
+  }
+}
 @media (width < 1389px) {
   .portfolio {
     padding-inline: 24px;
@@ -1515,6 +1520,10 @@ header {
 /*----------------------------------------------*/
 /* Achievements */
 /*----------------------------------------------*/
+:root {
+  --stats__list-gap: clamp(1rem, 0.286rem + 3.571vw, 3.5rem);
+}
+
 .stats {
   background-color: #FFFFFF;
   padding: 100px 0px 65px;
@@ -1534,15 +1543,41 @@ header {
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
+@media (width < 1440px) {
+  .stats .stats__container .stats__lead {
+    font-size: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+  }
+}
+@media (width < 768px) {
+  .stats .stats__container .stats__lead {
+    margin-right: 0px;
+  }
+}
+@media (width < 576px) {
+  .stats .stats__container .stats__lead br {
+    display: none;
+  }
+}
 .stats .stats__container .stats__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-right: 30px;
 }
-@media (width < 1090px) {
+@media (width < 1440px) {
   .stats .stats__container .stats__list {
-    flex-wrap: wrap;
+    gap: var(--stats__list-gap);
+  }
+}
+@media (width < 768px) {
+  .stats .stats__container .stats__list {
+    padding-right: 0px;
+  }
+}
+@media (width < 576px) {
+  .stats .stats__container .stats__list {
+    flex-direction: column;
   }
 }
 .stats .stats__container .stats__item {
@@ -1551,9 +1586,14 @@ header {
   align-items: center;
   justify-content: start;
 }
-@media (width < 1090px) {
+@media (width < 992px) {
   .stats .stats__container .stats__item {
-    width: 50%;
+    width: calc(50% - var(--stats__list-gap) / 2);
+  }
+}
+@media (width < 576px) {
+  .stats .stats__container .stats__item {
+    width: calc(100% - var(--stats__list-gap) / 2);
   }
 }
 .stats .stats__container .stats__number {
@@ -1564,6 +1604,11 @@ header {
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1;
+}
+@media (width < 1440px) {
+  .stats .stats__container .stats__number {
+    font-size: clamp(6.5rem, 6.071rem + 2.143vw, 8rem);
+  }
 }
 .stats .stats__container .stats__number .stats__number--small {
   font-size: 6rem;
@@ -1579,6 +1624,11 @@ header {
   font-weight: 400;
   line-height: 1.25;
   white-space: nowrap;
+}
+@media (width < 1440px) {
+  .stats .stats__container .stats__label {
+    font-size: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+  }
 }
 .stats .stats__container .stats__label--first {
   transform: translate(-3px, 0.9px);
