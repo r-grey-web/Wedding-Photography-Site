@@ -374,6 +374,7 @@ header {
     align-items: stretch;
     width: 100%;
     height: 858px;
+    margin: 0;
 
     @include m.mq-min(v.$xxl) {
         justify-content: center;
@@ -385,6 +386,7 @@ header {
 
     @include m.mq-max(v.$xxl) {
         justify-content: center;
+        margin-bottom: clamp(2.688rem, 1.911rem + 3.884vw, 5.406rem);
     }
 
     @include m.mq-max(v.$lg) {
@@ -559,10 +561,12 @@ header {
 /* Services */
 /*----------------------------------------------*/
 .services {
-    padding: 173px 0 183px;
+    padding-bottom: 91.5px;
+    margin-top: 173px;
 
     @include m.mq-max(v.$xxl) {
-        // 次回：padding考える
+        margin-top: clamp(5.406rem, 3.862rem + 7.723vw, 10.813rem);
+        padding-bottom: clamp(2.813rem, 1.982rem + 4.152vw, 5.719rem);
     }
 
     .services__header {
@@ -797,7 +801,12 @@ header {
         position: relative;
         width: 100%;
         max-width: 1440px;
-        margin: 0 auto;
+        margin: 91.5px auto 52px;
+
+        @include m.mq-max(v.$xxl) {
+            margin-top: clamp(2.813rem, 1.982rem + 4.152vw, 5.719rem);
+            margin-bottom: clamp(1.625rem, 1.161rem + 2.321vw, 3.25rem);
+        }
 
         @media (width < 1200px) {
             grid-template-columns: 5fr 1fr;
@@ -923,10 +932,10 @@ header {
 /* Portfolio */
 /*----------------------------------------------*/
 .portfolio {
-    padding: 104px 0 53px;
+    padding: 52px 0 0;
 
     @include m.mq-max(v.$xxl) {
-        padding-top: clamp(4rem, 3.286rem + 3.571vw, 6.5rem);
+        padding-top: clamp(1.625rem, 1.161rem + 2.321vw, 3.25rem);
     }
 
     @media (width < 1389px) {
@@ -1172,6 +1181,7 @@ header {
 /* Testimonials */
 /*----------------------------------------------*/
 .testimonials {
+    margin-top: 53px;
     background-color: v.$card-bg-color;
 
     .testimonials__title-container {
@@ -1421,7 +1431,11 @@ header {
 
 .stats {
     background-color: v.$color-white;
-    padding: 100px 0px 65px;
+    margin-top: 100px;
+
+    @include m.mq-max(v.$xxl) {
+        margin-top: clamp(3.125rem, 2.232rem + 4.464vw, 6.25rem);
+    }
 
     .stats__container {
         max-width: 1200px;
@@ -1547,7 +1561,11 @@ header {
 /*----------------------------------------------*/
 .contact {
     background-color: v.$color-white;
-    padding: 65px 0 109px;
+    margin-top: 130px;
+
+    @include m.mq-min(v.$xxl) {
+        margin-top: clamp(4.063rem, 2.902rem + 5.804vw, 8.125rem);
+    }
 }
 
 .contact__container {
@@ -1561,9 +1579,14 @@ header {
     }
 
     @include m.mq-max(v.$xxl) {
-        margin: 0 auto;
-        height: auto;
         width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-inline: 24px;
+    }
+
+    @include m.mq-max(v.$md) {
+        flex-direction: column;
     }
 
     .contact__form {
@@ -1576,7 +1599,11 @@ header {
         @include m.mq-max(v.$xxl) {
             flex: 1;
             width: 100%;
-            padding: 60px 40px;
+            padding: clamp(2.188rem, 1.563rem + 3.125vw, 4.375rem) clamp(1.875rem, 1.339rem + 2.679vw, 3.75rem);
+        }
+
+        @include m.mq-max(v.$md) {
+            order: 2;
         }
 
         .contact__subtitle {
@@ -1586,6 +1613,10 @@ header {
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             letter-spacing: v.$letter-spacing-wide;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+            }
         }
 
         .contact__title {
@@ -1596,6 +1627,11 @@ header {
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1.35;
+
+            @include m.mq-max(v.$xxl) {
+                margin-bottom: clamp(3.188rem, 2.277rem + 4.554vw, 6.375rem);
+                font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+            }
         }
 
         .contact__field {
@@ -1621,6 +1657,10 @@ header {
             font-family: v.$text-secondary-family;
             font-size: v.$fs-28;
             font-weight: v.$fw-light;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+            }
         }
 
         .contact__input,
@@ -1648,12 +1688,20 @@ header {
             cursor: pointer;
             border: none;
             color: #505050;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+            }
         }
     }
 
     .contact__image {
         flex: 1;
         overflow: hidden;
+
+        @include m.mq-max(v.$md) {
+            order: 1;
+        }
 
         img {
             width: 100%;
@@ -1670,19 +1718,83 @@ header {
     height: 398px;
     background-color: v.$card-bg-color;
     padding: 0px 0 60px;
+    margin-top: 109px;
     text-align: center;
 
-    .p-gnav {
+    @include m.mq-min(v.$xxl) {
+        margin-top: clamp(3.406rem, 2.433rem + 4.866vw, 6.813rem);
+    }
+
+    .footer-gnav {
         padding: 0 108px 0 111px;
+        min-height: 109px;
 
         @include m.mq-max(v.$xxl) {
-            padding-right: clamp(36px, 3.629vw, 108px);
-            padding-left: clamp(37px, 3.729vw, 111px);
+            padding-right: clamp(2.25rem, 0.964rem + 6.429vw, 6.75rem);
+            padding-left: clamp(2.313rem, 0.991rem + 6.607vw, 6.938rem);
         }
     }
 
-    .p-gnav__container {
+    .footer-gnav__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
         margin-bottom: 33px;
+
+        @include m.mq-min(v.$xxl) {
+            justify-content: space-around;
+        }
+
+        .footer-gnav__left-items {
+            display: flex;
+            gap: 67px;
+
+            @include m.mq-min(v.$xxl) {
+                gap: clamp(67px, 4.7vw, 120px);
+            }
+
+            @include m.mq-max(v.$xxl) {
+                gap: clamp(30px, -3.246rem + 8.259vw, 67px)
+            }
+        }
+
+        .footer-gnav__right-items {
+            display: flex;
+            justify-content: flex-end;
+            gap: 54px;
+
+            @include m.mq-min(v.$xxl) {
+                gap: clamp(67px, 4.7vw, 120px);
+            }
+
+            @include m.mq-max(v.$xxl) {
+                gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
+            }
+        }
+
+        .footer-gnav__item {
+            padding: 0 0px 9px 0;
+            color: #363636;
+            font-family: v.$font-accent-02;
+            font-size: 1.375rem;
+            font-weight: v.$fw-regular;
+            letter-spacing: v.$letter-spacing-base;
+
+            @include m.mq-max(v.$xxl) {
+                font-size: clamp(0.938rem, 0.813rem + 0.625vw, 1.375rem);
+            }
+        }
+
+        .footer-gnav__logo {
+            flex-shrink: 0;
+            margin: 8px 0px 0 30px;
+
+            .footer-gnav__img {
+                height: 101px;
+                width: 279px;
+            }
+        }
     }
 
     .footer__description {
