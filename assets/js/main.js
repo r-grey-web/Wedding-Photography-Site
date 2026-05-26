@@ -1,6 +1,31 @@
 // lucide Icons
 lucide.createIcons();
 
+// Navigation Scroll Effect
+window.addEventListener('scroll', () => {
+    document.querySelector('.p-gnav').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Back to Top Button
+const backToTopBtn = document.querySelector('.back-to-top');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('is-visible');
+        } else {
+            backToTopBtn.classList.remove('is-visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // Hamburger menu
 const nav = document.getElementById("p-gnav");
 const humBtn = document.getElementById("ham-btn");
@@ -24,6 +49,14 @@ humBtn.addEventListener('click', () => {
     document.body.classList.toggle('is-open', opened);
     humBtn.classList.toggle('is-open');
     humBtn.setAttribute('aria-expanded', opened);
+
+    if (opened) {
+        backToTopBtn.classList.remove('is-visible');
+    } else {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('is-visible');
+        }
+    }
 });
 
 function closeMenu() {
@@ -31,6 +64,10 @@ function closeMenu() {
     document.body.classList.remove('is-open');
     humBtn.classList.remove('is-open');
     humBtn.setAttribute('aria-expanded', false);
+
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('is-visible');
+    }
 }
 
 document.getElementById("overlay").addEventListener('click', closeMenu);
