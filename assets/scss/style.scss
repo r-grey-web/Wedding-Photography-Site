@@ -5,6 +5,10 @@
 /*----------------------------------------------*/
 /* Body */
 /*----------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: v.$color-white;
 
@@ -31,6 +35,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    z-index: 11;
     padding: 0;
     background: none;
     border: none;
@@ -64,6 +69,11 @@ body {
         }
     }
 
+    @include m.mq-max(v.$xxl) {
+        bottom: clamp(1.5rem, 1.286rem + 1.071vw, 2.25rem);
+        right: clamp(1.5rem, 1.286rem + 1.071vw, 2.25rem);
+    }
+
     .back-to-top__seal {
         position: relative;
         display: flex;
@@ -86,6 +96,11 @@ body {
             border-radius: 50%;
             transition: border-color 0.3s ease;
         }
+
+        @include m.mq-max(v.$xxl) {
+            width: clamp(3.25rem, 3.071rem + 0.893vw, 3.875rem);
+            height: clamp(3.25rem, 3.071rem + 0.893vw, 3.875rem);
+        }
     }
 
     .back-to-top__icon {
@@ -95,11 +110,16 @@ body {
         height: 20px;
         color: #9a7555;
         transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+
+        @include m.mq-max(v.$xxl) {
+            width: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+            height: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+        }
     }
 
     .back-to-top__label {
         font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: v.$fw-light;
         letter-spacing: 0.22em;
@@ -107,6 +127,10 @@ body {
         color: #9a7555;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         transition: color 0.3s ease;
+
+        @include m.mq-max(v.$xxl) {
+            font-size: clamp(0.75rem, 0.714rem + 0.179vw, 0.875rem);
+        }
     }
 }
 
@@ -123,7 +147,7 @@ header {
 .p-gnav {
     background: color.change(#F5F5F5, $alpha: 0.8);
 
-    @include m.mq-min(v.$lg) {
+    @media (width > 991px) {
         position: fixed;
         top: 0;
         left: 0;
@@ -135,7 +159,8 @@ header {
         box-shadow: none;
         transition:
             backdrop-filter 0.6s ease,
-            box-shadow 0.6s ease;
+            box-shadow 0.6s ease,
+            opacity 0.3s ease;
 
         &.scrolled {
             backdrop-filter: blur(20px);
@@ -243,7 +268,7 @@ header {
 
 .p-logo {
     flex-shrink: 0;
-    margin: 8px 0px 0 30px;
+    margin: 8px 0px 0 33px;
 
     @include m.mq-max(v.$lg) {
         display: none;
@@ -258,19 +283,38 @@ header {
 .p-gnav__right-items {
     display: flex;
     justify-content: flex-end;
-    gap: 54px;
 
     @include m.mq-min(v.$xxl) {
         gap: clamp(67px, 4.7vw, 120px);
     }
 
     @include m.mq-max(v.$xxl) {
-        gap: clamp(1.625rem, -2.25rem + 6.25vw, 3.375rem);
+        gap: clamp(1.625rem, -2.25rem + 6.25vw, 54px);
     }
 
     @include m.mq-max(v.$lg) {
         flex-direction: column;
         gap: 0;
+    }
+
+    .p-gnav__item {
+        padding-right: 54px;
+
+        @include m.mq-min(v.$xxl) {
+            padding-inline: 0;
+        }
+
+        @include m.mq-max(v.$xxl) {
+            padding-inline: 0;
+        }
+
+        @include m.mq-max(v.$lg) {
+            padding: 16px 30px;
+        }
+
+        &:last-child {
+            padding-right: 1.5px;
+        }
     }
 }
 
@@ -427,11 +471,11 @@ header {
 /* Concept Message 01 */
 /*----------------------------------------------*/
 .concept-message {
-    padding: 100px 0 97px;
+    padding: 99px 0 97px;
     background-color: #F4F4F4;
 
     @include m.mq-max(v.$xxl) {
-        padding-block: clamp(1.375rem, -0.018rem + 6.964vw, 6.25rem);
+        padding-block: clamp(1.313rem, -0.08rem + 6.964vw, 6.188rem);
     }
 
     .concept-message__content-box {
@@ -440,7 +484,8 @@ header {
 
         .concept-message__img {
             display: inline-block;
-            margin-bottom: v.$space-m;
+            margin-bottom: 26px;
+            padding-right: 9px;
 
             @include m.mq-max(v.$xxl) {
                 width: clamp(2.563rem, 2.027rem + 2.679vw, 4.438rem);
@@ -448,12 +493,12 @@ header {
         }
 
         .concept-message__catch {
-            margin-bottom: v.$space-l;
+            margin-bottom: 29px;
             color: v.$text-accent;
             font-family: v.$font-accent;
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
-            text-indent: v.$letter-spacing-wide-offset;
+            text-indent: 0.26em;
             letter-spacing: v.$letter-spacing-wide;
 
             @include m.mq-max(v.$xxl) {
@@ -468,7 +513,7 @@ header {
             font-family: v.$text-secondary-family;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
-            line-height: 1.2;
+            line-height: 1.22;
 
             @include m.mq-max(v.$xxl) {
                 font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
@@ -480,6 +525,10 @@ header {
 /*----------------------------------------------*/
 /* About */
 /*----------------------------------------------*/
+#about {
+    scroll-margin-top: 159px;
+}
+
 .about-wrapper {
     display: flex;
     align-items: stretch;
@@ -674,6 +723,7 @@ header {
 .services {
     padding-bottom: 91.5px;
     margin-top: 173px;
+    scroll-margin-top: 149px;
 
     @include m.mq-max(v.$xxl) {
         margin-top: clamp(5.406rem, 3.862rem + 7.723vw, 10.813rem);
@@ -1044,6 +1094,7 @@ header {
 /*----------------------------------------------*/
 .portfolio {
     padding: 52px 0 0;
+    scroll-margin-top: 109px;
 
     @include m.mq-max(v.$xxl) {
         padding-top: clamp(1.625rem, 1.161rem + 2.321vw, 3.25rem);
@@ -1551,7 +1602,7 @@ header {
     .stats__container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 25px;
+        padding: 0 24px;
         text-align: center;
 
         .stats__lead {
@@ -1673,6 +1724,7 @@ header {
 .contact {
     background-color: v.$color-white;
     margin-top: 130px;
+    scroll-margin-top: 40px;
 
     @include m.mq-min(v.$xxl) {
         margin-top: clamp(4.063rem, 2.902rem + 5.804vw, 8.125rem);
@@ -1839,6 +1891,7 @@ header {
     @include m.mq-max(v.$xxl) {
         margin-top: clamp(3.406rem, 2.433rem + 4.866vw, 6.813rem);
         padding-bottom: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+        padding-inline: 24px;
     }
 
     @media (width < 1140px) {
@@ -1858,6 +1911,11 @@ header {
             min-height: unset;
             height: auto;
             transform: translateY(-4px);
+        }
+
+        @include m.mq-max(v.$md) {
+            padding-right: clamp(0rem, -1.611rem + 8.054vw, 2.25rem);
+            padding-left: clamp(0rem, -1.655rem + 8.277vw, 2.313rem);
         }
     }
 

@@ -1,22 +1,45 @@
-// lucide Icons
+// lucideアイコン
 lucide.createIcons();
 
-// Navigation Scroll Effect
-window.addEventListener('scroll', () => {
-    document.querySelector('.p-gnav').classList.toggle('scrolled', window.scrollY > 40);
-});
-
-// Back to Top Button
+const nav = document.getElementById("p-gnav");
+const humBtn = document.getElementById("ham-btn");
 const backToTopBtn = document.querySelector('.back-to-top');
+const footer = document.getElementById('footer');
 
-if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
+
+// スクロールイベント
+window.addEventListener('scroll', () => {
+    const isPC = window.matchMedia("(min-width: 992px)").matches;
+    if (isPC) {
+        document.querySelector('.p-gnav').classList.toggle('scrolled', window.scrollY > 40);
+    }
+
+    if (backToTopBtn) {
         if (window.scrollY > 300) {
             backToTopBtn.classList.add('is-visible');
         } else {
             backToTopBtn.classList.remove('is-visible');
         }
+    }
+});
+
+// フッターが見えたら非表示にする
+if (backToTopBtn && footer) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            backToTopBtn.style.opacity = entry.isIntersecting ? '0' : '';
+            backToTopBtn.style.pointerEvents = entry.isIntersecting ? 'none' : '';
+
+            // PCのときだけナブメニューを非表示
+            const isPC = window.matchMedia("(min-width: 992px)").matches;
+            if (isPC) {
+                nav.style.opacity = entry.isIntersecting ? '0' : '';
+                nav.style.pointerEvents = entry.isIntersecting ? 'none' : '';
+            }
+        });
     });
+
+    observer.observe(footer);
 
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
@@ -26,22 +49,27 @@ if (backToTopBtn) {
     });
 }
 
-// Hamburger menu
-const nav = document.getElementById("p-gnav");
-const humBtn = document.getElementById("ham-btn");
-
-
+// ハンバーガーメニュー
 humBtn.addEventListener('click', () => {
-    const isMobile = window.matchMedia("(max-width: 992px)").matches
+    const isMobile = window.matchMedia("(max-width: 991px)").matches
 
     if (isMobile) {
         const isOpen = nav.classList.contains("is-open");
+
+        const navItems = document.querySelectorAll(".p-gnav .p-gnav__item");
+        const targetItems = Array.from(navItems).slice(0, 6);
+
         if (!isOpen) {
-            const navItems = document.querySelectorAll(".p-gnav .p-gnav__item");
-            const targetItems = Array.from(navItems).slice(0, 6);
+
             targetItems.forEach((item, i) => {
                 item.style.transitionDelay = `${(i + 1) * 0.05}s`;
             });
+        } else {
+            setTimeout(() => {
+                targetItems.forEach((item) => {
+                    item.style.transitionDelay = '';
+                });
+            }, 400);
         }
     }
 
@@ -72,7 +100,15 @@ function closeMenu() {
 
 document.getElementById("overlay").addEventListener('click', closeMenu);
 
-// Portfolio Section
+document.querySelectorAll('.p-gnav .p-gnav__item a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            closeMenu()
+        }
+    });
+});
+
+// Portfolioセクション - テキストボックスの幅を画像に合わせる
 window.addEventListener('load', () => {
     const images = document.querySelector('.portfolio__images');
     const lastChildImages = document.querySelector('.portfolio__images .portfolio__img:last-child');
@@ -92,7 +128,7 @@ window.addEventListener('load', () => {
     window.addEventListener('resize', matchWidth);
 });
 
-// Testimonials Section - Swiper
+// Testimonialsセクション - Swiperの初期化
 const swiper = new Swiper('.testimonials__swiper', {
     loop: true,
     navigation: {
