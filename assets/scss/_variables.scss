@@ -1,35 +1,33 @@
-// Design
 /*----------------------------------------------*/
 /* Space */
 /*----------------------------------------------*/
 $space-xs: 0.5rem; // 8px
 $space-s: 1rem; // 16px
-$space-m: 1.5rem; //24px
+$space-m: 1.5rem; // 24px
 $space-l: 2rem; // 32px
-$space-ll: 2.5rem; // 40px
-$space-xl: 3rem; // 48px
-$space-2xl: 3.5rem; // 56px
-$space-3xl: 4rem; // 64px
+$space-xl: 2.5rem; // 40px
+$space-2xl: 3rem; // 48px
 
 /*----------------------------------------------*/
 /* color */
 /*----------------------------------------------*/
-// とりあえず。最後の命名見直す
+$color-nav-item-dark: #363636;
+$color-nav-item-light: #f0e8df;
+$color-bg-light: #F8F8F8;
 $color-white: #FFFFFF;
-$text-accent: #BBA085;
-$color-gray-dark: #4F4F4F;
-$color-gray: #555555;
-$color-contents: #2D2D2D;
-$card-bg-color: #F8F8F8;
-$card-text-color: #5B5B5B;
-$card-text-color-02: #414141;
-$btn-bg-color: #E9E1D9;
-$btn-text-color: #484848;
+$color-accent: #BBA085;
+$color-gray-primary: #2D2D2D;
+$color-gray-secondary: #414141;
+$color-gray-tertiary: #4F4F4F;
+$color-gray-muted: #555555;
+$color-gray-soft: #5B5B5B;
+$color-btn-text: #484848;
+$color-warm: #E9E1D9;
+$color-ornament: #B58B61;
 
 /*----------------------------------------------*/
 /* font-family */
 /*----------------------------------------------*/
-// とりあえず。最後の命名見直す
 $text-primary-family: "Ephesis", cursive;
 $text-secondary-family: "Cormorant Garamond", serif;
 $font-accent: "Raleway", sans-serif;
@@ -57,12 +55,6 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
-
-/*----------------------------------------------*/
-/* text-indent */
-/*----------------------------------------------*/
-$letter-spacing-base-offset: 0.05em;
-$letter-spacing-wide-offset: 0.2em;
 
 /*----------------------------------------------*/
 /* letter-spacing */

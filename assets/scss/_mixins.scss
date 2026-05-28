@@ -4,9 +4,9 @@
 /* Design */
 /*----------------------------------------------*/
 @mixin btn-style {
-    background-color: v.$btn-bg-color;
-    border: 2px solid v.$btn-bg-color;
-    color: v.$btn-text-color;
+    background-color: v.$color-warm;
+    border: 2px solid v.$color-warm;
+    color: v.$color-btn-text;
     font-family: v.$text-secondary-family;
     font-size: v.$fs-28;
     font-weight: v.$fw-regular;
@@ -15,7 +15,7 @@
     @include hover-device {
         &:hover {
             background-color: transparent;
-            color: v.$btn-text-color;
+            color: v.$color-btn-text;
         }
     }
 }
