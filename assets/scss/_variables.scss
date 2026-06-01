@@ -28,24 +28,35 @@ $color-ornament: #B58B61;
 /*----------------------------------------------*/
 /* font-family */
 /*----------------------------------------------*/
-$text-primary-family: "Ephesis", cursive;
-$text-secondary-family: "Cormorant Garamond", serif;
-$font-accent: "Raleway", sans-serif;
-$font-accent-02: "Playfair Display SC", serif;
+$ff-script-main: "Ephesis", cursive;
+$ff-serif-main: "Cormorant Garamond", serif;
+$ff-serif-sub: "Playfair Display SC", serif;
+$ff-sans-sub: "Raleway", sans-serif;
 
 /*----------------------------------------------*/
 /* font-size */
 /*----------------------------------------------*/
-$fs-16: 1rem; // 16px
-$fs-18: 1.125rem; // 18px
-$fs-20: 1.25rem; // 20px
-$fs-28: 1.75rem; // 28px
-$fs-40: 2.5rem; // 40px
-$fs-50: 3.125rem; // 50px
-$fs-64: 4rem; // 64px
-$fs-80: 5rem; // 80px
-$fs-96: 6rem; // 96px
-$fs-120: 7.5rem; // 120px
+$fs-12: 0.75rem;
+$fs-14: 0.875rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-22: 1.375rem;
+$fs-24: 1.5rem;
+$fs-28: 1.75rem;
+$fs-32: 2rem;
+$fs-36: 2.25rem;
+$fs-40: 2.5rem;
+$fs-46: 2.875rem;
+$fs-48: 3rem;
+$fs-50: 3.125rem;
+$fs-60: 3.75rem;
+$fs-64: 4rem;
+$fs-70: 4.375rem;
+$fs-80: 5rem;
+$fs-120: 7.5rem;
+$fs-128: 8rem;
+$fs-200: 12.5rem;
 
 /*----------------------------------------------*/
 /* font-weight */

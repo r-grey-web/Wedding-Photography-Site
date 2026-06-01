@@ -123,8 +123,8 @@ body {
     }
 
     .back-to-top__label {
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: 0.875rem;
+        font-family: v.$ff-serif-main;
+        font-size: v.$fs-14;
         font-style: normal;
         font-weight: v.$fw-light;
         letter-spacing: 0.22em;
@@ -134,7 +134,7 @@ body {
         transition: color 0.3s ease;
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(0.75rem, 0.714rem + 0.179vw, 0.875rem);
+            font-size: clamp(v.$fs-12, 0.714rem + 0.179vw, v.$fs-14);
         }
     }
 }
@@ -326,13 +326,13 @@ header {
 .p-gnav__item {
     padding: 0 0px v.$space-xs 0;
     color: v.$color-nav-item-dark;
-    font-family: v.$font-accent-02;
-    font-size: 1.375rem;
+    font-family: v.$ff-serif-sub;
+    font-size: v.$fs-22;
     font-weight: v.$fw-regular;
     letter-spacing: v.$letter-spacing-base;
 
     @include m.mq-max(v.$xxl) {
-        font-size: clamp(0.938rem, 0.813rem + 0.625vw, 1.375rem);
+        font-size: clamp(0.938rem, 0.813rem + 0.625vw, v.$fs-22);
     }
 
     @include m.mq-max(v.$lg) {
@@ -441,7 +441,7 @@ header {
 
     .hero__catch {
         color: v.$color-accent;
-        font-family: v.$text-primary-family;
+        font-family: v.$ff-script-main;
         font-size: v.$fs-64;
         font-weight: v.$fw-regular;
         text-indent: 0.05em;
@@ -450,7 +450,7 @@ header {
         paint-order: stroke fill;
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(1.25rem, 0.464rem + 3.929vw, 4rem);
+            font-size: clamp(v.$fs-20, 0.464rem + 3.929vw, v.$fs-64);
         }
 
         @include m.mq-max(v.$sm) {
@@ -460,14 +460,14 @@ header {
 
     .hero__title {
         color: v.$color-white;
-        font-family: v.$text-secondary-family;
+        font-family: v.$ff-serif-main;
         font-size: v.$fs-80;
         font-weight: v.$fw-semibold;
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
         transform: translateY(5px);
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(1.5rem, 0.5rem + 5vw, 5rem);
+            font-size: clamp(v.$fs-24, 0.5rem + 5vw, v.$fs-80);
         }
     }
 }
@@ -500,7 +500,7 @@ header {
         .concept-message__catch {
             margin-bottom: 29px;
             color: v.$color-accent;
-            font-family: v.$font-accent;
+            font-family: v.$ff-sans-sub;
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: 0.26em;
@@ -508,20 +508,20 @@ header {
 
             @include m.mq-max(v.$xxl) {
                 margin-bottom: clamp(v.$space-s, 0.714rem + 1.429vw, v.$space-l);
-                font-size: clamp(0.813rem, 0.545rem + 1.339vw, 1.75rem);
+                font-size: clamp(0.813rem, 0.545rem + 1.339vw, v.$fs-28);
             }
         }
 
         .concept-message__title {
             margin-bottom: v.$space-m;
             color: v.$color-gray-tertiary;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             line-height: 1.22;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
+                font-size: clamp(v.$fs-28, 1.107rem + 3.214vw, v.$fs-64);
             }
         }
     }
@@ -642,23 +642,23 @@ header {
         .about__title {
             margin-bottom: 23px;
             color: #4A4A4A;
-            font-family: v.$text-secondary-family;
-            font-size: 48px;
+            font-family: v.$ff-serif-main;
+            font-size: v.$fs-48;
             font-weight: v.$fw-regular;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.5rem, 0.786rem + 3.571vw, 3rem);
+                font-size: clamp(v.$fs-24, 0.786rem + 3.571vw, v.$fs-48);
             }
         }
 
         .about__text-group {
             color: v.$color-gray-primary;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-28;
             font-weight: v.$fw-regular;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
             }
 
             @media (width <=378px) {
@@ -697,14 +697,14 @@ header {
 
         .about__signature {
             color: #545454;
-            font-family: v.$text-primary-family;
-            font-size: 3.75rem;
+            font-family: v.$ff-script-main;
+            font-size: v.$fs-60;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             text-indent: 0.07em;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+                font-size: clamp(v.$fs-32, 1.5rem + 2.5vw, v.$fs-60);
             }
         }
 
@@ -715,7 +715,7 @@ header {
             @include m.btn-style;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1rem, 0.643rem + 1.786vw, 1.75rem);
+                font-size: clamp(v.$fs-16, 0.643rem + 1.786vw, v.$fs-28);
             }
         }
 
@@ -746,21 +746,21 @@ header {
         .services__sub-title {
             margin-bottom: 5px;
             color: v.$color-accent;
-            font-family: v.$font-accent;
+            font-family: v.$ff-sans-sub;
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: 0.2em;
             letter-spacing: v.$letter-spacing-wide;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+                font-size: clamp(v.$fs-18, 0.946rem + 0.893vw, v.$fs-28);
             }
         }
 
         .services__main-title {
             margin: 0;
             color: v.$color-gray-soft;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-variant-ligatures: common-ligatures;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
@@ -770,7 +770,7 @@ header {
             font-variant-ligatures: no-common-ligatures;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+                font-size: clamp(v.$fs-40, 2.071rem + 2.143vw, v.$fs-64);
             }
         }
     }
@@ -837,7 +837,7 @@ header {
                     line-height: 1;
 
                     @include m.mq-max(v.$xxl) {
-                        font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
+                        font-size: clamp(2.375rem, 2.161rem + 1.071vw, v.$fs-50);
                     }
                 }
 
@@ -870,11 +870,11 @@ header {
                 }
 
                 .service-card__price {
-                    font-size: 48px;
+                    font-size: v.$fs-48;
                     line-height: 0.98;
 
                     @include m.mq-max(v.$xxl) {
-                        font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
+                        font-size: clamp(v.$fs-36, 2.036rem + 1.071vw, v.$fs-48);
                     }
                 }
             }
@@ -902,11 +902,11 @@ header {
                 }
 
                 .service-card__price {
-                    font-size: 48px;
+                    font-size: v.$fs-48;
                     line-height: 0.98;
 
                     @include m.mq-max(v.$xxl) {
-                        font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
+                        font-size: clamp(v.$fs-36, 2.036rem + 1.071vw, v.$fs-48);
                     }
                 }
             }
@@ -914,31 +914,31 @@ header {
 
         .service-card__title {
             color: v.$color-gray-soft;
-            font-family: v.$text-primary-family;
-            font-size: 60px;
+            font-family: v.$ff-script-main;
+            font-size: v.$fs-60;
             font-weight: v.$fw-regular;
             text-indent: 0.05em;
             letter-spacing: v.$letter-spacing-base;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(2.625rem, 2.304rem + 1.607vw, 3.75rem);
+                font-size: clamp(2.625rem, 2.304rem + 1.607vw, v.$fs-60);
             }
         }
 
         .service-card__price-wrapper {
             margin-bottom: v.$space-2xl;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             line-height: 1.05;
         }
 
         .service-card__label {
             color: v.$color-gray-soft;
-            font-size: 1.5rem;
+            font-size: v.$fs-24;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.188rem, 1.098rem + 0.446vw, 1.5rem);
+                font-size: clamp(1.188rem, 1.098rem + 0.446vw, v.$fs-24);
             }
         }
 
@@ -956,7 +956,7 @@ header {
 
             @include m.mq-max(v.$xxl) {
                 margin-top: clamp(0rem, -0.286rem + 1.429vw, v.$space-s);
-                font-size: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+                font-size: clamp(v.$fs-22, 1.268rem + 0.536vw, v.$fs-28);
             }
         }
     }
@@ -1080,7 +1080,7 @@ header {
                 margin: 0 0 v.$space-m;
                 padding-left: 0.065em;
                 color: #686868;
-                font-family: v.$text-primary-family;
+                font-family: v.$ff-script-main;
                 font-size: v.$fs-50;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
@@ -1088,20 +1088,20 @@ header {
                 white-space: nowrap;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(2rem, 1.679rem + 1.607vw, 3.125rem);
+                    font-size: clamp(v.$fs-32, 1.679rem + 1.607vw, v.$fs-50);
                 }
             }
 
             .concept-message-02__text {
                 padding-left: 0.1em;
                 color: v.$color-gray-secondary;
-                font-family: v.$text-secondary-family;
+                font-family: v.$ff-serif-main;
                 font-size: v.$fs-28;
                 font-weight: v.$fw-light;
                 line-height: 1.22;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                    font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
                 }
             }
         }
@@ -1134,21 +1134,21 @@ header {
         .portfolio__sub-title {
             margin-bottom: v.$space-xs;
             color: v.$color-accent;
-            font-family: v.$font-accent;
+            font-family: v.$ff-sans-sub;
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             text-indent: 0.8em;
             letter-spacing: v.$letter-spacing-wide;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+                font-size: clamp(v.$fs-18, 0.946rem + 0.893vw, v.$fs-28);
             }
         }
 
         .portfolio__main-title {
             margin: 0;
             color: v.$color-gray-soft;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             text-indent: 0.33em;
@@ -1156,7 +1156,7 @@ header {
             line-height: 1.1;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(40px, 2.071rem + 2.143vw, 64px);
+                font-size: clamp(v.$fs-40, 2.071rem + 2.143vw, v.$fs-64);
             }
         }
     }
@@ -1216,33 +1216,33 @@ header {
                 line-height: 0.5;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(4.5rem, 3.643rem + 4.286vw, 7.5rem);
+                    font-size: clamp(4.5rem, 3.643rem + 4.286vw, v.$fs-120);
                 }
             }
 
             .portfolio__story-title {
                 margin: 0 0 0px;
                 color: v.$color-gray-muted;
-                font-family: v.$text-primary-family;
-                font-size: 2.875rem;
+                font-family: v.$ff-script-main;
+                font-size: v.$fs-46;
                 font-weight: v.$fw-regular;
                 letter-spacing: v.$letter-spacing-base;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(1.75rem, 1.429rem + 1.607vw, 2.875rem);
+                    font-size: clamp(v.$fs-28, 1.429rem + 1.607vw, v.$fs-46);
                 }
             }
 
             .portfolio__description {
                 margin: 0;
                 color: v.$color-gray-primary;
-                font-family: v.$text-secondary-family;
+                font-family: v.$ff-serif-main;
                 font-size: v.$fs-28;
                 font-weight: v.$fw-light;
                 line-height: 1.22;
 
                 @include m.mq-max(v.$xxl) {
-                    font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                    font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
                 }
             }
         }
@@ -1352,7 +1352,7 @@ header {
             white-space: nowrap;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
             }
         }
     }
@@ -1373,14 +1373,14 @@ header {
 
         .testimonials__title {
             color: v.$color-gray-muted;
-            font-family: v.$text-primary-family;
-            font-size: 70px;
+            font-family: v.$ff-script-main;
+            font-size: v.$fs-70;
             font-weight: v.$fw-regular;
             text-indent: 0.3em;
             letter-spacing: v.$letter-spacing-base;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(2.75rem, 2.286rem + 2.321vw, 4.375rem);
+                font-size: clamp(2.75rem, 2.286rem + 2.321vw, v.$fs-70);
             }
         }
     }
@@ -1443,7 +1443,7 @@ header {
                     transform: translateX(-50%);
                     color: v.$color-warm;
                     font-family: "Forum", serif;
-                    font-size: 200px;
+                    font-size: v.$fs-200;
                     font-weight: v.$fw-regular;
                     -webkit-text-stroke: 3.2px v.$color-warm;
                     paint-order: stroke fill;
@@ -1451,34 +1451,34 @@ header {
 
                     @include m.mq-max(v.$xxl) {
                         top: clamp(2rem, 1.554rem + 2.232vw, 3.563rem);
-                        font-size: clamp(6.25rem, 4.464rem + 8.929vw, 12.5rem);
+                        font-size: clamp(6.25rem, 4.464rem + 8.929vw, v.$fs-200);
                     }
                 }
 
                 .testimonials__message {
                     margin-bottom: 74px;
                     color: v.$color-gray-tertiary;
-                    font-family: v.$text-secondary-family;
+                    font-family: v.$ff-serif-main;
                     font-size: v.$fs-28;
                     font-weight: v.$fw-regular;
                     line-height: 1.23;
 
                     @include m.mq-max(v.$xxl) {
                         margin-bottom: clamp(v.$space-xl, 1.893rem + 3.036vw, 4.625rem);
-                        font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                        font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
                     }
                 }
 
                 .testimonials__name {
                     margin: 0;
                     color: v.$color-gray-secondary;
-                    font-family: v.$text-secondary-family;
+                    font-family: v.$ff-serif-main;
                     font-size: v.$fs-28;
                     font-weight: v.$fw-light;
                     text-transform: uppercase;
 
                     @include m.mq-max(v.$xxl) {
-                        font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                        font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
                     }
                 }
             }
@@ -1624,14 +1624,14 @@ header {
         .stats__lead {
             margin: 0 27px v.$space-2xl 0;
             color: #000000;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-40;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1.2;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+                font-size: clamp(v.$fs-24, 1.214rem + 1.429vw, v.$fs-40);
             }
 
             @include m.mq-max(v.$md) {
@@ -1685,18 +1685,18 @@ header {
         .stats__number {
             display: block;
             color: v.$color-accent;
-            font-family: v.$font-accent-02;
-            font-size: 128px;
+            font-family: v.$ff-serif-sub;
+            font-size: v.$fs-128;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
             line-height: 1;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(6.5rem, 6.071rem + 2.143vw, 8rem);
+                font-size: clamp(6.5rem, 6.071rem + 2.143vw, v.$fs-128);
             }
 
             .stats__number--small {
-                font-size: v.$fs-96;
+                font-size: 6rem;
             }
 
             &.stats__number--offset {
@@ -1707,13 +1707,13 @@ header {
         .stats__label {
             margin: 0;
             color: #535353;
-            font-family: v.$text-primary-family;
+            font-family: v.$ff-script-main;
             font-size: v.$fs-40;
             font-weight: v.$fw-regular;
             white-space: nowrap;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+                font-size: clamp(v.$fs-24, 1.214rem + 1.429vw, v.$fs-40);
             }
 
             &--first {
@@ -1789,20 +1789,20 @@ header {
         .contact__subtitle {
             margin-bottom: 0px;
             color: v.$color-accent;
-            font-family: v.$font-accent;
+            font-family: v.$ff-sans-sub;
             font-size: v.$fs-28;
             font-weight: v.$fw-medium;
             letter-spacing: v.$letter-spacing-wide;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+                font-size: clamp(v.$fs-18, 0.946rem + 0.893vw, v.$fs-28);
             }
         }
 
         .contact__title {
             margin-bottom: 102px;
             color: v.$color-gray-soft;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
@@ -1810,7 +1810,7 @@ header {
 
             @include m.mq-max(v.$xxl) {
                 margin-bottom: clamp(3.188rem, 2.277rem + 4.554vw, 6.375rem);
-                font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+                font-size: clamp(v.$fs-40, 2.071rem + 2.143vw, v.$fs-64);
             }
         }
 
@@ -1834,12 +1834,12 @@ header {
             display: block;
             margin-bottom: -20px;
             color: v.$color-gray-primary;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-28;
             font-weight: v.$fw-light;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
             }
         }
 
@@ -1870,7 +1870,7 @@ header {
             color: #505050;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1.125rem, 0.946rem + 0.893vw, 1.75rem);
+                font-size: clamp(v.$fs-18, 0.946rem + 0.893vw, v.$fs-28);
             }
         }
     }
@@ -1991,13 +1991,13 @@ header {
         .footer-gnav__item {
             padding: 0 0px 10px 0;
             color: v.$color-nav-item-dark;
-            font-family: v.$font-accent-02;
-            font-size: 1.375rem;
+            font-family: v.$ff-serif-sub;
+            font-size: v.$fs-22;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(0.938rem, 0.813rem + 0.625vw, 1.375rem);
+                font-size: clamp(0.938rem, 0.813rem + 0.625vw, v.$fs-22);
             }
         }
 
@@ -2042,13 +2042,13 @@ header {
         .footer__description-body {
             margin: 0;
             color: v.$color-gray-primary;
-            font-family: v.$text-secondary-family;
+            font-family: v.$ff-serif-main;
             font-size: v.$fs-28;
             font-weight: v.$fw-light;
             line-height: 1.22;
 
             @include m.mq-max(v.$xxl) {
-                font-size: clamp(1rem, 0.786rem + 1.071vw, 1.75rem);
+                font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
             }
         }
     }
@@ -2077,12 +2077,12 @@ header {
 
     .footer__copyright {
         color: v.$color-gray-primary;
-        font-family: v.$text-secondary-family;
+        font-family: v.$ff-serif-main;
         font-size: v.$fs-20;
         font-weight: v.$fw-medium;
 
         @include m.mq-max(v.$xxl) {
-            font-size: clamp(0.875rem, 0.75rem + 0.357vw, 1.25rem);
+            font-size: clamp(v.$fs-14, 0.75rem + 0.357vw, v.$fs-20);
         }
     }
 }

@@ -144,7 +144,7 @@ body.is-open #overlay {
   }
 }
 .back-to-top .back-to-top__label {
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 300;
@@ -681,7 +681,7 @@ header {
   margin-bottom: 23px;
   color: #4A4A4A;
   font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 400;
 }
 @media (width < 1440px) {
@@ -912,7 +912,7 @@ header {
   margin-bottom: 51px;
 }
 .services .services__cards .service-card:nth-child(2) .service-card__price {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 0.98;
 }
 @media (width < 1440px) {
@@ -941,7 +941,7 @@ header {
   margin-bottom: 51px;
 }
 .services .services__cards .service-card:nth-child(3) .service-card__price {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 0.98;
 }
 @media (width < 1440px) {
@@ -952,7 +952,7 @@ header {
 .services .services__cards .service-card__title {
   color: #5B5B5B;
   font-family: "Ephesis", cursive;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 400;
   text-indent: 0.05em;
   letter-spacing: 0.05em;
@@ -1217,7 +1217,7 @@ header {
 }
 @media (width < 1440px) {
   .portfolio .portfolio__header .portfolio__main-title {
-    font-size: clamp(40px, 2.071rem + 2.143vw, 64px);
+    font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
   }
 }
 .portfolio .portfolio__container {
@@ -1466,7 +1466,7 @@ header {
 .testimonials .testimonials__title-container .testimonials__title {
   color: #555555;
   font-family: "Ephesis", cursive;
-  font-size: 70px;
+  font-size: 4.375rem;
   font-weight: 400;
   text-indent: 0.3em;
   letter-spacing: 0.05em;
@@ -1538,7 +1538,7 @@ header {
   transform: translateX(-50%);
   color: #E9E1D9;
   font-family: "Forum", serif;
-  font-size: 200px;
+  font-size: 12.5rem;
   font-weight: 400;
   -webkit-text-stroke: 3.2px #E9E1D9;
   paint-order: stroke fill;
@@ -1790,7 +1790,7 @@ header {
   display: block;
   color: #BBA085;
   font-family: "Playfair Display SC", serif;
-  font-size: 128px;
+  font-size: 8rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1;
