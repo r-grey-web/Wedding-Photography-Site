@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figma Copy</title>
+    <title>Wedding Photography</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +35,8 @@
     <header>
         <nav id="p-gnav" class="p-gnav">
             <div class="p-gnav--sp-header">
-                <a href="index.html" class="p-gnav--sp-logo" aria-label="ホーム"><img src="assets/icons/logo.svg"
-                        alt="サイト名" class="p-gnav--sp-logo__img"></a>
+                <a href="index.html" class="p-gnav--sp-logo" aria-label="Home"><img src="assets/icons/logo.svg"
+                        alt="Site name" class="p-gnav--sp-logo__img"></a>
             </div>
             <div class="p-gnav__container">
                 <!-- Left menu -->
@@ -46,12 +46,12 @@
                     <li class="p-gnav__item"><a href="#services">SERVICES</a></li>
                 </ul>
                 <!-- Central logo -->
-                <a href="index.html" class="p-logo" aria-label="ホーム"><img src="assets/icons/logo.svg" alt="サイト名"
+                <a href="index.html" class="p-logo" aria-label="Home"><img src="assets/icons/logo.svg" alt="Site name"
                         class="p-logo__img"></a>
                 <!-- Right menu -->
                 <ul class="p-gnav__right-items">
                     <li class="p-gnav__item"><a href="#portfolio">PORTFOLIO</a></li>
-                    <li class="p-gnav__item"><a href="#blog">BLOG</a></li>
+                    <li class="p-gnav__item"><a href="blog/">BLOG</a></li>
                     <li class="p-gnav__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
         <div id="overlay"></div>
 
         <!-- Hamburger menu -->
-        <button id="ham-btn" class="ham-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="p-gnav">
+        <button id="ham-btn" class="ham-btn" aria-label="Open menu" aria-expanded="false" aria-controls="p-gnav">
             <i class="ham-btn--open" data-lucide="menu" aria-hidden="true"></i>
             <i class="ham-btn--close" data-lucide="x" aria-hidden="true"></i>
         </button>
@@ -73,7 +73,7 @@
     </header><!-- Top End -->
 
     <!-- Back to Top Botton -->
-    <button class="back-to-top" aria-label="ページトップへ戻る">
+    <button class="back-to-top" aria-label="Back to top">
         <div class="back-to-top__seal">
             <svg class="back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -82,7 +82,7 @@
                 <path d="M12 2V22" />
             </svg>
         </div>
-        <span class="back-to-top__label">トップへ戻る</span>
+        <span class="back-to-top__label">Back to Top</span>
     </button>
 
     <main>
@@ -101,7 +101,8 @@
         <section id="about" class="about">
             <div class="about-wrapper">
                 <div class="about__img-wrapper">
-                    <img src="assets/images/about-photo.jpg" alt="カメラを持つテッサのポートレート" class="about__img">
+                    <img src="assets/images/about-photo.jpg" alt="Portrait of Tessa with a camera" class="about__img"
+                        loading="lazy">
                 </div>
                 <div class="about__content">
                     <div class="about__content-top">
@@ -109,20 +110,24 @@
                             class="about_decoration-01">
                         <h2 class="about__title">Hello, My Name is Tessa</h2>
                         <div class="about__text-group">
-                            <p class="about__text-group-01">Lorem ipsum dolor sit amet consectetur. Dignissim<br>
+                            <p class="about__text-group-01">Lorem ipsum dolor sit amet consectetur. Dignissim<br
+                                    class="br-pc">
                                 consectetur tristique purus vehicula
                                 felis
-                                velit ac.<br> Tempus velit morbi accumsan id sit interdum lacus<br> turpis ac. Integer
+                                velit ac.<br class="br-pc"> Tempus velit morbi accumsan id sit interdum lacus<br
+                                    class="br-pc"> turpis ac. Integer
                                 malesuada
                                 sagittis placerat eget.</p>
-                            <p class="about__text-group-02">Lorem ipsum dolor sit amet consectetur. Dignissim<br>
+                            <p class="about__text-group-02">Lorem ipsum dolor sit amet consectetur. Dignissim<br
+                                    class="br-pc">
                                 consectetur tristique purus vehicula
                                 felis
-                                velit ac.<br> Tempus velit morbi accumsan id sit interdum lacus<br> turpis ac. Integer
+                                velit ac.<br class="br-pc"> Tempus velit morbi accumsan id sit interdum lacus<br
+                                    class="br-pc"> turpis ac. Integer
                                 malesuada
                                 sagittis placerat.</p>
                         </div>
-                        <img src="assets/decorations/decoration-02.svg" alt="" classrole="presentation"
+                        <img src="assets/decorations/decoration-02.svg" alt="" role="presentation"
                             class="about_decoration-02">
                         <p class="about__signature">Tessa.M</p>
                     </div>
@@ -180,7 +185,8 @@
             <div class="concept-message-02__container">
 
                 <div class="concept-message-02__image-wrapper">
-                    <img src="assets/images/concept-message-photo.jpg" alt="ビーチを歩く新郎新婦" class="concept-message-02__img">
+                    <img src="assets/images/concept-message-photo.jpg" alt="A bride and groom walking on the beach"
+                        class="concept-message-02__img" loading="lazy">
                 </div>
 
                 <div class="concept-message-02__content-box">
@@ -221,8 +227,10 @@
                         </div>
                     </div>
                     <div class="portfolio__images">
-                        <img src="assets/images/portfolio-photo-01.jpg" alt="寄り添い合う新郎新婦" class="portfolio__img">
-                        <img src="assets/images/portfolio-photo-02.jpg" alt="花束を抱えた笑顔の新婦" class="portfolio__img">
+                        <img src="assets/images/portfolio-photo-01.jpg" alt="A bride and groom cuddling"
+                            class="portfolio__img" loading="lazy">
+                        <img src="assets/images/portfolio-photo-02.jpg" alt="A smiling bride holding a bouquet"
+                            class="portfolio__img" loading="lazy">
                     </div>
                 </div>
                 <div class="portfolio__pc-btn-wrapper">
@@ -250,7 +258,7 @@
 
                                 <div class="testimonials__image-wrapper">
                                     <img src="assets/images/testimonial-photo.jpg" alt="Sarah and Luke"
-                                        class="testimonials__image">
+                                        class="testimonials__image" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -265,7 +273,7 @@
 
                                 <div class="testimonials__image-wrapper">
                                     <img src="assets/images/contact-photo.jpg" alt="Sarah and Luke"
-                                        class="testimonials__image testimonials__image--secondary">
+                                        class="testimonials__image testimonials__image--secondary" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -280,7 +288,7 @@
 
                                 <div class="testimonials__image-wrapper">
                                     <img src="assets/images/portfolio-photo-01.jpg" alt="Sarah and Luke"
-                                        class="testimonials__image testimonials__image--tertiary">
+                                        class="testimonials__image testimonials__image--tertiary" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -304,7 +312,7 @@
             </div>
         </section><!-- Testimonials End -->
 
-        <!--   Start -->
+        <!-- Achievements Start -->
         <section class="stats">
             <div class="stats__container">
                 <h2 class="stats__lead">HELPING COUPLES BRING TO LIFE<br>THEIR WEDDING DREAMS</h2>
@@ -339,23 +347,22 @@
             <div class="contact__container">
                 <div class="contact__form">
                     <span class="contact__subtitle">CONTACT</span>
-                    <h1 class="contact__title">Get in Touch</h1>
+                    <h2 class="contact__title">Get in Touch</h2>
 
-                    <form class="contact__form-body" action="#">
+                    <form novalidate class="contact__form-body">
                         <div class="contact__field">
                             <label class="contact__label" for="name">NAME</label>
-                            <input class="contact__input" type="text" id="name" name="name" autocomplete="off">
+                            <input class="contact__input" type="text" id="name" name="name" autocomplete="name">
                         </div>
 
                         <div class="contact__field">
                             <label class="contact__label" for="email">EMAIL</label>
-                            <input class="contact__input" type="email" id="email" name="email" autocomplete="off">
+                            <input class="contact__input" type="email" id="email" name="email" autocomplete="email">
                         </div>
 
                         <div class="contact__field">
                             <label class="contact__label" for="message">MESSAGE</label>
-                            <textarea class="contact__textarea" id="message" name="message" rows="4"
-                                autocomplete="off"></textarea>
+                            <textarea class="contact__textarea" id="message" name="message" rows="4"></textarea>
                         </div>
 
                         <button class="contact__button" type="submit">Send</button>
@@ -363,7 +370,8 @@
                 </div>
 
                 <div class="contact__image">
-                    <img class="contact__photo" src="assets/images/contact-photo.jpg" alt="Wedding Couple">
+                    <img class="contact__photo" src="assets/images/contact-photo.jpg" alt="Wedding Couple"
+                        loading="lazy">
                 </div>
             </div>
         </section><!-- Contact End -->
@@ -371,23 +379,23 @@
 
     <!-- Footer Start -->
     <footer id="footer" class="footer__container">
-        <a href="index.html" class="footer-gnav__logo-sp" aria-label="ホーム"><img src="assets/icons/logo.svg" alt="サイト名"
-                class="footer-gnav__logo-sp__img"></a>
+        <a href="index.html" class="footer-gnav__logo-sp" aria-label="Home"><img src="assets/icons/logo.svg"
+                alt="Site name" class="footer-gnav__logo-sp__img"></a>
         <nav class="footer-gnav">
             <div class="footer-gnav__container">
-                <!-- 左メニュー -->
+                <!-- Left menu -->
                 <ul class="footer-gnav__left-items">
                     <li class="footer-gnav__item"><a href="index.html">HOME</a></li>
                     <li class="footer-gnav__item"><a href="#about">ABOUT</a></li>
                     <li class="footer-gnav__item"><a href="#services">SERVICES</a></li>
                 </ul>
                 <!-- Central logo -->
-                <a href="index.html" class="footer-gnav__logo" aria-label="ホーム"><img src="assets/icons/logo.svg"
-                        alt="サイト名" class="footer-gnav__img"></a>
+                <a href="index.html" class="footer-gnav__logo" aria-label="Home"><img src="assets/icons/logo.svg"
+                        alt="Site name" class="footer-gnav__img"></a>
                 <!-- Right menu -->
                 <ul class="footer-gnav__right-items">
                     <li class="footer-gnav__item"><a href="#portfolio">PORTFOLIO</a></li>
-                    <li class="footer-gnav__item"><a href="#blog">BLOG</a></li>
+                    <li class="footer-gnav__item"><a href="blog/">BLOG</a></li>
                     <li class="footer-gnav__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -400,13 +408,13 @@
         </div>
 
         <div class="footer__social-links">
-            <a class="footer__social-icon" href="index.html"><img class="footer__social-img--facebook"
+            <a class="footer__social-icon" href="#"><img class="footer__social-img--facebook"
                     src="assets/icons/facebook.svg" alt="Facebook"></a>
-            <a class="footer__social-icon" href="index.html"><img class="footer__social-img--twitter"
+            <a class="footer__social-icon" href="#"><img class="footer__social-img--twitter"
                     src="assets/icons/twitter.svg" alt="Twitter"></a>
-            <a class="footer__social-icon" href="index.html"><img class="footer__social-img--youtube"
+            <a class="footer__social-icon" href="#"><img class="footer__social-img--youtube"
                     src="assets/icons/youtube.svg" alt="YouTube"></a>
-            <a class="footer__social-icon" href="index.html"><img class="footer__social-img--instagram"
+            <a class="footer__social-icon" href="#"><img class="footer__social-img--instagram"
                     src="assets/icons/instagram.svg" alt="Instagram"></a>
         </div>
 
@@ -418,7 +426,7 @@
     <!-- js -->
     <script src="assets/js/main.js" defer></script>
     <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-// lucideアイコン
+// lucide icon
 lucide.createIcons();
 
 const nav = document.getElementById("p-gnav");
@@ -7,7 +7,7 @@ const backToTopBtn = document.querySelector('.back-to-top');
 const footer = document.getElementById('footer');
 
 
-// スクロールイベント
+// Scroll event
 window.addEventListener('scroll', () => {
     const isPC = window.matchMedia("(min-width: 992px)").matches;
     if (isPC) {
@@ -23,14 +23,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// フッターが見えたら非表示にする
+// Hide when the footer is visible
 if (backToTopBtn && footer) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             backToTopBtn.style.opacity = entry.isIntersecting ? '0' : '';
             backToTopBtn.style.pointerEvents = entry.isIntersecting ? 'none' : '';
 
-            // PCのときだけナブメニューを非表示
+            // Hide the nav menu on desktop only
             const isPC = window.matchMedia("(min-width: 992px)").matches;
             if (isPC) {
                 nav.style.opacity = entry.isIntersecting ? '0' : '';
@@ -49,7 +49,7 @@ if (backToTopBtn && footer) {
     });
 }
 
-// ハンバーガーメニュー
+// Hamburger menu
 humBtn.addEventListener('click', () => {
     const isMobile = window.matchMedia("(max-width: 991px)").matches
 
@@ -108,7 +108,7 @@ document.querySelectorAll('.p-gnav .p-gnav__item a').forEach(link => {
     });
 });
 
-// Portfolioセクション - テキストボックスの幅を画像に合わせる
+// Portfolio section - Match the text box width to the image width
 window.addEventListener('load', () => {
     const images = document.querySelector('.portfolio__images');
     const lastChildImages = document.querySelector('.portfolio__images .portfolio__img:last-child');
@@ -128,7 +128,7 @@ window.addEventListener('load', () => {
     window.addEventListener('resize', matchWidth);
 });
 
-// Testimonialsセクション - Swiperの初期化
+// Testimonials section - Initialize Swiper
 const swiper = new Swiper('.testimonials__swiper', {
     loop: true,
     navigation: {

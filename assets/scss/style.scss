@@ -518,7 +518,7 @@ header {
             font-family: v.$ff-serif-main;
             font-size: v.$fs-64;
             font-weight: v.$fw-regular;
-            line-height: 1.22;
+            line-height: v.$line-height-tight;
 
             @include m.mq-max(v.$xxl) {
                 font-size: clamp(v.$fs-28, 1.107rem + 3.214vw, v.$fs-64);
@@ -544,8 +544,7 @@ header {
     @include m.mq-min(v.$xxl) {
         justify-content: center;
         max-height: 858px;
-        width: 1440px;
-        max-width: 1440px;
+        max-width: v.$max-width-container;
         margin: v.$space-2xl auto 0;
     }
 
@@ -662,14 +661,14 @@ header {
             }
 
             @media (width <=378px) {
-                br {
+                .br-pc {
                     display: none;
                 }
             }
 
             .about__text-group-01 {
                 margin-bottom: 33px;
-                line-height: 1.23;
+                line-height: v.$line-height-base;
 
                 @include m.mq-max(v.$xxl) {
                     line-height: 1.33;
@@ -678,7 +677,7 @@ header {
 
             .about__text-group-02 {
                 margin-bottom: 44px;
-                line-height: 1.22;
+                line-height: v.$line-height-tight;
 
                 @include m.mq-max(v.$xxl) {
                     line-height: 1.32;
@@ -766,7 +765,7 @@ header {
             font-weight: v.$fw-regular;
             text-indent: 0.05em;
             letter-spacing: 0.045em;
-            line-height: v.$line-height-tight;
+            line-height: 1.3;
             font-variant-ligatures: no-common-ligatures;
 
             @include m.mq-max(v.$xxl) {
@@ -780,7 +779,7 @@ header {
         justify-content: center;
         gap: 66px;
         width: 100%;
-        max-width: 1440px;
+        max-width: v.$max-width-container;
         margin: 0 auto;
 
         @include m.mq-max(v.$xxl) {
@@ -834,7 +833,7 @@ header {
 
                 .service-card__price {
                     font-size: v.$fs-50;
-                    line-height: 1;
+                    line-height: v.$line-height-none;
 
                     @include m.mq-max(v.$xxl) {
                         font-size: clamp(2.375rem, 2.161rem + 1.071vw, v.$fs-50);
@@ -976,7 +975,7 @@ header {
         align-items: center;
         position: relative;
         width: 100%;
-        max-width: 1440px;
+        max-width: v.$max-width-container;
         margin: 91.5px auto 52px;
 
         @include m.mq-max(v.$xxl) {
@@ -1098,7 +1097,7 @@ header {
                 font-family: v.$ff-serif-main;
                 font-size: v.$fs-28;
                 font-weight: v.$fw-light;
-                line-height: 1.22;
+                line-height: v.$line-height-tight;
 
                 @include m.mq-max(v.$xxl) {
                     font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
@@ -1163,7 +1162,7 @@ header {
 
     .portfolio__container {
         width: 100%;
-        max-width: 1440px;
+        max-width: v.$max-width-container;
         margin: 0 auto;
     }
 
@@ -1239,7 +1238,7 @@ header {
                 font-family: v.$ff-serif-main;
                 font-size: v.$fs-28;
                 font-weight: v.$fw-light;
-                line-height: 1.22;
+                line-height: v.$line-height-tight;
 
                 @include m.mq-max(v.$xxl) {
                     font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
@@ -1447,7 +1446,7 @@ header {
                     font-weight: v.$fw-regular;
                     -webkit-text-stroke: 3.2px v.$color-warm;
                     paint-order: stroke fill;
-                    line-height: 1;
+                    line-height: v.$line-height-none;
 
                     @include m.mq-max(v.$xxl) {
                         top: clamp(2rem, 1.554rem + 2.232vw, 3.563rem);
@@ -1461,7 +1460,7 @@ header {
                     font-family: v.$ff-serif-main;
                     font-size: v.$fs-28;
                     font-weight: v.$fw-regular;
-                    line-height: 1.23;
+                    line-height: v.$line-height-base;
 
                     @include m.mq-max(v.$xxl) {
                         margin-bottom: clamp(v.$space-xl, 1.893rem + 3.036vw, 4.625rem);
@@ -1689,7 +1688,7 @@ header {
             font-size: v.$fs-128;
             font-weight: v.$fw-regular;
             letter-spacing: v.$letter-spacing-base;
-            line-height: 1;
+            line-height: v.$line-height-none;
 
             @include m.mq-max(v.$xxl) {
                 font-size: clamp(6.5rem, 6.071rem + 2.143vw, v.$fs-128);
@@ -2045,7 +2044,7 @@ header {
             font-family: v.$ff-serif-main;
             font-size: v.$fs-28;
             font-weight: v.$fw-light;
-            line-height: 1.22;
+            line-height: v.$line-height-tight;
 
             @include m.mq-max(v.$xxl) {
                 font-size: clamp(v.$fs-16, 0.786rem + 1.071vw, v.$fs-28);
