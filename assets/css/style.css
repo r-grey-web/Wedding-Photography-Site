@@ -869,85 +869,85 @@ header {
   }
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:first-child .service-card__decoration {
+  .services .services__cards .service-card--wedding .service-card__decoration {
     width: clamp(3.125rem, 2.768rem + 1.786vw, 4.375rem);
   }
 }
-.services .services__cards .service-card:first-child .service-card__title {
+.services .services__cards .service-card--wedding .service-card__title {
   margin: 0 0 34px;
   transform: translateY(-5px);
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:first-child .service-card__title {
+  .services .services__cards .service-card--wedding .service-card__title {
     margin-bottom: clamp(1.75rem, 1.607rem + 0.714vw, 2.25rem);
   }
 }
-.services .services__cards .service-card:first-child .service-card__price {
+.services .services__cards .service-card--wedding .service-card__price {
   font-size: 3.125rem;
   line-height: 1;
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:first-child .service-card__price {
+  .services .services__cards .service-card--wedding .service-card__price {
     font-size: clamp(2.375rem, 2.161rem + 1.071vw, 3.125rem);
   }
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:first-child .service-card__btn {
+  .services .services__cards .service-card--wedding .service-card__btn {
     margin-top: clamp(0rem, -0.259rem + 1.295vw, 0.906rem);
   }
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(2) .service-card__decoration {
+  .services .services__cards .service-card--portrait .service-card__decoration {
     width: clamp(4.563rem, 4.063rem + 2.5vw, 6.313rem);
   }
 }
-.services .services__cards .service-card:nth-child(2) .service-card__title {
+.services .services__cards .service-card--portrait .service-card__title {
   margin-bottom: 39px;
   transform: translateY(10.5px);
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(2) .service-card__title {
+  .services .services__cards .service-card--portrait .service-card__title {
     margin-bottom: clamp(2.375rem, 2.339rem + 0.179vw, 2.5rem);
   }
 }
-.services .services__cards .service-card:nth-child(2) .service-card__price-wrapper {
+.services .services__cards .service-card--portrait .service-card__price-wrapper {
   margin-bottom: 51px;
 }
-.services .services__cards .service-card:nth-child(2) .service-card__price {
+.services .services__cards .service-card--portrait .service-card__price {
   font-size: 3rem;
   line-height: 0.98;
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(2) .service-card__price {
+  .services .services__cards .service-card--portrait .service-card__price {
     font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
   }
 }
-.services .services__cards .service-card:nth-child(3) .service-card__decoration {
+.services .services__cards .service-card--engagement .service-card__decoration {
   margin-left: 35px;
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(3) .service-card__decoration {
+  .services .services__cards .service-card--engagement .service-card__decoration {
     width: clamp(3.75rem, 3.446rem + 1.518vw, 4.813rem);
   }
 }
-.services .services__cards .service-card:nth-child(3) .service-card__title {
+.services .services__cards .service-card--engagement .service-card__title {
   margin-bottom: 42px;
   transform: translateY(3px);
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(3) .service-card__title {
+  .services .services__cards .service-card--engagement .service-card__title {
     margin-bottom: clamp(2.25rem, 2.143rem + 0.536vw, 2.625rem);
   }
 }
-.services .services__cards .service-card:nth-child(3) .service-card__price-wrapper {
+.services .services__cards .service-card--engagement .service-card__price-wrapper {
   margin-bottom: 51px;
 }
-.services .services__cards .service-card:nth-child(3) .service-card__price {
+.services .services__cards .service-card--engagement .service-card__price {
   font-size: 3rem;
   line-height: 0.98;
 }
 @media (width < 1440px) {
-  .services .services__cards .service-card:nth-child(3) .service-card__price {
+  .services .services__cards .service-card--engagement .service-card__price {
     font-size: clamp(2.25rem, 2.036rem + 1.071vw, 3rem);
   }
 }
@@ -1707,7 +1707,7 @@ header {
 /* Achievements */
 /*----------------------------------------------*/
 :root {
-  --stats__list-gap: clamp(v.$space-s, 0.286rem + 3.571vw, 3.5rem);
+  --stats__list-gap: clamp(1rem, 0.286rem + 3.571vw, 3.5rem);
 }
 
 .stats {
@@ -2188,7 +2188,7 @@ header {
   transition: opacity 0.3s ease;
 }
 @media (hover: hover) {
-  .footer__container .footer__social-links .footer__social-icon:hover:hover {
+  .footer__container .footer__social-links .footer__social-icon:hover {
     opacity: 0.7;
   }
 }

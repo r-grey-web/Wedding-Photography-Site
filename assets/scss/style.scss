@@ -815,7 +815,7 @@ header {
                 padding-inline: clamp(1.406rem, 1.004rem + 2.009vw, 2.813rem);
             }
 
-            &:first-child {
+            &--wedding {
                 .service-card__decoration {
                     @include m.mq-max(v.$xxl) {
                         width: clamp(3.125rem, 2.768rem + 1.786vw, 4.375rem);
@@ -848,7 +848,7 @@ header {
                 }
             }
 
-            &:nth-child(2) {
+            &--portrait {
                 .service-card__decoration {
                     @include m.mq-max(v.$xxl) {
                         width: clamp(4.563rem, 4.063rem + 2.5vw, 6.313rem);
@@ -878,7 +878,7 @@ header {
                 }
             }
 
-            &:nth-child(3) {
+            &--engagement {
                 .service-card__decoration {
                     margin-left: 35px;
 
@@ -1603,7 +1603,7 @@ header {
 /* Achievements */
 /*----------------------------------------------*/
 :root {
-    --stats__list-gap: clamp(v.$space-s, 0.286rem + 3.571vw, 3.5rem);
+    --stats__list-gap: #{clamp(v.$space-s, 0.286rem + 3.571vw, 3.5rem)};
 }
 
 .stats {
@@ -2067,9 +2067,7 @@ header {
             transition: opacity 0.3s ease;
 
             @include m.hover-device {
-                &:hover {
-                    opacity: 0.7;
-                }
+                opacity: 0.7;
             }
         }
     }
