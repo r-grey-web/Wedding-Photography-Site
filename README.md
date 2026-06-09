@@ -5,6 +5,7 @@ Figma Communityのデザインをもとに制作したコーディング模写�
 ## Technologies
 
 * HTML
+* CSS
 * SCSS
 * JavaScript
 
