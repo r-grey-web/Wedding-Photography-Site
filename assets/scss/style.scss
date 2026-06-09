@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    z-index: 11;
+    z-index: 900;
     padding: 0;
     background: none;
     border: none;
@@ -185,7 +185,7 @@ header {
         right: -300px;
         z-index: 100;
         width: 260px;
-        height: 100vh;
+        height: 100dvh;
         padding: 0;
         background-color: #2e2520;
         transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
@@ -373,11 +373,14 @@ header {
     display: none;
 
     @include m.mq-max(v.$lg) {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         top: 24px;
         right: 40px;
-        z-index: 100;
+        z-index: 1001;
+        appearance: none;
 
         @include m.mq-max(v.$sm) {
             top: 16px;
@@ -428,7 +431,7 @@ header {
     background: rgba(0, 0, 0, 0);
     pointer-events: none;
     transition: background 0.4s ease;
-    z-index: 10;
+    z-index: 999;
 }
 
 .hero__titles {
