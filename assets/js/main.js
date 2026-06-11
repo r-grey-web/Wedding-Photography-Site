@@ -111,6 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+            closeMenu();
+            humBtn.focus();
+        }
+    });
+
+
     // Portfolio section - Match the text box width to the image width
     window.addEventListener('load', () => {
         const images = document.querySelector('.portfolio__images');
