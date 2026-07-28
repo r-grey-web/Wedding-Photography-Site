@@ -1416,12 +1416,17 @@ header {
   }
 }
 .portfolio .portfolio__pc-btn-wrapper .portfolio__pc-btn {
-  padding: 12px 28px 12px 26px;
-  border: none;
+  padding: 10px 26px 10px 24px;
+  border: 2px solid #E9E1D9;
   color: #555555;
   font-weight: 300;
   text-align: center;
   white-space: nowrap;
+}
+@media (hover: hover) {
+  .portfolio .portfolio__pc-btn-wrapper .portfolio__pc-btn:hover {
+    background-color: transparent;
+  }
 }
 .portfolio .portfolio__sp-btn-wrapper {
   display: none;
@@ -1989,12 +1994,17 @@ header {
   }
 }
 .contact__container .contact__form .contact__button {
-  padding: 0.5rem 66px;
+  padding: 6px 64px;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  border: none;
+  border: 2px solid #E9E1D9;
   color: #505050;
+}
+@media (hover: hover) {
+  .contact__container .contact__form .contact__button:hover {
+    background-color: transparent;
+  }
 }
 @media (width < 1440px) {
   .contact__container .contact__form .contact__button {
